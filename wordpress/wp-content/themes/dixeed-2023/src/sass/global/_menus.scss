@@ -1,0 +1,176 @@
+@use "../resources" as *; //should also load resources
+
+
+/*--------------------------------------------------------------
+# Basic Menu Styling
+--------------------------------------------------------------*/
+//this will affect all vertical menus everywhere (sidebar, panel-left,  etc...)
+
+.menu li {
+  color: white;
+}
+
+//item hovered on
+.menu li:hover, .menu li.toggled-on, .menu li:active {
+  color: black;
+}
+
+
+/*--------------------------------------------------------------
+# Vertical Menu in Panel Left overrides
+--------------------------------------------------------------*/
+#panel-left {
+  //current menu and a toggled-open one
+  .menu .current-menu-item, .menu li.toggled-on {
+    background: rgba(0, 0, 0, .3);
+    color: white;
+
+    //top level item
+    > .menu-item-link {
+      background: rgba(0, 0, 0, .5);
+    }
+  }
+}
+
+
+/*--------------------------------------------------------------
+# Horizontal Menu Styling overrides
+--------------------------------------------------------------*/
+
+@media(min-width: $media-nav) {
+  .site-top .menu, .horizontal-menu .menu {
+
+    li {
+      color: white;
+      font-weight: bold;
+    }
+
+    //top level items:
+    .top-level-item {
+
+      &.current-menu-item .menu-item-link{
+        color: var(--main-text-color);
+      }
+
+      //top level menu item turned on or hovered on, or item within is hovered on
+      &.toggled-on, &:focus-within {
+        background: transparent;
+        color: black;
+
+        //open submenu if there is one.
+        & > .sub-menu, & > .children {
+          transform: translate3d(-50%, -5px, 0) rotateX(0);
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+
+      //dropdown boxes styling from top level item on horizontal menus
+      & > .sub-menu, & > .children {
+        opacity: 0;
+        visibility: hidden;
+        transform: perspective(100px) translate3d(-50%, 0, 0) rotateX(-8deg);
+        transition: all .3s;
+        background: white;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, .17);
+        border-radius: 3px;
+        transform-style: preserve-3d;
+        transform-origin: 0 top;
+        overflow: visible;
+        padding: 5px 0;
+
+        a {
+          flex-shrink: 1;
+        }
+
+        //top cute arrow piece
+        &:before {
+          content: '';
+          width: 16px;
+          height: 16px;
+          background: inherit;
+          display: block;
+          transform: rotate(45deg);
+          position: absolute;
+          top: -8px;
+          left: 0;
+          right: 0;
+          margin: auto;
+          z-index: 1;
+        }
+
+        //submenu inner links
+        .menu-item-link {
+          transition: all .5s;
+          color: var(--highlight);
+          z-index: 2;
+          position: relative;
+        }
+
+        //inner links hovered
+        .menu-item-link:hover, .menu-item-link:focus-within{
+          background: var(--highlight);
+          color: white;
+        }
+      }
+
+
+
+
+
+      &.offscreen-right > .sub-menu{
+        left: -50px;
+        &:before{
+          content: none;
+        }
+      }
+      
+    } //top-level items
+  } //horizontal menus
+
+  .top-level-item > .menu-item-link{
+    .submenu-dropdown-toggle{
+      display: none;
+    }
+  }
+}
+
+//show the dropdown arrow when hover events are not available
+.touch-device .top-level-item > .menu-item-link{
+  .submenu-dropdown-toggle{
+    display: block;
+  }
+}
+
+
+
+/*--------------------------------------------------------------
+# Sub-Menu Dropdown Button styling
+--------------------------------------------------------------*/
+.submenu-dropdown-toggle .icon {
+  transition: transform .4s;
+}
+
+.menu-item.toggled-on > .menu-item-link .icon, .menu-item:focus-within > .menu-item-link.icon {
+  transform: rotate(90deg);
+}
+
+.submenu-dropdown-toggle,
+.submenu-dropdown-toggle:focus {
+  background: none;
+  border: none;
+  margin: 0;
+  display: inline;
+  outline: none;
+  cursor: pointer;
+  min-width: 1.5em;
+  text-align: left;
+  font-size: inherit;
+  color: inherit;
+}
+
+
+//for more panel-left styling see panels.scss
+
+
+

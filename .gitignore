@@ -1,0 +1,28 @@
+# Composer
+vendor/*
+
+# WordPress Core
+wordpress/wp-admin/*
+wordpress/wp-includes/*
+wordpress/wp-*.php
+wordpress/readme.html
+wordpress/license.txt
+wordpress/xmlrpc.php
+wordpress/.htaccess
+
+# WordPress configuration
+wordpress/wp-config.php
+
+# Plugins
+wordpress/wp-content/plugins/*
+
+# Thèmes
+wordpress/wp-content/themes/*
+!wordpress/wp-content/themes/dixeed-2023
+# wp-content
+wordpress/wp-content/languages/*
+wordpress/wp-content/upgrade/*
+wordpress/wp-content/uploads/*
+
+#utils
+wordpress/Search-Replace-DB-master/*
