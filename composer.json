@@ -5,7 +5,8 @@
     },
     "config": {
         "allow-plugins": {
-            "johnpbloch/wordpress-core-installer": true
+            "johnpbloch/wordpress-core-installer": true,
+            "drupal-composer/preserve-paths": true
         }
     },
     "extra": {
