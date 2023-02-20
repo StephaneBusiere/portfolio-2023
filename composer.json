@@ -1,6 +1,7 @@
 {
     "require": {
-        "johnpbloch/wordpress": "^6.1"
+        "johnpbloch/wordpress": "^6.1",
+        "drupal-composer/preserve-paths": "^0.1.6"
     },
     "config": {
         "allow-plugins": {
