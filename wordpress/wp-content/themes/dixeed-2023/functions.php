@@ -213,6 +213,9 @@ function dixeed_2023_scripts() {
 		wp_enqueue_style( 'dixeed-2023-fonts', ign_google_fonts_url(), array(), wp_get_theme()->get( 'Version' ) );
 	}
 
+	// font-face fonts
+    wp_enqueue_style( 'proxima-styles', get_template_directory_uri() . '/src/fonts/proximanova/proximanova.css', '', '1.0' );
+    wp_enqueue_style( 'basier-styles', get_template_directory_uri() . '/src/fonts/basier-circle/basier-circle.css', '', '1.0' );
 
 	// Theme stylesheet. Will get this stylesheet or a child themes stylesheet.
 	wp_enqueue_style( 'dixeed-2023-style', get_stylesheet_uri(), '', wp_get_theme()->get( 'Version' ) );
@@ -224,7 +227,7 @@ function dixeed_2023_scripts() {
 
 	//ie11 js polyfills
 	wp_enqueue_script( 'polyfill', 'https://polyfill.io/v3/polyfill.min.js?flags=gated&features=AbortController%2Cdefault%2CNodeList.prototype.forEach%2CEvent%2Csmoothscroll' );
-
+ 
 	//jQuery 3.0 replaces WP jquery
 	wp_deregister_script( 'jquery-core' );
 	wp_register_script( 'jquery-core', "https://code.jquery.com/jquery-3.5.1.min.js", array(), '3.5.1' );

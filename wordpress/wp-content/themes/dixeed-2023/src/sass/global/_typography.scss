@@ -1,6 +1,6 @@
 @use "../resources"as *;
-@use "../../fonts/basier-circle/basier-circle";
-@use "../../fonts/proximanova/proximanova";
+// @use "../../fonts/basier-circle/basier-circle";
+// @use "../../fonts/proximanova/proximanova";
 
 /*--------------------------------------------------------------
 # Typography
@@ -8,7 +8,7 @@
 html {
   font-size: 62.5%; // resets so rem is easy to use 1.2rem = 12px.
 }
-
+ 
 //because we are using this on the front end and the back end we need to be careful
 body {
   font-size: 1.6rem; //results in 16px
@@ -69,7 +69,7 @@ p {
   text-align: left;
 }
 
-.text-justify {
+.text-justify { 
   text-align: justify;
 }
 
@@ -83,7 +83,7 @@ h1, .h1 {
   line-height: 103px;
   font-weight: 700;
 }
-
+ 
 h2, .h2 {
   font-family: 'Basier-circle-bold';
   font-size: 72px;
@@ -106,16 +106,16 @@ h4, .h4 {
 }
 
 /*--------------------------------------------------------------
-# paragprahs from figma desihn system
+# paragprahs from figma design system
 --------------------------------------------------------------*/
 
 p {
   font-family: 'Proximanova-regular';
   font-size: 14px;
-  line-height: 14px;
+  line-height: 16px;
   font-weight: 400;
   &.p-16 {
-    font-size: 12px;
+    font-size: 16px;
     line-height: 22px;
   }
   &.p-18 {
