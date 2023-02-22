@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Basier-circle-regular';
+    src: url('basiercircle-regular-webfont.woff2') format('woff2'),
+        url('basiercircle-regular-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: regular;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Basier-circle-bold';
+    src: url('basiercircle-bold-webfont.woff2') format('woff2'),
+        url('basiercircle-bold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: regular;
+    font-display: swap;
+}
