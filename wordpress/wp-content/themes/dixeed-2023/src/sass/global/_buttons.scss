@@ -14,19 +14,18 @@
   border: 1px solid var(--orange-500);
   color: var(--orange-500);
   letter-spacing: 1px;
-  background-color: transparent;
-  transition: color 300ms ease, background-color 300ms ease;
+  transition: color 300ms ease;
   border-radius: 2px;
   .shape {
     display: block;
-    width: 120px;
-    height: 120px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     background-color: var(--orange-500);
     position: absolute;
     z-index: 0;
-    top: calc(50% - 60px);
-    left: calc(50% - 60px);
+    top: calc(50% - 150px);
+    left: calc(50% - 150px);
     transform: scale(0);
     transition: transform 300ms ease;
   }
@@ -36,7 +35,6 @@
   }
   &:hover {
     color: var(--white);
-    background-color: var(--orange-500);
     .shape {
       transform: scale(1);
     }
