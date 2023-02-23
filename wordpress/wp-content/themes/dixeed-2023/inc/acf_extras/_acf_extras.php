@@ -337,3 +337,88 @@ function get_dixeed_colors_palette() {
 		),
 	);
 }
+function add_default_color_acf_picker() {
+	?>
+	<script type="text/javascript">
+	(function($) {
+	acf.add_filter('color_picker_args', function( args, $field ){
+	// add the hexadecimal codes here for the colors you want to appear as swatches
+	args.palettes = ['#EFEAE7', '#ffffff','#DED5CD','#1D4259','#fbfdff']
+	// return colors
+	return args;
+	});
+	})(jQuery);
+	</script>
+	<?php
+}
+	add_action( 'acf/input/admin_footer', 'add_default_color_acf_picker' );
+
+
+/**
+ * Customize the default color palette for TinyMce editor
+ *
+ * @param array $options The TinyMCE options.
+ */
+function dixeed_custom_color_tinymce( $options ) {
+	$colors_palette = get_dixeed_colors_palette();
+
+	$colors = array_reduce(
+		$colors_palette,
+		function ( $acc, $color_item ) {
+			$acc[] = substr( $color_item['color'], 1 );
+			$acc[] = $color_item['name'];
+
+			return $acc;
+		},
+		array()
+	);
+
+	$options['textcolor_map'] = wp_json_encode( $colors );
+	$style_formats            = array(
+		array(
+			'title'   => 'P-16',
+			'inline'  => 'span',
+			'classes' => 'P-16',
+			'wrapper' => true,
+		),
+		array(
+			'title'   => 'P-18',
+			'inline'  => 'span',
+			'classes' => 'P-18',
+			'wrapper' => true,
+		),
+		array(
+			'title'   => 'P-22',
+			'inline'  => 'span',
+			'classes' => 'P-22',
+			'wrapper' => true,
+		),
+	);
+	$options['style_formats'] = wp_json_encode( $style_formats );
+
+	return $options;
+
+}
+
+add_filter( 'tiny_mce_before_init', 'dixeed_custom_color_tinymce' );
+
+/* Hook to init */
+add_action( 'init', 'dixeed_editor_background_color' );
+
+/**
+ * Add TinyMCE Button
+ */
+function dixeed_editor_background_color() {
+	add_filter( 'mce_buttons_2', 'dixeed_editor_background_color_button', 1, 2 ); // 2nd row
+}
+
+/**
+ * Modify 2nd Row in TinyMCE and Add Background Color After Text Color Option
+ */
+function dixeed_editor_background_color_button( $buttons, $id ) {
+	/* Add the button/option after 4th item */
+	array_splice( $buttons, 4, 0, 'backcolor' );
+	array_unshift( $buttons, 'styleselect' );
+
+	return $buttons;
+}
