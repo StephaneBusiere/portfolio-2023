@@ -41,36 +41,36 @@ function add_header_block_default() {
 	}
 }
 
-add_action( 'init', 'add_header_block_default', 9999 );
+// add_action( 'init', 'add_header_block_default', 9999 );
 
 
 //registering the new block
-function ign_register_header_block( $post_type ) {
-	$title      = '';
-	$post_types = '';
-	if ( $post_type->name != 'post' ) {
-		$title      = ucwords( $post_type->labels->singular_name ) . ' ';
-		$post_types = array( $post_type->name );
-	}
+// function ign_register_header_block( $post_type ) {
+// 	$title      = '';
+// 	$post_types = '';
+// 	if ( $post_type->name != 'post' ) {
+// 		$title      = ucwords( $post_type->labels->singular_name ) . ' ';
+// 		$post_types = array( $post_type->name );
+// 	}
 
-	acf_register_block_type( array(
-		'name'            => 'header-' . $post_type->name,
-		'title'           => __( $title . 'Header' ),
-		'description'     => __( 'Header Block' ),
-		'render_callback' => 'render_default_block',
-		'category'        => 'ign-custom',
-		'icon'            => 'schedule',
-		'keywords'        => array( 'header', 'hero' ),
-		'align'           => 'full',
-		'post_types'      => $post_types,
-		'supports'        => array(
-			'anchor'   => true,
-			'align'    => array( 'wide', 'full' ),
-			'multiple' => false
-		),
+// 	acf_register_block_type( array(
+// 		'name'            => 'header-' . $post_type->name,
+// 		'title'           => __( $title . 'Header' ),
+// 		'description'     => __( 'Header Block' ),
+// 		'render_callback' => 'render_default_block',
+// 		'category'        => 'ign-custom',
+// 		'icon'            => 'schedule',
+// 		'keywords'        => array( 'header', 'hero' ),
+// 		'align'           => 'full',
+// 		'post_types'      => $post_types,
+// 		'supports'        => array(
+// 			'anchor'   => true,
+// 			'align'    => array( 'wide', 'full' ),
+// 			'multiple' => false
+// 		),
 
-	) );
-}
+// 	) );
+// }
 
 
 /**
