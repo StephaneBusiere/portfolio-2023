@@ -13,7 +13,6 @@
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<div class="entry-content container-content grow-font">
-			<?php ign_header_block(); ?>
 			<?php the_content(); ?>
 		</div>
 	</article>

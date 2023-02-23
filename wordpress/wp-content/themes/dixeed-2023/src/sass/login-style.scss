@@ -4,13 +4,11 @@ html{
 }
 
 body, input {
-  display: flex;
-  align-items: center;
   font-size: 1.6rem;
 }
 
 body #login{
-  padding: 0;
+  padding: 80px 0px;
 }
 
 #login h1 a,

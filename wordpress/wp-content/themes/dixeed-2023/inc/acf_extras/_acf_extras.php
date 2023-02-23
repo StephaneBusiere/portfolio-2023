@@ -294,3 +294,46 @@ add_action( 'acf/input/admin_footer', 'acf_plugin_wysiwyg_styling' );
 
 
 
+/**
+ * Adds a custom color palette for Gutenberg blocs.
+ */
+function wpdc_add_custom_gutenberg_color_palette() {
+	$colors = get_dixeed_colors_palette();
+
+	add_theme_support( 'editor-color-palette', $colors );
+}
+
+add_action( 'after_setup_theme', 'wpdc_add_custom_gutenberg_color_palette' );
+
+/**
+ * Returns the colors palette for the theme.
+ */
+function get_dixeed_colors_palette() {
+	return array(
+		array(
+			'name'  => esc_html__( 'Blanc cassé', 'dixeed-2023' ),
+			'slug'  => 'blanc-casse',
+			'color' => '#EFEAE7',
+		),
+		array(
+			'name'  => esc_html__( 'Blanc', 'dixeed-2023' ),
+			'slug'  => 'blanc',
+			'color' => '#ffffff',
+		),
+		array(
+			'name'  => esc_html__( 'Gris clair', 'dixeed-2023' ),
+			'slug'  => 'gris-clair',
+			'color' => '#DED5CD',
+		),
+		array(
+			'name'  => esc_html__( 'Bleu foncé', 'magner-ignition' ),
+			'slug'  => 'bleu-fonce',
+			'color' => '#1D4259',
+		),
+		array(
+			'name'  => esc_html__( 'Blanc glacé', 'magner-ignition' ),
+			'slug'  => 'blanc-glace',
+			'color' => '#fbfdff',
+		),
+	);
+}

@@ -15,10 +15,9 @@ import "./js/core/panel-left"
 import "./js/core/smooth-scroll"
 import "./js/core/icons"
 import "./js/core/responsive-iframe"
-
+import "./js/core/dixeed-custom.js"
 
 //add all underscored js files from inc and parts
 import "../inc/**/_?*.js";
 import "./parts/**/_?*.js";
-
 
