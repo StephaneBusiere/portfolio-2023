@@ -19,11 +19,18 @@
       font-size: 120px;
       display: inline-block;
       padding: 0 2vw;
-      line-height: 1;
+      line-height: 1.2;
       font-family: 'Basier-circle-bold';
       color: white;
       -webkit-text-shadow: -1px -1px 0 var(--black), 1px -1px 0 var(--black), -1px 1px 0 var(--black), 1px 1px 0 var(--black);
       text-shadow: -1px -1px 0 var(--black), 1px -1px 0 var(--black), -1px 1px 0 var(--black), 1px 1px 0 var(--black);
+      @media(max-width: $media-large) {
+      	font-size: 72px;
+      }
+
+      @media(max-width: $media-medium) {
+      	font-size:36px;
+      }
     }
   }
 }
