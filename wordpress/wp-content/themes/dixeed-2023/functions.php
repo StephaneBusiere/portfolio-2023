@@ -227,6 +227,11 @@ function dixeed_2023_scripts() {
 
 	//ie11 js polyfills
 	wp_enqueue_script( 'polyfill', 'https://polyfill.io/v3/polyfill.min.js?flags=gated&features=AbortController%2Cdefault%2CNodeList.prototype.forEach%2CEvent%2Csmoothscroll' );
+
+	// gsap 
+	
+	wp_enqueue_script( 'gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js' );
+
  
 	//jQuery 3.0 replaces WP jquery
 	wp_deregister_script( 'jquery-core' );

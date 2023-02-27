@@ -1,5 +1,4 @@
 import LocomotiveScroll from 'locomotive-scroll';
-import gsap from "gsap";
 
 // init locmotiv scroll
 if ($('#site-container').length) {

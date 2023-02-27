@@ -1,0 +1,29 @@
+@use "../../sass/resources"as *;
+
+.marquees-block {
+  height: 100vh;
+  padding: 0;
+  overflow: hidden;
+  .marquees-wrapper {
+    max-width: 100%;
+    .marquee {
+      max-width: 100%;
+      overflow: hidden;
+    }
+    .marquee-inner {
+      display: inline-block;
+      white-space: nowrap;
+    }
+    .marquee span {
+      // font-size: 10vw;
+      font-size: 120px;
+      display: inline-block;
+      padding: 0 2vw;
+      line-height: 1;
+      font-family: 'Basier-circle-bold';
+      color: white;
+      -webkit-text-shadow: -1px -1px 0 var(--black), 1px -1px 0 var(--black), -1px 1px 0 var(--black), 1px 1px 0 var(--black);
+      text-shadow: -1px -1px 0 var(--black), 1px -1px 0 var(--black), -1px 1px 0 var(--black), 1px 1px 0 var(--black);
+    }
+  }
+}
