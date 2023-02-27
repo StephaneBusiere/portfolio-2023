@@ -30,9 +30,10 @@
   --light-blue: rgba(0, 185, 235, 0.73);
   --dark-blue: #007fb0;
 
-  //Colors from figme desgn system
+  //Colors from figme design system
   --black: #262626;
   --white: #F2EFEB;
+  --light-grey : #EFEAE7;
   // main colors
   --bleu-500: #1D4259;
   --cafe-500: #BE916B;
@@ -43,7 +44,7 @@
   --body-bg: white; //found in page.scss
   --main-text-color: var(--black); //used in various files
   --subtle-text-color: var(--grey); //used in forms.scss and page.scss
-  --site-top: var(--dark-blue);
+  --site-top: var( --light-grey);
   --footer-bg: var(--dark-grey); //found in page.scss
   --header-bg: var(--dark-grey); //found in page.scss
 
