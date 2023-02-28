@@ -1,0 +1,38 @@
+@use "../../sass/resources"as *;
+
+.marquees-block {
+  padding: 80px 0;
+  overflow: hidden;
+  background-color: var(--white);
+  .marquees-wrapper {
+    max-width: 100%;
+    .marquee {
+      max-width: 100%;
+      overflow: hidden;
+    }
+    .marquee-inner {
+      display: inline-block;
+      white-space: nowrap;
+    }
+    .marquee span {
+      font-size: 120px;
+      display: inline-block;
+      padding: 0 2vw;
+      line-height: 1.2;
+      font-family: 'Basier-circle-bold';
+      color: var(--white);
+      -webkit-text-shadow: -1px -1px 0 var(--black), 1px -1px 0 var(--black), -1px 1px 0 var(--black), 1px 1px 0 var(--black);
+      text-shadow: -1px -1px 0 var(--black), 1px -1px 0 var(--black), -1px 1px 0 var(--black), 1px 1px 0 var(--black);
+      @media(max-width: $media-large) {
+      	font-size: 72px;
+      }
+
+      @media(max-width: $media-medium) {
+      	font-size:36px;
+      	-webkit-text-shadow: none;
+      text-shadow: none;
+      color: var(--orange-500);
+      }
+    }
+  }
+}

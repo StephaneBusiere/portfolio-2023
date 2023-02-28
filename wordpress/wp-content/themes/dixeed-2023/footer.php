@@ -32,6 +32,7 @@ if($sidebar_icon == 'sidebar-icon'){
 </div><!-- .site-container -->
 
 <?php wp_footer(); ?>
-
+<!-- modals -->
+<?php ign_template('src/parts/modal/modal-video.php'); ?>
 </body>
 </html>

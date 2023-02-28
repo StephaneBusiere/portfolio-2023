@@ -227,6 +227,13 @@ function dixeed_2023_scripts() {
 
 	//ie11 js polyfills
 	wp_enqueue_script( 'polyfill', 'https://polyfill.io/v3/polyfill.min.js?flags=gated&features=AbortController%2Cdefault%2CNodeList.prototype.forEach%2CEvent%2Csmoothscroll' );
+
+	// gsap 
+	
+	wp_enqueue_script( 'gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js' );
+
+	// custom modal
+	wp_enqueue_script( 'dixeed-2023-modal', get_stylesheet_directory_uri() . '/src/parts/modal/modal.js', array( 'jquery' ), '1.6.0', true );
  
 	//jQuery 3.0 replaces WP jquery
 	wp_deregister_script( 'jquery-core' );
@@ -275,6 +282,10 @@ add_action( 'wp_enqueue_scripts', 'dixeed_2023_scripts' );
 function ign_gutenberg_styles() {
 	//load regular versions if script debug is set to true in wp-config file.
 	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
+
+	// font-face fonts
+    wp_enqueue_style( 'proxima-styles', get_template_directory_uri() . '/src/fonts/proximanova/proximanova.css', '', '1.0' );
+    wp_enqueue_style( 'basier-styles', get_template_directory_uri() . '/src/fonts/basier-circle/basier-circle.css', '', '1.0' );
 
 
 	// Load the theme styles within Gutenberg.

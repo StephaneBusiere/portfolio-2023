@@ -7,6 +7,17 @@ body {
   background: var(--body-bg);
 }
 
+// text selection
+::-moz-selection { /* Code for Firefox */
+  color: var(--black);
+  background: var(--white);
+}
+
+::selection {
+  color: var(--black);
+  background: var(--white);
+}
+
 
 /*--------------------------------------------------------------
 # Logo
