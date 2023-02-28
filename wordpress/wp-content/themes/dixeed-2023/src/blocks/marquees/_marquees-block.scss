@@ -1,9 +1,9 @@
 @use "../../sass/resources"as *;
 
 .marquees-block {
-  height: 100vh;
-  padding: 0;
+  padding: 80px 0;
   overflow: hidden;
+  background-color: var(--white);
   .marquees-wrapper {
     max-width: 100%;
     .marquee {
@@ -20,7 +20,7 @@
       padding: 0 2vw;
       line-height: 1.2;
       font-family: 'Basier-circle-bold';
-      color: white;
+      color: var(--white);
       -webkit-text-shadow: -1px -1px 0 var(--black), 1px -1px 0 var(--black), -1px 1px 0 var(--black), 1px 1px 0 var(--black);
       text-shadow: -1px -1px 0 var(--black), 1px -1px 0 var(--black), -1px 1px 0 var(--black), 1px 1px 0 var(--black);
       @media(max-width: $media-large) {
@@ -29,6 +29,9 @@
 
       @media(max-width: $media-medium) {
       	font-size:36px;
+      	-webkit-text-shadow: none;
+      text-shadow: none;
+      color: var(--orange-500);
       }
     }
   }

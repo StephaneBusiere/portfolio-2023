@@ -232,6 +232,8 @@ function dixeed_2023_scripts() {
 	
 	wp_enqueue_script( 'gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js' );
 
+	// custom modal
+	wp_enqueue_script( 'dixeed-2023-modal', get_stylesheet_directory_uri() . '/src/parts/modal/modal.js', array( 'jquery' ), '1.6.0', true );
  
 	//jQuery 3.0 replaces WP jquery
 	wp_deregister_script( 'jquery-core' );

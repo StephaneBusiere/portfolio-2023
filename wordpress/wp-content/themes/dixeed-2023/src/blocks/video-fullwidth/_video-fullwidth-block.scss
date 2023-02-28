@@ -4,17 +4,61 @@
 	height: 100vh;
 	padding: 0;
 	overflow: hidden;
-  
-	.video-fullwidth-wrapper {
-	  max-width: 100%;
-	  // height: 100%;
-	  // background-size: cover; 
-	  // background-repeat: no-repeat;
-	  // background-position: center center;
-	  // display:flex;
-	  // justify-content: center;
-	  // align-items: center;
-	  // padding: 20px;
-	  font-family: 'Basier-circle-regular';
+	font-family: 'Basier-circle-regular';
+    .video-fullwidth-wrapper {
+		position: relative;
+		height: 100vh;
+		min-height: -webkit-fill-available;
+		video {
+		    position: absolute;
+		    z-index: 0;
+		    width: 100%;
+		    height: 100%; 
+		    object-fit: cover;
+		    top: 50%;
+			left: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+		}
+		.video-mask {
+			background-color: black;
+			position: absolute;
+		    z-index: 1;
+		    width: 100%;
+		    height: 100%;
+		    opacity: 0.15
+		}
+		.play {
+			position: absolute;
+		    z-index: 3;
+		    top: calc(50% - 38px);
+			left: 50%;
+			-webkit-transform: translate(-50%,0);
+			transform: translate(-50%, 0);
+			text-align : center;
+			cursor: pointer;
+			svg {
+				width: 76px;
+				height: 76px;
+				circle {
+					-webkit-transition: transform 0.3s ease;
+					transition: transform 0.3s ease;
+					transform : scale(1);
+					transform-origin: 50% 50%;
+				}
+			}
+			div {
+				color:var(--white);
+			}
+			&:hover {
+				svg { 
+					circle {
+						transform : scale(0.85);
+					}
+				}
+			}
+		}
+	}
+	@media (max-width: $media-medium) {
 	}
 }
