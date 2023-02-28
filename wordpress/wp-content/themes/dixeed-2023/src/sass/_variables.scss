@@ -69,8 +69,8 @@
   --desktop-menu-alignment: center; //can be flex-end or flex-start or center for top level menu-items positioning on desktop
 
   /*------- Layout --------*/
-  --container: 1200px; //holds site in a centered container of this size
-  --container-content: 70rem; //holds article text for nice reading
+  --container: 1600px; //holds site in a centered container of this size
+  --container-content: 1600px; //holds article text for nice reading
   --container-padding: 30px; //used on left and right side of containers
 
   --gutters: 15px; //common padding size, used on flexbox and modules
