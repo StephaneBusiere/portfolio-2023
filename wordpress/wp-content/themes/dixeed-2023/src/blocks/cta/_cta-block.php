@@ -1,8 +1,8 @@
 <?php
 /**
- * Block to display a background video banner
+ * Block to display regular cta
  *
- * @package Blocks/video-fullwidth
+ * @package Blocks/cta
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -10,16 +10,19 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Registers a new block with ACF
  */
-function video_fullwidth_register_acf_block() {
+function cta_register_acf_block() {
 	acf_register_block_type(
 		array(
-			'name'            => 'Dixeed/video-fullwidth',
-			'title'           => __( '[Dixeed] Bannière video pleine largeur', 'dixeed-2023' ),
-			'description'     => __( 'Block bannière video pleine largeur', 'dixeed-2023' ),
-			'render_template' => 'src/blocks/video-fullwidth/video-fullwidth-block.template.php',
+			'name'            => 'Dixeed/cta',
+			'title'           => __( '[Dixeed] Block cta', 'dixeed-2023' ),
+			'description'     => __( 'Block call to action', 'dixeed-2023' ),
+			'render_template' => 'src/blocks/cta/cta-block.template.php',
 			'category'        => 'ign-custom',
 			'icon'            => 'slides',
 			'keywords'        => array( 'places', 'media', 'pattern' ),
+			'enqueue_assets'  => function() {
+				wp_enqueue_script( 'cta', get_template_directory_uri() . '/src/blocks/cta/cta-block.js', array(), '1.0.0', true );
+			},
 			'supports'        => array(
 				'align'  => array( 'full' ),
 				'anchor' => true,
@@ -33,9 +36,7 @@ function video_fullwidth_register_acf_block() {
 	);
 }
 
-
-
 // Check if function exists and hook into setup and adds all blocks.
 if ( function_exists( 'acf_register_block_type' ) ) {
-	add_action( 'acf/init', 'video_fullwidth_register_acf_block' );
+	add_action( 'acf/init', 'cta_register_acf_block' );
 }

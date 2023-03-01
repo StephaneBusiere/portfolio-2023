@@ -1,8 +1,8 @@
 <?php
 /**
- * Block to display marquees with animation
+ * Block to display arrow cta
  *
- * @package Blocks/marquees
+ * @package Blocks/cta-arrow
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -10,18 +10,18 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Registers a new block with ACF
  */
-function marquees_register_acf_block() {
+function cta_arrow_register_acf_block() {
 	acf_register_block_type(
 		array(
-			'name'            => 'Dixeed/marquees',
-			'title'           => __( '[Dixeed] Bloc marquees', 'dixeed-2023' ),
-			'description'     => __( 'Block avec texte qui défile', 'dixeed-2023' ),
-			'render_template' => 'src/blocks/marquees/marquees-block.template.php',
+			'name'            => 'Dixeed/cta-arrow',
+			'title'           => __( '[Dixeed] Block cta arrow', 'dixeed-2023' ),
+			'description'     => __( 'Block call to action avec fleche', 'dixeed-2023' ),
+			'render_template' => 'src/blocks/cta-arrow/cta-arrow-block.template.php',
 			'category'        => 'ign-custom',
 			'icon'            => 'slides',
 			'keywords'        => array( 'places', 'media', 'pattern' ),
 			'enqueue_assets'  => function() {
-				wp_enqueue_script( 'marquees', get_template_directory_uri() . '/src/blocks/marquees/marquees-block.js', array(), '1.0.0', true );
+				wp_enqueue_script( 'cta-arrow', get_template_directory_uri() . '/src/blocks/cta-arrow/cta-arrow-block.js', array(), '1.0.0', true );
 			},
 			'supports'        => array(
 				'align'  => array( 'full' ),
@@ -38,5 +38,5 @@ function marquees_register_acf_block() {
 
 // Check if function exists and hook into setup and adds all blocks.
 if ( function_exists( 'acf_register_block_type' ) ) {
-	add_action( 'acf/init', 'marquees_register_acf_block' );
+	add_action( 'acf/init', 'cta_arrow_register_acf_block' );
 }

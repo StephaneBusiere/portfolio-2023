@@ -295,7 +295,8 @@ function ign_gutenberg_styles() {
 		wp_get_theme()->get( 'Version' ), true );
 }
 
-//add_action( 'enqueue_block_editor_assets', 'ign_gutenberg_styles' ); //todo remove if already adding admin-css?
+//todo remove if already adding admin-css?
+add_action( 'enqueue_block_editor_assets', 'ign_gutenberg_styles' ); 
 
 
 /**
