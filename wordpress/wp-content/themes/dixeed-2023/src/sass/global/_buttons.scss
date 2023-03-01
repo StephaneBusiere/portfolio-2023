@@ -13,31 +13,3 @@
   color: var(--black);
   border: 1px solid var(--black);
 }
-
-// arrow button
-.cta-arrow {
-  position: relative;
-  display: inline-block;
-  z-index: 0;
-  width: 80px;
-  height:80px;
-  border-radius : 50%;
-  color: var(--orange-500);
-  border: 1px solid var(--orange-500);
-  background-color: transparent;
-  transition: background-color 300ms ease;
-  padding : 27px;
-  svg {
-  	width: 26px;
-  	height:26px;
-  	fill : var(--orange-500);
-  	transition: fill 300ms ease;
-  }
-  &:hover {
-  	background-color: var(--orange-500);
-  	svg {
-  		fill : var(--white);
-  	}
-  }
-}
-

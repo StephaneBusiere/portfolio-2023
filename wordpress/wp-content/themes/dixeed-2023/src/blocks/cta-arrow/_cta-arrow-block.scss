@@ -1,0 +1,44 @@
+@use "../../sass/resources"as *;
+
+// Arrow button
+.cta-arrow {
+  position: relative;
+  display: block;
+  z-index: 0;
+  overflow: hidden;
+  width: fit-content;
+  &.align-left {
+    margin-left: auto;
+    margin-right: 0;
+  }
+  &.align-center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &.align-right {
+    margin-right: auto;
+    margin-left: 0;
+  }
+  a {
+    display: block;
+    width: 80px;
+    height:80px;
+    border-radius : 50%;
+    border: 1px solid var(--orange-500);
+    background-color: transparent;
+    transition: background-color 300ms ease;
+    padding : 27px;
+    svg {
+      width: 26px;
+      height:26px;
+      fill : var(--orange-500);
+      transition: fill 300ms ease;
+    }
+  }
+  a:hover {
+    background-color: var(--orange-500);
+    svg {
+      fill : var(--white);
+    }
+  }
+}
