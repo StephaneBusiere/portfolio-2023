@@ -1,0 +1,90 @@
+@use "../../sass/resources" as *;
+
+.skills-cards-section {
+	width:100%;
+  	height: auto;
+  	padding: 0 0 40px 0;
+  	overflow: hidden;
+	.skills-cards-block {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.skills-cards-content {
+		min-width: 235px;
+    	height: 235px;
+		border:1px solid var(--black);
+		.skills-cards-number-container {
+			display:flex;
+			align-items: center;
+			justify-content: end;
+			.skills-cards-number {
+				color: #ea7e25;
+				font-size:30px;
+				font-weight: bold;
+				margin-right: 10px;
+			}
+		}
+		.skills-cards-icon-container {
+			display:flex;
+			align-items: center;
+			justify-content: center;
+			.skills-cards-icon {
+				max-width: 120px;
+				max-height: 120px;
+			}
+		}
+		.skills-cards-text-container {
+			.skills-cards-text {
+				font-size: 30px;
+    			font-weight: bold;
+    			padding-top: 20px;
+    			margin-left: 10px;
+			}
+		}
+		
+	}
+	
+}
+
+@media (max-width: $media-medium) {
+	.skills-cards-section {
+		.skills-cards-block {
+			justify-content: center;
+		}
+		.skills-cards-content {
+			min-width: 235px;
+			height: 235px;
+			border:1px solid var(--black);
+			.skills-cards-number-container {
+				display:flex;
+				align-items: center;
+				justify-content: end;
+				.skills-cards-number {
+					color: #ea7e25;
+					font-size:30px;
+					font-weight: bold;
+					margin-right: 10px;
+				}
+			}
+			.skills-cards-icon-container {
+				display:flex;
+				align-items: center;
+				justify-content: center;
+				.skills-cards-icon {
+					max-width: 120px;
+					max-height: 120px;
+				}
+			}
+			.skills-cards-text-container {
+				.skills-cards-text {
+					font-size: 30px;
+					font-weight: bold;
+					padding-top: 20px;
+					margin-left: 10px;
+				}
+			}
+			
+		}
+		
+	}
+  }

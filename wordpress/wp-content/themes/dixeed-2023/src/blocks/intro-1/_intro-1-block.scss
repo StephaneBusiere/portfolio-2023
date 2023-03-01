@@ -26,3 +26,36 @@
 		}
 	}
 }
+
+@media (max-width: $media-sidebar) {
+	.intro-1-block  {
+		.intro-1-wrapper {
+			.intro-1-title {
+			font-size: 4.2rem; 
+			line-height: 6rem;
+			}
+		}
+	}
+}
+
+@media (max-width: $media-medium) {
+	.intro-1-block  {
+		.intro-1-wrapper {
+			.intro-1-title {
+			font-size: 3.5rem; 
+			line-height: 4rem;
+			}
+		}
+	}
+}
+
+@media (max-width: $media-small) {
+	.intro-1-block  {
+		.intro-1-wrapper {
+			.intro-1-title {
+			font-size: 2.2rem; 
+			line-height: 2.7rem;
+			}
+		}
+	}
+}

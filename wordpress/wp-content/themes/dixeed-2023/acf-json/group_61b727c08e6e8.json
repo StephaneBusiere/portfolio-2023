@@ -1,0 +1,210 @@
+{
+    "key": "group_61b727c08e6e8",
+    "title": "Block accordéon et image",
+    "fields": [
+        {
+            "key": "field_63fe332974122",
+            "label": "Couleur du background",
+            "name": "background_color_accordeon",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "admin_only": 0,
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string"
+        },
+        {
+            "key": "field_61b72926e87c1",
+            "label": "Accordéons",
+            "name": "accordions_block",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "admin_only": 0,
+            "layout": "block",
+            "pagination": 0,
+            "min": 1,
+            "max": 0,
+            "collapsed": "field_61b729f2e87c3",
+            "button_label": "Ajouter un élément",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_62f4c5df6dbf9",
+                    "label": "Titre et Image",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "admin_only": 0,
+                    "ign_set_data": "",
+                    "placement": "top",
+                    "endpoint": 1,
+                    "wpml_cf_preferences": 0,
+                    "parent_repeater": "field_61b72926e87c1"
+                },
+                {
+                    "key": "field_61b729f2e87c3",
+                    "label": "Titre",
+                    "name": "accordion-title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "admin_only": 0,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "wpml_cf_preferences": 1,
+                    "autocomplete": "",
+                    "ign_set_data": "",
+                    "parent_repeater": "field_61b72926e87c1"
+                },
+                {
+                    "key": "field_6200ea228bd36",
+                    "label": "Image",
+                    "name": "accordion-image",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "Choisir une image ou une icône",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "admin_only": 0,
+                    "return_format": "url",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "parent_repeater": "field_61b72926e87c1"
+                },
+                {
+                    "key": "field_62f4c6086dbfa",
+                    "label": "Contenu",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "admin_only": 0,
+                    "ign_set_data": "",
+                    "placement": "top",
+                    "endpoint": 0,
+                    "wpml_cf_preferences": 1,
+                    "parent_repeater": "field_61b72926e87c1"
+                },
+                {
+                    "key": "field_61b72a13e87c4",
+                    "label": "Texte",
+                    "name": "accordion-text",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 2,
+                    "admin_only": 0,
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 0,
+                    "delay": 0,
+                    "parent_repeater": "field_61b72926e87c1"
+                }
+            ]
+        },
+        {
+            "key": "field_62f4c2afec44d",
+            "label": "Gestion responsive",
+            "name": "accordions_disable_responsive",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Permet de ne pas appliquer le style responsive et conserver le comportement desktop sur mobile (recommandé si un des blocs contient un long contenu).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 0,
+            "admin_only": 0,
+            "message": "Désactiver le style responsive",
+            "default_value": 0,
+            "ui": 0,
+            "ign_set_data": "",
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/dixeed-accordion-icon"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1677603687
+}
