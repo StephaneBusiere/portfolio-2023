@@ -57,5 +57,12 @@
         color: var(--white);
       }
     }
+    @media(max-width: $media-medium) {
+      padding: 10px 20px;
+      .text {
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
   }
 }

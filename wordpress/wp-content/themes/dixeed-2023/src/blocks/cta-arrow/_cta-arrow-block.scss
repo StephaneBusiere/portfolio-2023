@@ -22,23 +22,33 @@
   a {
     display: block;
     width: 80px;
-    height:80px;
-    border-radius : 50%;
+    height: 80px;
+    border-radius: 50%;
     border: 1px solid var(--orange-500);
     background-color: transparent;
     transition: background-color 300ms ease;
-    padding : 27px;
+    padding: 27px;
     svg {
       width: 26px;
-      height:26px;
-      fill : var(--orange-500);
+      height: 26px;
+      fill: var(--orange-500);
       transition: fill 300ms ease;
     }
   }
   a:hover {
     background-color: var(--orange-500);
     svg {
-      fill : var(--white);
+      fill: var(--white);
+    }
+  }
+  @media(max-width: $media-medium) {
+    a {
+      width: 40px;
+      height: 40px;
+      svg {
+        width: 13px;
+        height: 13px;
+      }
     }
   }
 }
