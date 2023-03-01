@@ -59,7 +59,7 @@ $media-list: ('container': 1200px, 'medium': 768px, 'small': 576px, 'large': 103
   padding: 0 var(--container-padding); //still has padding.
   width: 100%;
 
-  > *:not( .alignwide ):not( .alignfull ):not(.full-width) {
+  > *:not( .alignwide ):not( .alignfull ):not(.full-width):not(.cta) {
 	max-width: var(--container-content) !important; //needs to override the figures or any other elements with inline widths
 	margin-right: auto;
 	margin-left: auto;

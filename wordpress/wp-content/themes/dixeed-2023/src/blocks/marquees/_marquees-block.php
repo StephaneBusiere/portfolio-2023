@@ -1,8 +1,8 @@
 <?php
 /**
- * Block to display a background image and a text.
+ * Block to display marquees with animation
  *
- * @package Blocks/video-fullwidth
+ * @package Blocks/marquees
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -14,8 +14,8 @@ function marquees_register_acf_block() {
 	acf_register_block_type(
 		array(
 			'name'            => 'Dixeed/marquees',
-			'title'           => __( '[Dixeed] Bloc marquees', 'k-ip-ignition' ),
-			'description'     => __( 'Block avec texte qui défile', 'k-ip-ignition' ),
+			'title'           => __( '[Dixeed] Bloc marquees', 'dixeed-2023' ),
+			'description'     => __( 'Block avec texte qui défile', 'dixeed-2023' ),
 			'render_template' => 'src/blocks/marquees/marquees-block.template.php',
 			'category'        => 'ign-custom',
 			'icon'            => 'slides',

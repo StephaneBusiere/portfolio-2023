@@ -1,0 +1,61 @@
+@use "../../sass/resources"as *;
+
+// Regular button
+.cta {
+  position: relative;
+  display: block;
+  z-index: 0;
+  overflow: hidden;
+  width: fit-content;
+  &.align-left {
+    margin-left: auto;
+    margin-right: 0;
+  }
+  &.align-center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &.align-right {
+    margin-right: auto;
+    margin-left: 0;
+  }
+  a {
+    padding: 18px 28px;
+    border: 1px solid var(--orange-500);
+    transition: color 300ms ease;
+    border-radius: 2px;
+    display: block;
+    .shape {
+      display: block;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background-color: var(--orange-500);
+      position: absolute;
+      z-index: 0;
+      top: calc(50% - 150px);
+      left: calc(50% - 150px);
+      transform: scale(0);
+      transition: transform 300ms ease;
+    }
+    .text {
+      position: relative;
+      z-index: 1;
+      font-family: 'Basier-circle-bold';
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      color: var(--orange-500);
+      letter-spacing: 1px;
+    }
+    &:hover {
+
+      .shape {
+        transform: scale(1);
+      }
+      .text {
+        color: var(--white);
+      }
+    }
+  }
+}
