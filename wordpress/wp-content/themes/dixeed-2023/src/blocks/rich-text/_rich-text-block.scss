@@ -1,0 +1,50 @@
+@use "../../sass/resources" as *;
+
+.rich-text-section {
+  height: auto;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  max-width: 100%;
+}
+
+@media (max-width: $media-container) {
+  .rich-text-section { 
+      .rich-text {
+        & h2 {
+          font-size: 5rem;
+          line-height: 6rem;
+        }
+      }
+  
+    }
+}
+
+@media (max-width: $media-tablett) {
+  .rich-text-section {
+    .rich-text {
+        & h2 {
+          font-size: 4rem;
+          line-height: 5rem;
+        }
+        & p > span {
+          font-size:2rem; 
+        }
+      }
+  
+    }
+}
+
+@media (max-width: $media-large) {
+  .rich-text-section {
+      .rich-text {
+        & h2 {
+          font-size: 3.5rem;
+          line-height: 4rem;
+        }
+        & p > span {
+          font-size:1.6rem; 
+        }
+      }
+  
+    }
+}

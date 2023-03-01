@@ -1,6 +1,6 @@
 {
     "key": "group_61af5a080dd5c",
-    "title": "Dixeed block image et texte",
+    "title": "Block image et texte",
     "fields": [
         {
             "key": "field_61af5a2156eb6",
@@ -465,5 +465,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1677167144
+    "modified": 1677594702
 }

@@ -1,7 +1,6 @@
 @use "../../sass/resources" as *;
 
 .text-image-section {
-	min-height: 100vh;
     padding: 0;
     overflow: hidden;
   .text-image-container {
@@ -227,16 +226,62 @@
     }
 }
 }
+@media (max-width: $media-container) {
+    .text-image-section {
+        .image-container {
+            .image {
+                width:70%;
+            }
+        }
+        .block-text-container {
+          & h2 {
+            font-size: 5rem;
+            line-height: 6rem;
+          }
+        }
+    
+      }
+}
 
+@media (max-width: $media-tablett) {
+    .text-image-section {
+        .block-text-container {
+          & h2 {
+            font-size: 4rem;
+            line-height: 5rem;
+          }
+          & p > span {
+            font-size:2rem; 
+          }
+        }
+    
+      }
+}
+
+@media (max-width: $media-large) {
+    .text-image-section {
+        .block-text-container {
+          & h2 {
+            font-size: 3.5rem;
+            line-height: 4rem;
+          }
+          & p > span {
+            font-size:1.6rem; 
+          }
+        }
+    
+      }
+}
 @media (max-width: $media-nav) {
   .text-image-section {
-    margin-bottom: 2rem;
     .text-image-container  {
       display:block;
+      padding: 0px 40px;
       .image-container {
         width:auto!important;
         .image-mobile {
             display:block!important;
+            width:70%;
         }
         .image {
             display:none!important;
@@ -278,7 +323,9 @@
     .block-text-container {
       width: 100%!important;
       padding: 2rem;
-      text-align: center;
+      & p {
+        text-align-last: left;
+      }
     }
 
   }

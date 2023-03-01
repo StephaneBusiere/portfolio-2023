@@ -19,46 +19,54 @@ if ( ! $container ) {
 
 
 <section <?php ign_block_attrs( $block, 'section-menu' ); ?>>
-    <div class="section-menu" <?php if ( $fixed_at_top ) {
+	<div class="section-menu" 
+	<?php
+	if ( $fixed_at_top ) {
 		echo 'data-scrollanimation="fixed-at-top"';
-	} ?>>
-        <div class="horizontal-menu <?php echo $container; ?>">
-            <nav>
+	}
+	?>
+	>
+		<div class="horizontal-menu <?php echo $container; ?>">
+			<nav>
 				<?php
 				if ( get_field( 'menu' ) == 'menu' ) {
-					wp_nav_menu( array(
-						'menu'        => get_field( 'wp_menu_name' ),
-						'menu_id'     => 'menu-' . $block['id'],
-						'container'   => '',
-						'fallback_cb' => 'link_to_menu_editor'
-					) );
+					wp_nav_menu(
+						array(
+							'menu'        => get_field( 'wp_menu_name' ),
+							'menu_id'     => 'menu-' . $block['id'],
+							'container'   => '',
+							'fallback_cb' => 'link_to_menu_editor',
+						)
+					);
 				} else {
 					?>
-                    <ul class="menu">
+					<ul class="menu">
 						<?php
-						while ( have_rows( 'custom_menu' ) ) : the_row();
+						while ( have_rows( 'custom_menu' ) ) :
+							the_row();
 							?>
 							<?php $link = get_sub_field( 'link' ); ?>
-							<?php if ( $link ): ?>
-                                <li>
-                                    <div class="menu-item-link">
-                                        <a href="<?php echo esc_attr($link['url']); ?>"><?php echo esc_html($link['title']); ?></a>
-                                    </div>
-                                </li>
+							<?php if ( $link ) : ?>
+								<li>
+									<div class="menu-item-link">
+										<a href="<?php echo esc_attr( $link['url'] ); ?>"><?php echo esc_html( $link['title'] ); ?></a>
+									</div>
+								</li>
 
-							<?php
+								<?php
 							endif;
 						endwhile;
 						?>
 
-                    </ul>
-                    <!-- /.menu -->
+					</ul>
+					<!-- /.menu -->
 					<?php
-				} ?>
+				}
+				?>
 
-            </nav>
-            <!-- /.menu -->
-        </div>
-        <!-- /.horizontal-menu -->
-    </div>
+			</nav>
+			<!-- /.menu -->
+		</div>
+		<!-- /.horizontal-menu -->
+	</div>
 </section>

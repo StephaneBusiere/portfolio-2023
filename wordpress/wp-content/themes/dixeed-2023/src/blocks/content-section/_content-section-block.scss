@@ -1,0 +1,27 @@
+@use "../../sass/resources" as *;
+
+.section-content-block {
+  position: relative;
+  padding: 0;
+  
+
+  & > .container-content {
+    z-index: 2;
+    position: relative;
+  }
+}
+
+@media (max-width: $media-nav) {
+  .k-ip-section-content-block {
+    margin-bottom: 4rem;
+    & > .container-content {
+      padding-top: 2rem;
+    }
+  }
+  .wp-block-columns.strapper-block {
+    flex-direction: column-reverse;
+  }
+}
+.wp-block-columns {
+  margin-bottom: 0;
+}
