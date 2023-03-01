@@ -27,14 +27,14 @@
     display: block;
     .shape {
       display: block;
-      width: 300px;
-      height: 300px;
+      width: 200px;
+      height: 200px;
       border-radius: 50%;
       background-color: var(--orange-500);
       position: absolute;
       z-index: 0;
-      top: calc(50% - 150px);
-      left: calc(50% - 150px);
+      top: calc(50% - 100px);
+      left: calc(50% - 100px);
       transform: scale(0);
       transition: transform 300ms ease;
     }
