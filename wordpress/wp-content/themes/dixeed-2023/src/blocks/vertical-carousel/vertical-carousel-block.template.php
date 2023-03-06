@@ -21,16 +21,16 @@ $vertical_carousel_col_3 = get_field( 'vertical_carousel_col_3' );
 				        $link = get_sub_field('vertical_carousel_lien_image');
 				        if($link === ''){
 				        	?>
-				        	<li>
-					            <img src="<?php echo $img;?>" alt="<?php echo __( 'Agence dixeed', 'dixeed-2023' );?>">
+				        	<li class="vertical-carousel-item">
+				        		<span style="background-image : url(<?php echo $img;?>);"></span>
 				            </li>
 				        	<?php
 				        }
 				        else {
 					        ?>
-				    	    <li>
+				    	    <li class="vertical-carousel-item">
 				    	    	<a href="<?php echo $link;?>" title="<?php echo __( 'Agence dixeed', 'dixeed-2023' );?>" target="_blank">
-					            	<img src="<?php echo $img;?>" alt="<?php echo __( 'Agence dixeed', 'dixeed-2023' );?>">
+					            	<span style="background-image : url(<?php echo $img;?>);"></span>
 					            </a>
 				            </li>
 					        <?php
@@ -54,7 +54,7 @@ $vertical_carousel_col_3 = get_field( 'vertical_carousel_col_3' );
 				        if($link === ''){
 				        	?>
 				        	<li>
-					            <img src="<?php echo $img;?>" alt="<?php echo __( 'Agence dixeed', 'dixeed-2023' );?>">
+					            <span style="background-image : url(<?php echo $img;?>);"></span>
 				            </li>
 				        	<?php
 				        }
@@ -62,7 +62,7 @@ $vertical_carousel_col_3 = get_field( 'vertical_carousel_col_3' );
 					        ?>
 				    	    <li>
 				    	    	<a href="<?php echo $link;?>" title="<?php echo __( 'Agence dixeed', 'dixeed-2023' );?>" target="_blank">
-					            	<img src="<?php echo $img;?>" alt="<?php echo __( 'Agence dixeed', 'dixeed-2023' );?>">
+					            	<span style="background-image : url(<?php echo $img;?>);"></span>
 					            </a>
 				            </li>
 					        <?php
@@ -86,7 +86,7 @@ $vertical_carousel_col_3 = get_field( 'vertical_carousel_col_3' );
 				        if($link === ''){
 				        	?>
 				        	<li>
-					            <img src="<?php echo $img;?>" alt="<?php echo __( 'Agence dixeed', 'dixeed-2023' );?>">
+					            <span style="background-image : url(<?php echo $img;?>);"></span>
 				            </li>
 				        	<?php
 				        }
@@ -94,7 +94,7 @@ $vertical_carousel_col_3 = get_field( 'vertical_carousel_col_3' );
 					        ?>
 				    	    <li>
 				    	    	<a href="<?php echo $link;?>" title="<?php echo __( 'Agence dixeed', 'dixeed-2023' );?>" target="_blank">
-					            	<img src="<?php echo $img;?>" alt="<?php echo __( 'Agence dixeed', 'dixeed-2023' );?>">
+					            	<span style="background-image : url(<?php echo $img;?>);"></span>
 					            </a>
 				            </li>
 					        <?php

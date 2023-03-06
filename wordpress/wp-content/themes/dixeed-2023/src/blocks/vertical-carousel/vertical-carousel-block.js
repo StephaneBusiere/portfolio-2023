@@ -1,6 +1,6 @@
 (function($) {
-  // slick oauseOnHover does not work with infinite autoplay 
-  // todo : made custom gsap slider : https://codepen.io/akapowl/pen/RwjGVWq
+   // slick oauseOnHover does not work with infinite autoplay 
+   // todo : made custom gsap slider : https://codepen.io/akapowl/pen/RwjGVWq
    function initializeBlock($block) {
       $block.slick({
          autoplay: true,
@@ -19,6 +19,17 @@
          useTransform: true,
          cssEase: 'linear',
          adaptiveHeight: true,
+         responsive: [{
+               breakpoint: 768,
+               settings: {
+                  slidesToShow: 3,
+                  vertical: false,
+                  verticalSwiping: false,
+                  adaptiveHeight: false,
+                  speed: 3500 + Math.floor(Math.random() * 500) + 1,
+               }
+            }
+         ]
       });
    }
    if (window.acf) {
