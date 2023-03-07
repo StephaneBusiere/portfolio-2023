@@ -1,22 +1,15 @@
 (function($) {
-   // slick pauseOnHover bug with infinite autoplay 
    function initializeBlock($block) {
       $block.slick({
-         autoplay: true,
          arrows: false,
          dots: false,
-         slidesToShow: 3,
+         slidesToShow: 1,
          draggable: false,
          infinite: true,
-         pauseOnHover: false,
-         // swipe: false,
+         swipe: true,
          // touchMove: false,
-         vertical: true,
-         verticalSwiping: true,
-         speed: 5000,
-         autoplaySpeed: 0,
          useTransform: true,
-         cssEase: 'linear',
+         // cssEase: 'linear',
          adaptiveHeight: true,
          responsive: [{
                breakpoint: 768,
@@ -25,11 +18,19 @@
                   vertical: false,
                   verticalSwiping: false,
                   adaptiveHeight: false,
-                  speed: 3500 + Math.floor(Math.random() * 500) + 1,
                }
             }
          ]
       });
+         $(".cta-arrow-prev").click(function(e) {
+            e.preventDefault();
+            $block.slick("slickPrev");
+         });
+
+         $(".cta-arrow-next").click(function(e) {
+            e.preventDefault();
+            $block.slick("slickNext");
+         });
    }
    // if (window.acf) {
    //    // Initialize dynamic block preview (editor).
@@ -44,7 +45,7 @@
    // } else {
       // Initialize each block on page load (front end).
       $(document).ready(function() {
-         $(".vertical-carousel").each(function() {
+         $(".horizontal-slider").each(function() {
             initializeBlock($(this));
          });
       });
