@@ -1,0 +1,66 @@
+@use "../../sass/resources"as *;
+
+.circle-outline-text-block {
+  .circle-outline-text {
+    width: 288px;
+    height: 288px;
+    display: inline-block;
+    svg {
+      -webkit-animation: rotating 8s linear infinite;
+      animation: rotating 8s linear infinite;
+      margin-top: 94px;
+      margin-left: 94px;
+      text {
+        font-family: 'Basier-circle-bold';
+        letter-spacing: 0.18px;
+        font-size: 14px;
+        font-style: normal;
+        text-transform: uppercase;
+        font-weight: 700;
+        fill: var(--orange-500);
+      }
+    }
+  }
+  @-webkit-keyframes rotating {
+    from {
+      -webkit-transform: rotate(0deg) scale(2.88);
+    }
+    to {
+      -webkit-transform: rotate(360deg) scale(2.88);
+    }
+  }
+  @keyframes rotating {
+    from {
+      -webkit-transform: rotate(0deg) scale(2.88);
+    }
+    to {
+      -webkit-transform: rotate(360deg) scale(2.88);
+    }
+  }
+  @media (max-width: $media-medium) {
+    .circle-outline-text {
+      width: 130px;
+      height: 130px;
+      svg {
+        margin-top: 15px;
+        margin-left: 15px;
+      }
+    }
+    @-webkit-keyframes rotating {
+      from {
+        -webkit-transform: rotate(0deg) scale(1.3);
+      }
+      to {
+        -webkit-transform: rotate(360deg) scale(1.3);
+      }
+    }
+    @keyframes rotating {
+      from {
+        -webkit-transform: rotate(0deg) scale(1.3);
+      }
+      to {
+        -webkit-transform: rotate(360deg) scale(1.3);
+      }
+    }
+  }
+}
