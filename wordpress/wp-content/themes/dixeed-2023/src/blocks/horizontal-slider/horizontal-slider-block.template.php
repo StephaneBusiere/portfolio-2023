@@ -28,6 +28,13 @@ $horizontal_slide = get_field( 'horizontal_slide' );
 				    endwhile;
 				    ?>
 			    </ul>
+			    <div class="graphics">
+			    	<div class="g-1">
+			    		<span class="circle c-1"></span>
+			    		<span class="circle c-2"></span>
+			    		<span class="circle c-3"></span>
+			    	</div>
+			    </div>
 			    <div class="nav">
 			    	<div class="cta-arrow cta-arrow-prev">
 						<a href="#" title="<?php printf( __('Slide précédent', 'dixeed-2023' )); ?>">
