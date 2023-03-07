@@ -6,7 +6,7 @@
          autoplay: true,
          arrows: false,
          dots: false,
-         // slidesToShow: 3,
+         slidesToShow: 3,
          draggable: false,
          infinite: true,
          pauseOnHover: false,
