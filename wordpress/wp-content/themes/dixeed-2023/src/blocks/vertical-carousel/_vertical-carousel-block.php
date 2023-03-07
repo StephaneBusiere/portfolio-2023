@@ -15,7 +15,7 @@ function vertical_carousel_register_acf_block() {
 		array(
 			'name'            => 'Dixeed/vertical-carousel',
 			'title'           => __( '[Dixeed] Block carousel vertical', 'dixeed-2023' ),
-			'description'     => __( 'Block call to action', 'dixeed-2023' ),
+			'description'     => __( 'Block carousel vertical', 'dixeed-2023' ),
 			'render_template' => 'src/blocks/vertical-carousel/vertical-carousel-block.template.php',
 			'category'        => 'ign-custom',
 			'icon'            => 'slides',
