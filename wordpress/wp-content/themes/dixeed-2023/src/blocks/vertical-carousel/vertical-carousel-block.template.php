@@ -1,8 +1,8 @@
 <?php
 /**
- * Content block cta.
+ * Content block vertical-carousel.
  *
- * @package Blocks/cta/Templates
+ * @package Blocks/vertical-carousel/Templates
  */
 
 $vertical_carousel_col_1 = get_field( 'vertical_carousel_col_1' );
