@@ -28,6 +28,13 @@ $horizontal_slide = get_field( 'horizontal_slide' );
 				    endwhile;
 				    ?>
 			    </ul>
+			    <!-- todo : multiple shapes ?  
+			    	https://codepen.io/joshcummingsdesign/pen/dYzgQZ
+			    	https://codepen.io/GreenSock/pen/bEzgLd
+			    	https://www.softr.io/tools/svg-shape-generator
+			    	https://codepen.io/ainalem/pen/jZzxrP
+			    	https://codepen.io/xiaoluoboding/pen/wvKNQxb?editors=1010
+			    -->
 			    <div class="graphics">
 			    	<div class="g-1">
 			    		<span class="circle c-1"></span>
