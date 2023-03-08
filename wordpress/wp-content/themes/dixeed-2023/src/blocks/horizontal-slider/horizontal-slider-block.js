@@ -1,6 +1,8 @@
 (function($) {
    function initializeBlock($block) {
       $block.slick({
+         autoplay : true,
+         autoplaySpeed: 8000,
          arrows: false,
          dots: false,
          slidesToShow: 1,
@@ -12,14 +14,14 @@
          cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
          // fade: true,
          speed: 900,
-         adaptiveHeight: true,
+         // adaptiveHeight: true,
          responsive: [{
             breakpoint: 768,
             settings: {
-               slidesToShow: 3,
-               vertical: false,
-               verticalSwiping: false,
-               adaptiveHeight: false,
+               // slidesToShow: 3,
+               // vertical: false,
+               // verticalSwiping: false,
+               // adaptiveHeight: false,
             }
          }]
       });

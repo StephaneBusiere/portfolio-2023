@@ -17,9 +17,13 @@ $horizontal_slide = get_field( 'horizontal_slide' );
 				    while( have_rows('horizontal_slide') ) : the_row();
 				        $slide_title = get_sub_field('slide_title');
 				        $slide_content = get_sub_field('slide_content');
+				        $slide_graphic = get_sub_field('slide_graphic');
 					        ?>
 				    	    <li class="horizontal-slide">
-				    	    	<h3 class="h2"><span class="index"><span>01</span></span><?php echo $slide_title;?></h3>
+				    	    	<h3 class="h2"><?php echo $slide_title;?></h3>
+				    	    	<div class="graphics">
+							    	<img src="<?php echo $slide_graphic;?>" alt="<?php echo __( 'Agence dixeed', 'dixeed-2023' );?>">
+							    </div>
 					            <div class="slide-content">
 					            	<?php echo $slide_content;?>
 					            </div>
@@ -28,20 +32,6 @@ $horizontal_slide = get_field( 'horizontal_slide' );
 				    endwhile;
 				    ?>
 			    </ul>
-			    <!-- todo : multiple shapes ?  
-			    	https://codepen.io/joshcummingsdesign/pen/dYzgQZ
-			    	https://codepen.io/GreenSock/pen/bEzgLd
-			    	https://www.softr.io/tools/svg-shape-generator
-			    	https://codepen.io/ainalem/pen/jZzxrP
-			    	https://codepen.io/xiaoluoboding/pen/wvKNQxb?editors=1010
-			    -->
-			    <div class="graphics">
-			    	<div class="g-1">
-			    		<span class="circle c-1"></span>
-			    		<span class="circle c-2"></span>
-			    		<span class="circle c-3"></span>
-			    	</div>
-			    </div>
 			    <div class="nav">
 			    	<div class="cta-arrow cta-arrow-prev">
 						<a href="#" title="<?php printf( __('Slide précédent', 'dixeed-2023' )); ?>">

@@ -28,6 +28,7 @@
     background-color: transparent;
     transition: background-color 300ms ease;
     padding: 27px;
+    box-sizing: border-box;
     svg {
       width: 26px;
       height: 26px;
@@ -41,14 +42,14 @@
       fill: var(--white);
     }
   }
-  @media(max-width: $media-medium) {
+  @media(max-width: $media-large) {
     a {
       width: 40px;
       height: 40px;
       svg {
         width: 13px;
         height: 13px;
-        transform: translate3d(-6px,-8px,0);
+        transform: translate3d(-6px,-10px,0);
       }
     }
   }
