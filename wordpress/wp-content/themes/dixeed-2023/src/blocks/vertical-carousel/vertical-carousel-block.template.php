@@ -80,7 +80,7 @@ $vertical_carousel_col_3 = get_field( 'vertical_carousel_col_3' );
 				?>
 				<ul class="vertical-carousel">
 					<?php
-				    while( have_rows('vertical_carousel_col_2') ) : the_row();
+				    while( have_rows('vertical_carousel_col_3') ) : the_row();
 				        $img = get_sub_field('vertical_carousel_image');
 				        $link = get_sub_field('vertical_carousel_lien_image');
 				        if($link === ''){

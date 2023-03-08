@@ -1,6 +1,5 @@
 (function($) {
-   // slick oauseOnHover does not work with infinite autoplay 
-   // todo : made custom gsap slider : https://codepen.io/akapowl/pen/RwjGVWq
+   // slick pauseOnHover bug with infinite autoplay 
    function initializeBlock($block) {
       $block.slick({
          autoplay: true,

@@ -1,0 +1,115 @@
+@use "../../sass/resources"as *;
+
+// Regular button
+.horizontal-slider-wrapper {
+  position: relative;
+  margin: 50px auto;
+  max-width: 1237px;
+  border-top: 20px solid var(--orange-200);
+  border-left: 2px solid var(--orange-200);
+  border-right: 2px solid var(--orange-200);
+  border-bottom: 2px solid var(--orange-200);
+  .horizontal-slider {
+    display: block;
+    list-style: none;
+    li {
+      display: block;
+      width: 100%;
+      padding: 40px 60px;
+      position: relative;
+      h3 {
+        color: var(--bleu-500);
+        margin-bottom: 113px;
+        margin-top: 0;
+      }
+      .slide-content {
+        max-width: 487px;
+        margin-left: auto;
+        margin-right: 74px;
+        margin-bottom: 195px;
+        p {
+          color: var(--bleu-500);
+          font-size: 18px;
+          line-height: 26px;
+          letter-spacing: 0.06em;
+        }
+      }
+      .graphics {
+        position: absolute;
+        top: 169px;
+        img {
+          margin-left: 20%;
+        }
+      }
+    }
+    .slick-slide[data-slick-index="1"] {
+      .graphics {
+        img {
+          margin-left: 57%;
+        }
+      }
+    }
+  }
+  .nav {
+    position: absolute;
+    z-index: 2;
+    width: 190px;
+    display: flex;
+    justify-content: space-between;
+    bottom: 40px;
+    right: 60px;
+    .cta-arrow {
+      &.cta-arrow-prev {}
+      &.cta-arrow-next {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  @media(max-width: $media-large) {
+    max-width: calc(100% - 40px);
+    .horizontal-slider {
+      li {
+        padding: 24px 48px;
+        h3 {
+          font-size: 36px;
+          line-height: 45px;
+          text-align: center;
+          margin-bottom: 45px;
+        }
+        .slide-content {
+          margin-right: auto;
+          max-width: 230px;
+          margin-bottom: 96px;
+          p {
+            font-size: 16px;
+            line-height: 22px;
+          }
+        }
+        .graphics {
+          display: block;
+          position: relative;
+          top: 0;
+          margin-bottom: 45px;
+          img {
+            display: block;
+            margin: 0 auto;
+            max-width: 180px;
+          }
+        }
+      }
+      .slick-slide[data-slick-index="1"] {
+        .graphics {
+          img {
+            margin-left: auto;
+          }
+        }
+      }
+    }
+    .nav {
+      width: 130px;
+      bottom: 24px;
+      right: 50%;
+      transform: translate3d(50%, 0, 0);
+    }
+  }
+}
