@@ -1,0 +1,14 @@
+@use "../../sass/resources"as *;
+
+// Regular button
+.team-wrapper {
+  position: relative;
+  .team {
+    li {
+    }
+    
+  }
+  
+  @media(max-width: $media-large) {
+  }
+}
