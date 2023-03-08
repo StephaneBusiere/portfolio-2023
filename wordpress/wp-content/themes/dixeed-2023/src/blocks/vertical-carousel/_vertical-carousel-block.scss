@@ -1,0 +1,73 @@
+@use "../../sass/resources"as *;
+
+// Regular button
+.vertical-carousel-wrapper {
+  position: relative;
+  display: flex;
+  max-width: 510px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  .vertical-carousel {
+    display: block;
+    list-style: none;
+    margin: 0 10px 0 0;
+    width: 150px;
+    overflow: hidden;
+    height: 450px;
+    li {
+      display: block;
+      width: 150px;
+      height: 150px;
+      margin: 5px 0;
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      span {
+        -webkit-background-size: cover;
+        background-size: cover;
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &:nth-child(1) {
+      margin: 140px 10px 0 0;
+    }
+    &:nth-child(2) {
+      margin: 70px 10px 0 0;
+    }
+    &:nth-child(3) {
+      margin: 0;
+    }
+  }
+  @media(max-width: $media-medium) {
+    max-width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    .vertical-carousel {
+      width: 100vw;
+      height: 110px;
+      // display: flex;
+      // flex-wrap: nowrap;
+      li {
+        width: 100px;
+        height: 100px;
+        margin: 0 ;
+      }
+      .slick-slide {
+        margin:0 5px;
+      }
+      &:nth-child(1) {
+        margin: 0;
+      }
+      &:nth-child(2) {
+        margin: 0;
+      }
+      &:nth-child(3) {
+        margin: 0;
+      }
+    }
+  }
+}

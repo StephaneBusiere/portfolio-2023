@@ -21,10 +21,6 @@ function accordion_icon_register_acf_block() {
 			'icon'            => 'table-row-after',
 			'keywords'        => array( 'places', 'media', 'pattern' ),
 			'enqueue_assets'  => function() {
-				wp_enqueue_style( 'slick', get_template_directory_uri() . '/src/library/slider-library/css/slick2.css', array(), '1.8.1' );
-				wp_enqueue_style( 'slick-theme', get_template_directory_uri() . '/src/library/slider-library/css/slick-theme2.css', array(), '1.8.1' );
-				wp_enqueue_script( 'slick', get_template_directory_uri() . '/src/library/slider-library/js/slick.min.js', array( 'jquery' ), '1.8.1', true );
-
 				wp_enqueue_script( 'accordion-icon', get_template_directory_uri() . '/src/blocks/accordion-icon/accordion-icon-block.js', array(), '1.0.0', true );
 			},
 			'supports'        => array(
