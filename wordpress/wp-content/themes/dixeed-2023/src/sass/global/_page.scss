@@ -91,9 +91,10 @@ body {
 .site-footer {
   padding-top: 5px;
   padding-bottom: 5px;
-  background: var(--footer-bg);
-  color: var(--subtle-text-color);
+  background: var(--bleu-500);
+  color: var(--white);
   font-size: 1.1rem;
+  height:500px;
 
   a{
 	color: inherit;

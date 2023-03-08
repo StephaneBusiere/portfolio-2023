@@ -337,58 +337,59 @@ add_action( 'admin_footer', 'footer_styles', 99 );
 if ( ! function_exists( 'ign_widgets_init' ) ) {
 	function ign_widgets_init() {
 		register_sidebar( array(
-			'name'          => __( 'Sidebar', 'dixeed-2023' ),
-			'id'            => 'sidebar-1',
+			'name'          => __( 'Footer title', 'dixeed-2023' ),
+			'id'            => 'footer-title',
 			'description'   => __( 'Add widgets here to appear in your sidebar.', 'dixeed-2023' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
 			'after_title'   => '</h2>',
 		) );
+		register_sidebar(
+			array(
+				'name'          => esc_html__( 'Footer gauche', 'dixeed-2023' ),
+				'id'            => 'footer-left',
+				'description'   => esc_html__( 'Add footer widgets here.', 'pwm' ),
+				'before_widget' => '<section id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</section>',
+				'before_title'  => '<h2 class="widget-title">',
+				'after_title'   => '</h2>',
+			)
+		);
 
+		register_sidebar(
+			array(
+				'name'          => esc_html__( 'Footer centre', 'dixeed-2023' ),
+				'id'            => 'footer-center',
+				'description'   => esc_html__( 'Add footer widgets here.', 'pwm' ),
+				'before_widget' => '<section id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</section>',
+				'before_title'  => '<h2 class="widget-title">',
+				'after_title'   => '</h2>',
+			)
+		);
 
-//footer widgets and sections. up to 4
-		register_sidebar( array(
-			'name'          => esc_html__( 'Footer', 'dixeed-2023' ),
-			'id'            => 'sidebar-2',
-			'description'   => esc_html__( 'Add footer widgets here.', 'pwm' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		) );
+		register_sidebar(
+			array(
+				'name'          => esc_html__( 'Footer droite', 'dixeed-2023' ),
+				'id'            => 'footer-right',
+				'description'   => esc_html__( 'Add footer widgets here.', 'pwm' ),
+				'before_widget' => '<section id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</section>',
+				'before_title'  => '<h2 class="widget-title">',
+				'after_title'   => '</h2>',
+			)
+		);
 
-
-		register_sidebar( array(
-			'name'          => esc_html__( 'Footer 2', 'dixeed-2023' ),
-			'id'            => 'sidebar-3',
-			'description'   => esc_html__( 'Add footer widgets here.', 'pwm' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		) );
-
-
-		register_sidebar( array(
-			'name'          => esc_html__( 'Footer 3', 'dixeed-2023' ),
-			'id'            => 'sidebar-4',
-			'description'   => esc_html__( 'Add footer widgets here.', 'pwm' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		) );
-
-		register_sidebar( array(
-			'name'          => esc_html__( 'Footer 4', 'dixeed-2023' ),
-			'id'            => 'sidebar-5',
-			'description'   => esc_html__( 'Add footer widgets here.', 'pwm' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		) );
+		register_sidebar(
+			array(
+				'name'          => esc_html__( 'Légende footer', 'dixeed-2023' ),
+				'id'            => 'footer-caption',
+				'description'   => esc_html__( 'Add footer widgets here.', 'pwm' ),
+				'before_widget' => '<div id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</div>',
+			)
+		);
 
 	}
 }
