@@ -173,6 +173,7 @@
             line-height: 1.8rem;
             width: 100%;
             text-align: left;
+            font-weight: bold;
           }
 
           .accordion-text-container.open,
@@ -238,6 +239,23 @@
         .accordion-text-container.open,
         .accordion-text-container {
           font-size: 1.6rem;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 600px) {
+  .accordion-block-wrapper:not(.disable-responsive-style) {
+    .accordion-content {
+      .accordion-image-container {
+        min-width: 90px;
+        .accordion-image {
+          height: 80px;
+          width: 80px;
+          border-top-left-radius: 0%;
+          border-top-right-radius: 50%;
+          border-bottom-right-radius: 50%;
+          border-bottom-left-radius: 0%;
         }
       }
     }

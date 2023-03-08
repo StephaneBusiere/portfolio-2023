@@ -14,8 +14,8 @@ function skills_cards_register_acf_block() {
 	acf_register_block_type(
 		array(
 			'name'            => 'Dixeed/skills-cards',
-			'title'           => __( '[Dixeed] Cartes de compétences', 'k-ip-ignition' ),
-			'description'     => __( 'Block cartes de compétances', 'k-ip-ignition' ),
+			'title'           => __( '[Dixeed] Cartes de compétences', 'dixeed-2023' ),
+			'description'     => __( 'Block cartes de compétances', 'dixeed-2023' ),
 			'render_template' => 'src/blocks/skills-cards/skills-cards-block.template.php',
 			'category'        => 'ign-custom',
 			'icon'            => 'slides',

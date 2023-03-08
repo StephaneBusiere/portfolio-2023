@@ -14,8 +14,8 @@ function content_section_register_acf_block() {
 	acf_register_block_type(
 		array(
 			'name'            => 'dixeed/content-section',
-			'title'           => __( '[Dixeed] Section de contenu', 'k-ip-ignition' ),
-			'description'     => __( 'Section of content', 'k-ip-ignition' ),
+			'title'           => __( '[Dixeed] Section de contenu', 'dixeed-2023' ),
+			'description'     => __( 'Section of content', 'dixeed-2023' ),
 			'render_template' => 'src/blocks/content-section/content-section-block.template.php',
 			'category'        => 'ign-custom',
 			'icon'            => 'align-wide',

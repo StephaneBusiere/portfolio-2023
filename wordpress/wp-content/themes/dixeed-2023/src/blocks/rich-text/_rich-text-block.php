@@ -14,8 +14,8 @@ function rich_text_register_acf_block() {
 	acf_register_block_type(
 		array(
 			'name'            => 'Dixeed/texte-riche',
-			'title'           => __( '[Dixeed] Texte enrichi', 'k-ip-ignition' ),
-			'description'     => __( 'Block texte riche', 'k-ip-ignition' ),
+			'title'           => __( '[Dixeed] Texte enrichi', 'dixeed-2023' ),
+			'description'     => __( 'Block texte riche', 'dixeed-2023' ),
 			'render_template' => 'src/blocks/rich-text/rich-text-block.template.php',
 			'category'        => 'ign-custom',
 			'icon'            => 'media-document',

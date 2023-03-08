@@ -14,8 +14,8 @@ function text_illustration_1_register_acf_block() {
 	acf_register_block_type(
 		array(
 			'name'            => 'Dixeed/text-illustration',
-			'title'           => __( '[Dixeed] text avec image', 'k-ip-ignition' ),
-			'description'     => __( 'Block texte avec image', 'k-ip-ignition' ),
+			'title'           => __( '[Dixeed] text avec image', 'dixeed-2023' ),
+			'description'     => __( 'Block texte avec image', 'dixeed-2023' ),
 			'render_template' => 'src/blocks/text-illustration-1/text-illustration-1.template.php',
 			'category'        => 'ign-custom',
 			'icon'            => 'id',

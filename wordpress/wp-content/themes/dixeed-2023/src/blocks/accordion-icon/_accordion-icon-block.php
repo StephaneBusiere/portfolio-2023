@@ -14,8 +14,8 @@ function accordion_icon_register_acf_block() {
 	acf_register_block_type(
 		array(
 			'name'            => 'dixeed/accordion-icon',
-			'title'           => __( '[Dixeed] Accordéon avec icône', 'k-ip-ignition' ),
-			'description'     => __( 'Block accordéon et icône', 'k-ip-ignition' ),
+			'title'           => __( '[Dixeed] Accordéon avec icône', 'dixeed-2023' ),
+			'description'     => __( 'Block accordéon et icône', 'dixeed-2023' ),
 			'render_template' => 'src/blocks/accordion-icon/accordion-icon-block.template.php',
 			'category'        => 'ign-custom',
 			'icon'            => 'table-row-after',

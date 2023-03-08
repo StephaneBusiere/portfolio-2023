@@ -5,15 +5,15 @@
  * @package Blocks/cta/Templates
  */
 
-$cta_text = get_field( 'cta_text' );
-$cta_url = get_field( 'cta_url' );
-$cta_align = get_field( 'cta_align' );
+$cta_link         = get_field( 'cta_link' );
+$cta_align        = get_field( 'cta_align' );
+$background_color = get_field( 'background_color_cta' );
 ?>
-<div <?php ign_block_attrs( $block, 'cta-block full-width' ); ?>>
-	<div class="cta <?php echo $cta_align;?>">
-		<a href="<?php echo $cta_url;?>" title="<?php echo $cta_text;?>">
+<div <?php ign_block_attrs( $block, 'cta-block full-width' ); ?>  style="background-color:<?php echo esc_attr( $background_color ); ?>">
+	<div class="cta <?php echo $cta_align; ?>">
+		<a href="<?php echo esc_url( $cta_link['url'] ); ?>" title="<?php echo esc_attr( $cta_link['title'] ); ?>">
 			<span class="shape"></span>
-			<span class="text"><?php echo $cta_text;?></span>
+			<span class="text"><?php echo esc_attr( $cta_link['title'] ); ?></span>
 		</a>
 	</div>
 </div>

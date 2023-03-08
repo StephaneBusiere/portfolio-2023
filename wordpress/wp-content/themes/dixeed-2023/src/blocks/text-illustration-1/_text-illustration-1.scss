@@ -6,6 +6,7 @@
   .text-image-container {
     display:flex;
 	padding: 0px 100px;
+    padding-top: 40px;
     &.row {
         flex-direction: row;
         &.one-fourth-three-fourth {
@@ -276,7 +277,7 @@
   .text-image-section {
     .text-image-container  {
       display:block;
-      padding: 0px 40px;
+      padding: 40px 40px;
       .image-container {
         width:auto!important;
         .image-mobile {
