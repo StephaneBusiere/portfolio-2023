@@ -48,7 +48,7 @@ $cta_link         = get_field( 'cta_link_maison' );
 					<span class="shape"></span>
 					<span class="text"><?php echo esc_attr( $cta_link['title'] ); ?></span>
 				</a>
-			</div>
+				</div>
 			</div>
 			
 		</div>
