@@ -49,6 +49,13 @@
         }
       }
     }
+    .slick-slide[data-slick-index="3"] {
+      .graphics {
+        img {
+          margin-left: 45%;
+        }
+      }
+    }
   }
   .nav {
     position: absolute;
@@ -98,6 +105,13 @@
         }
       }
       .slick-slide[data-slick-index="1"] {
+        .graphics {
+          img {
+            margin-left: auto;
+          }
+        }
+      }
+      .slick-slide[data-slick-index="3"] {
         .graphics {
           img {
             margin-left: auto;
