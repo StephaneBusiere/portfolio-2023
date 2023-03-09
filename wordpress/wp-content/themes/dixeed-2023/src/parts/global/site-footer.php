@@ -13,14 +13,34 @@
 ?>
 
 
-<div class="container">
-
-
-
-
-    <div class="site-info gutters text-center">
-        <a target="_blank" href="<?php echo esc_url( 'https://ignition.press/' ); ?>"><?php printf( __(
-				'© %s Created by %s with Ignition. Proudly powered by %s', 'dixeed-2023' ), date( 'Y' ), 'Eric', 'WordPress' ); ?></a>
-    </div><!-- .site-info -->
-
+<div class="container-footer">
+	<div class="footer-title-container">
+		<?php if ( is_active_sidebar( 'footer-title' ) ) : ?>
+			<div class="footer-title">
+				<?php dynamic_sidebar( 'footer-title' ); ?>
+			</div>
+		<?php endif; ?>
+	</div>
+	<div class="footer-content-container">
+		<?php if ( is_active_sidebar( 'footer-left' ) ) : ?>
+			<div class="footer-left">
+				<?php dynamic_sidebar( 'footer-left' ); ?>
+			</div>
+		<?php endif; ?>
+		<?php if ( is_active_sidebar( 'footer-center' ) ) : ?>
+			<div class="footer-center">
+				<?php dynamic_sidebar( 'footer-center' ); ?>
+			</div>
+		<?php endif; ?>
+		<?php if ( is_active_sidebar( 'footer-right' ) ) : ?>
+			<div class="footer-right">
+				<?php dynamic_sidebar( 'footer-right' ); ?>
+			</div>
+		<?php endif; ?>
+	</div>
+	<?php if ( is_active_sidebar( 'footer-caption' ) ) : ?>
+		<div class="footer-caption">
+			<?php dynamic_sidebar( 'footer-caption' ); ?>
+		</div>
+	<?php endif; ?>
 </div>
