@@ -1,27 +1,38 @@
 (function($) {
    function initializeBlock($block) {
       $block.slick({
-         autoplay : false,
-         autoplaySpeed: 8000,
          arrows: false,
          dots: false,
          slidesToShow: 4,
+         slidesToScroll: 4,
          draggable: true,
-         infinite: true,
          swipe: true,
-         // touchMove: false,
-         useTransform: true,
-         cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
-         // fade: true,
-         speed: 900,
-         // adaptiveHeight: true,
+         variableWidth: true,
+         variableHeight: true,
+         infinite: true,
          responsive: [{
             breakpoint: 768,
             settings: {
+               centerMode:true,
+               slidesToShow: 2,
+               slidesToScroll: 2,
+               dots: false,
+               infinite: true,
+               variableWidth: true,
+               variableHeight: true
+               
+            },
+         }, {
+            breakpoint: 550,
+            settings: {
+               centerMode:true,
                slidesToShow: 1,
-               vertical: false,
-               verticalSwiping: false,
-               adaptiveHeight: false,
+               slidesToScroll: 1,
+               dots: false,
+               infinite: true,
+               variableWidth: true,
+               variableHeight: true
+               
             }
          }]
       });

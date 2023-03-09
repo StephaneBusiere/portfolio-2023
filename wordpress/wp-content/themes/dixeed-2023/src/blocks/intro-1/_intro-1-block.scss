@@ -51,9 +51,11 @@
 
 @media (max-width: $media-small) {
 	.intro-1-block  {
+		height: 50vh;
 		.intro-1-wrapper {
+		padding: 5px;
 			.intro-1-title {
-			font-size: 2.2rem; 
+			font-size: 1.8rem; 
 			line-height: 2.7rem;
 			}
 		}

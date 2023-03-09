@@ -12,6 +12,19 @@ $realisation_title = get_field( 'realisations_title' );
 <section <?php ign_block_attrs( $block, 'realisation-slider-block full-width' ); ?> style="background-color:<?php echo esc_attr( $background_color ); ?>">
 	<div class="realisations-container">
 		<img class="line-realisations-1"src="<?php echo get_template_directory_uri(); ?>/images/line-realisation-slider-top.svg " alt="">
+		<div class="realisation-title-container-mobile">
+				<div class="realisation-title"><?php echo esc_attr( $realisation_title ); ?></div>
+				<img class="line-realisations-2"src="<?php echo get_template_directory_uri(); ?>/images/line-realisation-slider-bottom.svg " >
+			</div>
+			<div class="cta-container-mobile">
+				<span class="cta-line"></span>
+				<div class="cta-realisations<?php echo $cta_align; ?>">
+					<a href="<?php echo esc_url( $cta_link['url'] ); ?>" title="<?php echo esc_attr( $cta_link['title'] ); ?>">
+						<span class="shape"></span>
+						<span class="text"><?php echo esc_attr( $cta_link['title'] ); ?></span>
+					</a>
+				</div>
+			</div>
 			<div class="realisation-slider-wrapper">
 				<?php
 				if ( have_rows( 'realisation_slide' ) ) :

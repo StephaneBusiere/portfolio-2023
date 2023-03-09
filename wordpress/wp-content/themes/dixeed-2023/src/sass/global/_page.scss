@@ -6,6 +6,11 @@
 body {
   background: var(--body-bg);
 }
+@media(max-width: $media-small) {
+  .wp-block-spacer {
+    height: 40px!important;
+  }
+}
 
 // text selection
 ::-moz-selection { /* Code for Firefox */
