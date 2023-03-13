@@ -143,6 +143,16 @@ p {
   line-height: 28px;
 }
 
+.title-shadow {
+  font-family: 'Basier-circle-bold';
+  color: var(--white);
+  -webkit-text-shadow: -1px -1px 0 var(--black), 1px -1px 0 var(--black), -1px 1px 0 var(--black), 1px 1px 0 var(--black);
+  text-shadow: -1px -1px 0 var(--black), 1px -1px 0 var(--black), -1px 1px 0 var(--black), 1px 1px 0 var(--black);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 78px;
+  line-height: 97px;
+}
 
 /*--------------------------------------------------------------
 # Basic Links

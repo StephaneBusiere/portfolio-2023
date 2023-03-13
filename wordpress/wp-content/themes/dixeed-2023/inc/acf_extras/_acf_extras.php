@@ -393,6 +393,12 @@ function dixeed_custom_color_tinymce( $options ) {
 			'classes' => 'P-22',
 			'wrapper' => true,
 		),
+		array(
+			'title'   => 'shadow-title',
+			'inline'  => 'span',
+			'classes' => 'title-shadow',
+			'wrapper' => true,
+		),
 	);
 	$options['style_formats'] = wp_json_encode( $style_formats );
 
