@@ -6,8 +6,9 @@
  */
 
 $horizontal_slide = get_field( 'horizontal_slide' );
+$background_color = get_field( 'horizontal-slide-background-color' );
 ?>
-<div <?php ign_block_attrs( $block, 'horizontal-slider-block full-width' ); ?>>
+<div <?php ign_block_attrs( $block, 'horizontal-slider-block full-width' ); ?> style="background-color:<?php echo esc_attr( $background_color ); ?>">
 	<div class="horizontal-slider-wrapper">
 		<?php
 		if ( have_rows( 'horizontal_slide' ) ) :
