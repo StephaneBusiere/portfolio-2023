@@ -1,0 +1,107 @@
+@use "../../sass/resources" as *;
+
+.text-vertical-title-section {
+  padding: 0;
+   .text-vertical-title-container {
+	position:relative;
+	min-height:800px;
+  		.top-text-container {
+			position: relative;
+			z-index: 2;
+			font-size: 80px;
+			font-weight: 700;
+			text-decoration: underline;
+			text-underline-offset: 21px;
+			line-height: 9.9rem;
+			padding: 100px 0px 20px 80px;
+		}
+		.bottom-text-container {
+			text-align: right;
+			font-weight: 400;
+			font-size: 30px;
+			line-height: 40px;
+			letter-spacing: 0.06em;
+			padding: 20px 80px 20px 0px;
+		}
+		.vertical-title-container {
+			position:absolute;
+			top:20px;
+			font-size: 150px;
+			font-weight: 700;
+			line-height: 247px;
+			font-family: 'Basier-circle-bold';
+			color: var(--white);
+			-webkit-text-shadow: -1px -1px 0 #BE916B, 1px -1px 0 #BE916B, -1px 1px 0 #BE916B, 1px 1px 0 #BE916B;
+			text-shadow: -1px -1px 0 #BE916B, 1px -1px 0 #BE916B, -1px 1px 0 #BE916B, 1px 1px 0 #BE916B;
+			writing-mode: vertical-rl;
+			text-orientation: mixed;
+		}
+	}
+}
+
+@media (max-width:1280px) {
+	.text-vertical-title-section {
+		.text-vertical-title-container {
+			min-height: 612px;
+			.top-text-container {
+				font-size: 60px;
+				line-height: 7rem;
+				text-underline-offset: 15px;
+				padding: 78px 0px 20px 80px;
+			}
+			.bottom-text-container {
+				font-size: 20px;
+				line-height: 3rem;
+			}
+			.vertical-title-container {
+				font-size: 110px;
+				line-height: 247px;
+			}
+		}
+	}
+	 
+	
+}
+
+@media (max-width: 920px) {
+	.text-vertical-title-section {
+		.text-vertical-title-container {
+			min-height: 612px;
+			.top-text-container {
+				font-size: 60px;
+				line-height: 7rem;
+				text-underline-offset: 15px;
+				padding: 78px 0px 20px 80px;
+			}
+			.bottom-text-container {
+				text-align: left;
+				padding: 20px 80px 20px 80px;
+			}
+			.vertical-title-container {
+				display:none;
+			}
+		}
+	}
+}
+
+@media (max-width: 730px) {
+	.text-vertical-title-section {
+		.text-vertical-title-container {
+			min-height: 612px;
+			.top-text-container {
+				font-size: 30px;
+				line-height: 7rem;
+				text-underline-offset: 15px;
+				padding: 6px 0px 20px 30px;
+			}
+			.bottom-text-container {
+				text-align: left;
+				padding: 20px 80px 20px 32px;
+				font-size: 20px;
+			}
+			.vertical-title-container {
+				display:none;
+			}
+		}
+	}
+}

@@ -6,7 +6,9 @@
             "key": "field_61f9577e645b5",
             "label": "couleur du background",
             "name": "content-section-background-color",
+            "aria-label": "",
             "type": "color_picker",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -15,9 +17,37 @@
                 "id": ""
             },
             "admin_only": 0,
-            "default_value": "",
+            "default_value": "#EFEAE7",
             "enable_opacity": 0,
             "return_format": "string"
+        },
+        {
+            "key": "field_64526be829850",
+            "label": "Choix du padding interne",
+            "name": "section-padding",
+            "aria-label": "",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "admin_only": 0,
+            "choices": {
+                "full-size": "Full size",
+                "box": "Boxé"
+            },
+            "default_value": [
+                "full-size"
+            ],
+            "return_format": "value",
+            "allow_custom": 0,
+            "layout": "vertical",
+            "toggle": 0,
+            "save_custom": 0
         }
     ],
     "location": [
@@ -38,5 +68,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1643731509
+    "modified": 1683126364
 }

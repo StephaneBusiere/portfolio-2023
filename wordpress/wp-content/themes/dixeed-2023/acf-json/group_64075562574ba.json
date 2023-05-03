@@ -3,6 +3,25 @@
     "title": "Block horizontal slider with arrows",
     "fields": [
         {
+            "key": "field_644690bc57cb3",
+            "label": "Couleur en background",
+            "name": "horizontal-slide-background-color",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "admin_only": 0,
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string"
+        },
+        {
             "key": "field_6407556394dc9",
             "label": "Slide",
             "name": "horizontal_slide",
@@ -119,5 +138,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1678277940
+    "modified": 1682346200
 }
