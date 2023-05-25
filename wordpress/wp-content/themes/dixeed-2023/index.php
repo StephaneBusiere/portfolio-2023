@@ -17,55 +17,15 @@
  *
  */
 
-get_header();
+ get_header(); ?>
+ <div id="primary" class="content-area">
+	 <main id="main" class="site-main" role="main">
+		 <?php
+		 while ( have_posts() ) : the_post();
+			 ign_template('content');
+		 endwhile; 
+		 ?>
+	 </main>
+ </div>
 
-
-?>
-
-    <div id="primary" class="content-area">
-        <main id="main" class="site-main" role="main">
-
-            <header class="entry-header layout-center-content">
-                <div class="container text-center">
-                    <h1 class="entry-title">
-						<?php if ( is_front_page() ) {
-							echo get_bloginfo( 'name' );
-						}
-
-						if( is_post_type_archive()){
-						    echo post_type_archive_title();
-                        } ?>
-                    </h1>
-                </div>
-            </header>
-
-            <div class="container">
-                <section class="archive-cards card-grid">
-					<?php
-					if ( have_posts() ):
-						while ( have_posts() ) : the_post();
-							ign_template( 'card' );
-						endwhile;
-					endif;
-
-					?>
-                </section><!-- .entry-content -->
-
-                <div class="container card-pagination text-center">
-					<?php
-					the_posts_pagination( array(
-						'prev_text'          => '<span class="iconify" data-icon="carbon:chevron-left"></span><span class="screen-reader-text">' . __( 'Previous page', 'dixeed-2023' ) . '</span>',
-						'next_text'          => '<span class="screen-reader-text">' . __( 'Next page', 'dixeed-2023' ) . '</span><span class="iconify" data-icon="carbon:chevron-right"></span>',
-						'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'dixeed-2023' ) . ' </span>',
-					) );
-					?>
-                </div>
-
-            </div>
-
-        </main><!-- #main -->
-    </div><!-- #primary -->
-
-
-<?php
-get_footer();
+<?php get_footer(); ?>
