@@ -254,7 +254,7 @@ function dixeed_2023_scripts() {
 		wp_get_theme()->get( 'Version' ), true );
 
 	//AJAX ready for .custom.js files
-	wp_localize_script( 'dixeed-2023-custom-js', 'frontEndAjax', array(
+	wp_localize_script( 'realisations-archive-block', 'frontEndAjax', array(
 		'ajaxurl'    => admin_url( 'admin-ajax.php' ),
 		'nonce'      => wp_create_nonce( 'ajax_nonce' ),
 		'url'        => home_url(),
@@ -417,4 +417,3 @@ require_once get_parent_theme_file_path( '/inc/core/dev-helpers.php' );
 //no need to include php files, just add them to the inc folder and start them with an underscore. Ignition takes care of the rest!
 //Ignition will also search two directories deep for more underscored files within inc, blocks, and post-types folders.
 // (ie: inc/acf-extras/_acf-extras.php )
-

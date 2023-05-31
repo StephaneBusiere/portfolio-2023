@@ -17,11 +17,8 @@
   padding-top: 40px;
 }
 
-.filter-item-all.stop,
-.filter-item-banque,
-.filter-item-mecenat,
-.filter-item-recrutement,
-.filter-item-responsable {
+.filter-item.all.stop,
+.filter-item {
   margin-left: 30px;
   border: 1px solid #333333;
   border-radius: 15px;
@@ -33,11 +30,8 @@
   font-size: 14px;
   text-transform: uppercase;
 }
-.filter-item-all,
-.filter-item-banque.active,
-.filter-item-mecenat.active,
-.filter-item-recrutement.active,
-.filter-item-responsable.active {
+.filter-item.all,
+.filter-item.active {
   margin-left: 30px;
   border: 1px solid #333333;
   border-radius: 15px;
@@ -244,7 +238,7 @@
     margin-bottom: 40px;
     padding-top: 20px;
   }
-  .filter-item-all {
+  .filter-item.all {
     margin-left: 10%;
     border-bottom: 1px solid #333333;
     border-top: 0px solid #333333;
@@ -261,7 +255,7 @@
     text-transform: uppercase;
     width: 80%;
   }
-  .filter-item-all::after {
+  .filter-item.all::after {
     content: inline-svg(
       '<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"><path d="m7.31 1.621 10 10-10 10" stroke="#333333" fill="none" fill-rule="evenodd"/></svg>'
     );
@@ -270,7 +264,7 @@
     transform: rotate(90deg);
     cursor: pointer;
   }
-  .filter-item-all::before {
+  .filter-item.all::before {
     content: inline-svg(
       '<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"><g transform="translate(3 4)" stroke="#4A4A4A" stroke-width="2" fill="none" fill-rule="evenodd"><path stroke-linecap="round" d="M3.5 0v16M9.5 0v16M15.5 0v16"/><circle fill="#FFF" cx="3.5" cy="5" r="2.5"/><circle fill="#FFF" cx="9.5" cy="12" r="2.5"/><circle fill="#FFF" cx="15.5" cy="7" r="2.5"/></g></svg>'
     );
@@ -278,20 +272,20 @@
     top: 5px;
     left: -5px;
   }
-  .filter-item-banque,
+  .filter-item,
   .filter-item-mecenat,
   .filter-item-recrutement,
   .filter-item-responsable {
     display: none !important;
   }
-  .filter-item-banque.open,
+  .filter-item.open,
   .filter-item-mecenat.open,
   .filter-item-recrutement.open,
   .filter-item-responsable.open {
     display: block !important;
   }
-  .filter-item-all.stop,
-  .filter-item-banque,
+  .filter-item.all.stop,
+  .filter-item,
   .filter-item-mecenat,
   .filter-item-recrutement,
   .filter-item-responsable {
@@ -311,7 +305,7 @@
     width: 80%;
     font-weight: normal;
   }
-  .filter-item-banque.active,
+  .filter-item.active,
   .filter-item-mecenat.active,
   .filter-item-recrutement.active,
   .filter-item-responsable.active {
