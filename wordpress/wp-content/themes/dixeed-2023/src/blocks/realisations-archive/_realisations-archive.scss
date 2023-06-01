@@ -1,11 +1,24 @@
 @use "../../sass/resources"as *;
 
-.News-section {
-  margin-top: 40px;
-  margin-bottom: 40px;
+.realisation-section {
   margin: 0 auto;
-  width: 1180px;
-}
+  position: relative;
+  .loader-container {
+    position: absolute;
+    background-color: #EFEAE7;
+    width: 100%;
+    height: 800px;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display:none;
+    &.active {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
 .filter-container {
   width: 1200px;
   height: auto;
@@ -43,11 +56,11 @@
   font-size: 14px;
   text-transform: uppercase;
 }
-.News-left {
+.realisations-left {
   width: 500px;
   height: auto;
 }
-.News-slogan {
+.realisations-slogan {
   font-family: "Ubuntu";
   font-size: 12px;
   text-transform: uppercase;
@@ -55,22 +68,22 @@
   border-bottom: 1px solid #000;
 }
 
-.News-title {
+.realisations-title {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.News-title > a {
+.realisations-title > a {
   color: black;
   text-decoration: none;
 }
-.News-button {
+.realisations-button {
   width: 183px;
   height: 48px;
   background-color: var(--red);
   text-align: center;
 }
 
-.News-button > a {
+.realisations-button > a {
   color: white;
   position: relative;
   top: 10px;
@@ -79,132 +92,57 @@
   font-weight: bold;
   text-decoration: none;
 }
-.News-container {
-  width: 100%;
-  height: 215px;
-  display: grid;
-  grid-template-columns: 125px 20% 1fr auto;
-  border-bottom: 1px solid #66666680;
-  margin-bottom: 30px;
-  padding-top: 20px;
-  grid-gap: 15px;
-}
-.News-date {
-  display: inline-block;
-  position: relative;
-  top: 60px;
-  left: 0px;
-  font-family: "Ubuntu";
-  font-size: 13px;
-  text-transform: uppercase;
-  color: black;
-  text-decoration: none;
-}
-.News-date > a {
-  color: black;
-  text-decoration: none;
-}
-.News-thumbnail {
-  height: 145px;
-  position: relative;
-}
 
-.News-thumbnail img {
-  height: 100%;
-  object-fit: cover;
-}
+.realisations-wrapper {
+  padding: 0 80px 40px 0px;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 2s linear;
+    &.fade {
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0s 2s, opacity 2s linear;
 
-.News-tag {
-  font-family: "Ubuntu";
-  font-size: 12px;
-  text-transform: uppercase;
-  display: inline-block;
-  border-bottom: 1px solid #000;
-  & > a {
-    text-decoration: none;
-    color: #333333;
-    pointer-events: none;
+    }
+  .realisations-container {
+    width: 100%;
+    height: 215px;
+    display: flex;
+    border-bottom: 1px solid #66666680;
+    padding-top: 20px;
+    justify-content: space-between;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 2s linear;
+    &.fade {
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0s 2s, opacity 2s linear;
+
+    }
+    .realisations-category-container {
+      display:flex;
+      .realisations-category {
+        border:1px solid black;
+        margin: 20px 20px 0 0;
+        padding: 1px 9px;
+      }
+    }
+    .realisations-thumbnail {
+      height: 145px;
+      position: relative;
+    }
+  
+    .realisations-thumbnail img {
+      height: 100%;
+      object-fit: cover;
+    }
   }
 }
 
-.News-resum {
-  font-family: "Ubuntu";
-  font-size: 15px;
-  line-height: 22px;
 }
-.News-resum > a {
-  color: black;
-  text-decoration: none;
-}
-.news-arrow-link {
-  position: relative;
-  top: 30%;
-  left: 30px;
-}
-
-.news-arrow-link > a {
-  font-size: 30px;
-  color: var(--red);
-  text-decoration: none;
-}
-
-.icon-news {
-  width: 30px;
-  height: auto;
-  object-fit: cover;
-}
-.news-dowload-link {
-  width: 150px;
-  height: 48px;
-  background-color: var(--red);
-  text-align: center;
-  position: relative;
-  top: 50px;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  position: relative;
-  display: inline-block;
-  padding-top: 10px;
-}
-.news-dowload-link:hover,
-.newsroom-dowload-link:hover {
-  background-color: white;
-  color: var(--red);
-  border: 1px solid rgba(0, 0, 0, 0.397);
-}
-.newsroom-dowload-link {
-  width: 150px;
-  height: 48px;
-  background-color: var(--red);
-  text-align: center;
-  position: relative;
-  top: 50px;
-  margin: 30px auto;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  position: relative;
-  display: block;
-  padding-top: 10px;
-}
-
-.share-title {
-  width: 40px;
-  height: 170px;
-  position: fixed;
-  right: 80px;
-  top: 75%;
-  text-transform: uppercase;
-  font-size: 16px;
-  font-weight: bold;
-  border-left: 1px solid var(--red);
-  padding-left: 10px;
-}
-.share-title-mobile {
-  display: none;
-}
-
 @media (max-width: 1400px) {
   .essb_links.essb_displayed_bottom.essb_share.essb_content_responsive.essb_template_grey-retina::before {
     content: "PARTAGER";
@@ -214,13 +152,13 @@
   }
 }
 @media (min-width: 1261px) {
-  .News-thumbnail img {
+  .realisations-thumbnail img {
     width: 100%;
   }
 }
 
 @media (max-width: 1260px) {
-  .icon-news {
+  .icon-realisations {
     width: 30px;
     height: auto;
     -o-object-fit: cover;
@@ -324,7 +262,7 @@
     text-transform: uppercase;
     font-weight: bold;
   }
-  .News-section {
+  .realisations-section {
     margin-top: 40px;
     margin-bottom: 40px;
     margin: 0 auto;
@@ -333,32 +271,32 @@
     padding-right: 10%;
     padding-top: 0px;
   }
-  .News-container {
+  .realisations-container {
     display: block;
     height: auto;
     padding-bottom: 1.5rem;
 
-    .News-date {
+    .realisations-date {
       top: 0px;
       margin-bottom: 1rem;
     }
 
-    .News-text-left {
+    .realisations-text-left {
       margin-top: 1.5rem;
     }
 
-    .news-arrow-link {
+    .realisations-arrow-link {
       display: none;
     }
   }
 
-  .News-thumbnail {
+  .realisations-thumbnail {
     width: 100%;
     height: auto;
     display: inline-block;
   }
 
-  .News-thumbnail img {
+  .realisations-thumbnail img {
     height: auto;
     object-fit: none;
     width: 100%;
@@ -374,7 +312,7 @@
     font-weight: bold;
     border-bottom: 1px solid var(--red);
   }
-  .news-dowload-link {
+  .realisations-dowload-link {
     width: 150px;
     height: 48px;
     background-color: var(--red);
