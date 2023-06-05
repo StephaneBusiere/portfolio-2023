@@ -1,0 +1,38 @@
+@use "../../sass/resources" as *;
+
+.quote-section {
+  padding: 0;
+   .quote-container {
+	position:relative;
+	border-top: 1px solid #BE916B;
+	border-bottom: 1px solid #BE916B;
+	margin: 0 80px;
+  		.quote-text {
+			padding: 100px 400px;
+		}
+
+		.quote-icon {
+			position: absolute;
+			width: 122px;
+    		height: 78px;
+    		top: -24px;
+    		right: 80px;
+    		z-index: 2;
+		}
+		
+	}
+}
+
+@media (max-width:1280px) {
+	.quote-section {
+		.quote-container {
+		
+			.quote-text {
+				
+			}
+			
+		}
+	}
+	 
+	
+}

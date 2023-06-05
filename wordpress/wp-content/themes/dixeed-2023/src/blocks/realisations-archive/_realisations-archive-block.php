@@ -22,6 +22,7 @@ function realisation_archive_register_acf_block() {
 			'keywords'        => array( 'places', 'media', 'pattern' ),
 			'enqueue_assets'  => function() {
 				wp_enqueue_script( 'realisations-archive', get_template_directory_uri() . '/src/blocks/realisations-archive/realisations-archive-block.js', array(), '1.0.0', true );
+				wp_localize_script( 'realisations-archive', 'ajax_url', admin_url( 'admin-ajax.php' ) ) ;
 			},
 			'supports'        => array(
 				'align'  => array( 'full' ),
