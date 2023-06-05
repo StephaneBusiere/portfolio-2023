@@ -30,7 +30,7 @@ function realisations_register_post_types() {
 		'supports'        => array( 'title', 'editor', 'thumbnail','author' ),
 		'menu_position'   => 5,
 		'menu_icon'       => 'dashicons-star-empty',
-		'capability_type' => 'page',
+		'capability_type' => 'post',
 		'hierarchical'    => false,
 		'taxonomies'  => array( 'category' ),
 	);

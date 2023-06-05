@@ -1,8 +1,8 @@
 <?php
 /**
- * Block to display a text xith vertical title.
+ * Block to display a text border.
  *
- * @package Blocks/text-vertical-title
+ * @package Blocks/text-border
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -10,13 +10,13 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Registers a new block with ACF
  */
-function text_vertical_title_acf_block() {
+function text_border_acf_block() {
 	acf_register_block_type(
 		array(
-			'name'            => 'Dixeed/text-vertical-title',
-			'title'           => __( '[Dixeed] texte avec titre vertical', 'k-ip-ignition' ),
-			'description'     => __( 'Block texte avec titre vertical', 'k-ip-ignition' ),
-			'render_template' => 'src/blocks/text-vertical-title/text-vertical-title-block.template.php',
+			'name'            => 'Dixeed/text-border',
+			'title'           => __( '[Dixeed] Block text avec un border', 'k-ip-ignition' ),
+			'description'     => __( 'Block citation', 'k-ip-ignition' ),
+			'render_template' => 'src/blocks/text-border/text-border-block.template.php',
 			'category'        => 'ign-custom',
 			'icon'            => 'slides',
 			'keywords'        => array( 'places', 'media', 'pattern' ),
@@ -39,5 +39,5 @@ function text_vertical_title_acf_block() {
 
 // Check if function exists and hook into setup and adds all blocks.
 if ( function_exists( 'acf_register_block_type' ) ) {
-	add_action( 'acf/init', 'text_vertical_title_acf_block' );
+	add_action( 'acf/init', 'text_border_acf_block' );
 }

@@ -1,0 +1,84 @@
+@use "../../sass/resources" as *;
+
+.text-border-section {
+  padding: 0;
+   .text-border-container {
+	position:relative;
+	margin: 0 80px;
+	&::before {
+		content : "";
+  		position: absolute;
+  		left    : 0;
+  		bottom  : 0;
+  		height  : 1px;
+  		width   : 50%;
+  		border-bottom:1px solid #BE916B;
+	}
+	&::after {
+		content : "";
+  		position: absolute;
+  		right    : 0;
+  		top : 0;
+  		height  : 1px;
+  		width   : 50%;
+  		border-bottom:1px solid #BE916B;
+	}
+  		.text-border-text {
+			padding: 100px 400px;
+			&::before {
+				content : "";
+				position: absolute;
+				left: 30px;
+    			bottom: 150px;
+    			height: 1px;
+    			width: 180px;
+    			border-bottom: 1px solid #BE916B;
+    			transform: rotate(90deg);
+    			transform-origin: left;
+				z-index: 9;
+			}
+			&::after {
+				content : "";
+				position: absolute;
+				right: 30px;
+    			top: 150px;
+    			height: 1px;
+    			width: 180px;
+    			border-bottom: 1px solid #BE916B;
+    			transform: rotate(90deg);
+    			transform-origin: right;
+				z-index: 9;
+			}
+
+			
+		}
+		
+	}
+}
+.vertical-text {
+	position:absolute;
+	top:140px;
+	font-size: 150px;
+	font-weight: 700;
+	line-height: 247px;
+	font-family: 'Basier-circle-bold';
+	color: var(--white);
+	-webkit-text-shadow: -1px -1px 0 #BE916B, 1px -1px 0 #BE916B, -1px 1px 0 #BE916B, 1px 1px 0 #BE916B;
+	text-shadow: -1px -1px 0 #BE916B, 1px -1px 0 #BE916B, -1px 1px 0 #BE916B, 1px 1px 0 #BE916B;
+	writing-mode: vertical-rl;
+	text-orientation: mixed;
+	z-index: 9;
+	}
+@media (max-width:1280px) {
+	.text-border-section {
+		.text-border-container {
+		
+			.text-border-text {
+				
+			}
+			
+		}
+	}
+	 
+	
+}

@@ -55,6 +55,9 @@ $media-list: ('container': 1200px, 'medium': 768px, 'small': 576px, 'large': 103
 - Any items inside with full-width or .alignfull will NOT have a max-width and will fill page
 - Dont surround container-content with a container or full items wont be full width!
 */
+body.realisations-dixeed-template-default {
+	background-color: var(--light-grey);
+}
 .container-content {
   padding: 0 var(--container-padding); //still has padding.
   width: 100%;
@@ -78,7 +81,14 @@ $media-list: ('container': 1200px, 'medium': 768px, 'small': 576px, 'large': 103
   }
 
 }
-
+.after-article.container-content {
+	background-color:var(--light-grey);
+	> nav > div > div > a {
+		color:var(--bleu-500);
+		font-weight: bold;
+		
+	}
+}
 
 /*------- Special exceptions for container contents padding  --------*/
 //remove container-content's padding when inside a container. Otherwise padding doubles up
