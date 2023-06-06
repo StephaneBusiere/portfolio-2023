@@ -1,15 +1,11 @@
-.panel-left-toggle:focus, .panel-right-toggle:focus{
-  border: 1px dashed white;
-}
-
 
 /*--------------------------------------------------------------
 # Panel Left Styling
 --------------------------------------------------------------*/
 #panel-left {
-  background: #4c545d;
-  color: white;
-  padding-top: 80px;
+  background: var(--light-grey);
+  color: black;
+  padding-top: 100px;
 }
 
 
@@ -33,8 +29,8 @@ body .navigation-menu-icon {
 
 /*-------  #panel Right --------*/
 #panel-right {
-  background: rgb(30, 30, 34);
-  color: white;
+  background: var(--light-grey);
+  color: black;
   padding-top: 60px;
 }
 

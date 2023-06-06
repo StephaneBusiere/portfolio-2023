@@ -8,7 +8,7 @@
 	border-bottom: 1px solid #BE916B;
 	margin: 0 80px;
   		.quote-text {
-			padding: 100px 400px;
+			padding: 100px 20%;
 		}
 
 		.quote-icon {
@@ -34,5 +34,21 @@
 		}
 	}
 	 
-	
+}
+@media (max-width: $media-nav) {
+	.quote-section {
+		.quote-container {
+			margin: 0 20px;
+			.quote-text {
+				padding: 100px 0;
+			}
+			.quote-icon {
+				width: 82px;
+				height: 70px;
+				top: -18px;
+				right: 5%;
+			}
+			
+		}
+	}
 }

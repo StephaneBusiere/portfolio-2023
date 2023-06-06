@@ -20,14 +20,22 @@
 # Vertical Menu in Panel Left overrides
 --------------------------------------------------------------*/
 #panel-left {
+  .menu .current-menu-item, .menu li {
+    color: black;
+    text-align: center;
+    font-size:40px;
+  }
   //current menu and a toggled-open one
   .menu .current-menu-item, .menu li.toggled-on {
-    background: rgba(0, 0, 0, .3);
+    background: black;
     color: white;
+    text-align: center;
+    font-size:40px;
+    margin: 0 40px;
 
     //top level item
     > .menu-item-link {
-      background: rgba(0, 0, 0, .5);
+      background: black;
     }
   }
 }

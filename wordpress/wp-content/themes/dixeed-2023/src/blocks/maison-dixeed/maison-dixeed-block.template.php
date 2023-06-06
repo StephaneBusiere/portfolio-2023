@@ -10,7 +10,6 @@
 
 $background_color = get_field( 'background_color_maison-dixeed' );
 $description_text = get_field( 'text_maison-dixeed' );
-$image_maison     = get_field( 'image_maison-dixeed' );
 $cta_link         = get_field( 'cta_link_maison' );
 ?>
 
@@ -50,7 +49,6 @@ $cta_link         = get_field( 'cta_link_maison' );
 				</a>
 				</div>
 			</div>
-			
 		</div>
 		<div class="maison-image-container">
 		</div>

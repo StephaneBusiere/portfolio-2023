@@ -22,7 +22,6 @@ $background_color = get_field( 'background_color_realisations_archive' );
 			?>
 			  
 			<div class="filter-container">
-			<img class="icon-realisations" src="<?php echo get_template_directory_uri(); ?>/images/icons-trie.svg" alt="">
 				<div class="filter-item all" data-category="all"><?php echo __( 'Toutes les réalisations', 'Dixeed-2023' ); ?></div>
 				<?php
 				if ( ! empty( $terms ) ) :

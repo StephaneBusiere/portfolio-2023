@@ -15,7 +15,7 @@
   "dev_admin_bar_color": "#2c2c2c",
   "admin_access_capability": "manage_options",
   "load_custom_icons": false,
-  "mobile_menu_type": "app-menu",
+  "mobile_menu_type": "",
   "logo_position": "logo-left",
   "site_top_container": "container",
   "default_acf_header_block" : ["post", "page"]

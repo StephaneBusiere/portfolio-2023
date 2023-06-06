@@ -60,13 +60,10 @@
     		right: 155px;
     		width: 376px;
     		height: 550px;
-			background-image:url('../../../images/image-maison.png');
+			background-image:url('../../../images/image-maison-mask.png');
 			background-size: contain;
 			background-position: center;
 			background-repeat: no-repeat;
-			border-top-left-radius: 250px 200px;
-			border-top-right-radius: 250px 200px;
-			border:1px solid white;
 		}
 		.maison-text-container {
 			color:white;
@@ -119,14 +116,14 @@
 					  display: block;
 					  .shape {
 						display: block;
-						width: 200px;
-						height: 200px;
+						width: 400px;
+						height: 400px;
 						border-radius: 50%;
 						background-color: var(--orange-500);
 						position: absolute;
 						z-index: 0;
-						top: calc(50% - 100px);
-						left: calc(50% - 100px);
+						top: calc(50% - 200px);
+						left: calc(50% - 200px);
 						transform: scale(0);
 						transition: transform 300ms ease;
 					  }
@@ -599,14 +596,14 @@
 						  display: block;
 						  .shape {
 							display: block;
-							width: 200px;
-							height: 200px;
+							width: 400px;
+							height: 400px;
 							border-radius: 50%;
 							background-color: var(--orange-500);
 							position: absolute;
 							z-index: 0;
-							top: calc(50% - 100px);
-							left: calc(50% - 100px);
+							top: calc(50% - 200px);
+							left: calc(50% - 200px);
 							transform: scale(0);
 							transition: transform 300ms ease;
 						  }
@@ -733,14 +730,14 @@
 						  display: block;
 						  .shape {
 							display: block;
-							width: 200px;
-							height: 200px;
+							width: 400px;
+							height: 400px;
 							border-radius: 50%;
 							background-color: var(--orange-500);
 							position: absolute;
 							z-index: 0;
-							top: calc(50% - 100px);
-							left: calc(50% - 100px);
+							top: calc(50% - 200px);
+							left: calc(50% - 200px);
 							transform: scale(0);
 							transition: transform 300ms ease;
 						  }
