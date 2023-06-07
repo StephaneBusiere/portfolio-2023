@@ -55,6 +55,7 @@
   "dependencies": {
     "gsap": "^3.11.4",
     "locomotive-scroll": "^4.1.4",
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "velocity-animate": "^2.0.6"
   }
 }

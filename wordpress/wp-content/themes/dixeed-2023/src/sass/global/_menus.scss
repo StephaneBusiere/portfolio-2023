@@ -180,5 +180,21 @@
 
 //for more panel-left styling see panels.scss
 
+.site-navigation__nav-holder.desktop {
+  display:block;
 
+}
+.site-navigation.horizontal-menu.flex.not-home {
+  display:none;
+}
+
+@media (max-width:$media-nav) {
+  .site-navigation__nav-holder.desktop {
+    display:none;
+  }
+
+  .site-navigation.horizontal-menu.flex.not-home {
+    display:block;
+  }
+}
 
