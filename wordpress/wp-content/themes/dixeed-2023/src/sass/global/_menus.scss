@@ -10,12 +10,6 @@
   color: white;
 }
 
-//item hovered on
-.menu li:hover, .menu li.toggled-on, .menu li:active {
-  color: black;
-}
-
-
 /*--------------------------------------------------------------
 # Vertical Menu in Panel Left overrides
 --------------------------------------------------------------*/
@@ -187,14 +181,30 @@
 .site-navigation.horizontal-menu.flex.not-home {
   display:none;
 }
+.burger-menu-container.home {
+  display:none;
+ }
 
+ .home-full-logo {
+  display:none;
+ }
 @media (max-width:$media-nav) {
-  .site-navigation__nav-holder.desktop {
-    display:none;
+  .burger-menu-container {
+    height:50px;
   }
-
-  .site-navigation.horizontal-menu.flex.not-home {
+.burger-menu-container.home {
+  display:block;
+ }
+.site-navigation.horizontal-menu.flex.not-home {
+  display:block;
+  }
+  .home-full-logo {
     display:block;
   }
+   .site-top {
+    height: 120px!important;
+    padding:40px 0;
+}
+
 }
 

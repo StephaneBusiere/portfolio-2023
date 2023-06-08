@@ -48,9 +48,48 @@ $app_menu = ign_get_config( 'mobile_menu_type', 'regular_menu' ); //accepts svg 
 <?php if ( is_front_page() ) : ?>
 	<div id="panel-left"></div>
 	<div id="panel-right"></div>
-<?php else : ?>
-	<div>
-		<?php echo ign_logo(); ?>
+	
+	<div class="burger-menu-container home">
+	<?php add_filter('wp_nav_menu_items','add_new_menu_item', 10, 2);
+	function add_new_menu_item( $nav, $args ) {
+		$newmenuitem ="<div class='home-full-logo'>" . ign_logo() . "</div>";
+		$nav = $newmenuitem.$nav;
+		return $nav;
+	}?>
+		<div class="site-navigation__nav-holder desktop" >
+				<nav class="site-navigation__nav" role="navigation"
+					 aria-label="<?php _e( 'Top Menu', 'dixeed-2023' ); ?>">
+					<?php
+					wp_nav_menu(
+						array(
+							'theme_location' => 'top-menu',
+							'menu_id'        => 'top-menu-animated',
+							'container'      => '',
+							'fallback_cb'    => 'link_to_menu_editor',
+						)
+					);
+					?>
+				</nav>
+			</div>
+		<div class="cd-overlay-nav">
+			<span ></span>
+		</div>
+
+		<div class="cd-overlay-content">
+			<span></span>
+		</div> 
+		<a href="#0" class="cd-nav-trigger">Menu<span class="cd-icon"></span></a>
+	</div>
+<?php else : 
+	add_filter('wp_nav_menu_items','add_new_menu_item', 10, 2);
+	function add_new_menu_item( $nav, $args ) {
+		$newmenuitem = ign_logo();
+		$nav = $newmenuitem.$nav;
+		return $nav;
+	}
+	
+	?>
+	<div class="burger-menu-container">
 		<div class="site-navigation__nav-holder desktop" >
 				<nav class="site-navigation__nav" role="navigation"
 					 aria-label="<?php _e( 'Top Menu', 'dixeed-2023' ); ?>">
