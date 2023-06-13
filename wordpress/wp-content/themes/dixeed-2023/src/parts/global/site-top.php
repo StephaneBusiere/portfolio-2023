@@ -10,7 +10,7 @@
 
 ?>
 
-<div class="site-top <?php echo ign_get_config( 'logo_position', 'logo-left' ); ?>">
+<div class="site-top <?php echo ign_get_config( 'logo_position', 'logo-left' ); ?>"data-scroll-section>
 	<div class="site-top-container <?php echo ign_get_config( 'site_top_container', 'container' ); ?>">
 	<?php if ( is_front_page() ) : ?>
 		<div class="site-navigation horizontal-menu flex">
@@ -39,7 +39,7 @@
 			<?php echo ign_logo(); ?>
 
 			<div class="site-navigation__nav-holder" data-moveto="#panel-left" data-moveat="--nav-move"
-				 data-moveto-pos="0">
+				 data-moveto-pos="0"data-scroll-section>
 				<nav class="site-navigation__nav" role="navigation"
 					 aria-label="<?php _e( 'Top Menu', 'dixeed-2023' ); ?>">
 					<?php

@@ -10,7 +10,7 @@ $marquee_ligne_2  = get_field( 'marquee_ligne_2' );
 $background_color = get_field( 'background_color_marquee' );
 ?>
 
-<section <?php ign_block_attrs( $block, 'marquees-block full-width' ); ?> style="background-color:<?php echo esc_attr( $background_color ); ?>">
+<section <?php ign_block_attrs( $block, 'marquees-block full-width' ); ?> style="background-color:<?php echo esc_attr( $background_color ); ?>"data-scroll-section>
 	<div class="marquees-wrapper">
 		<div class="marquee">
 			<?php

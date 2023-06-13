@@ -4,7 +4,7 @@
 # Body Background
 --------------------------------------------------------------*/
 body {
-  background: var(--body-bg);
+  background-color: var(--light-grey);
 }
 @media(max-width: $media-small) {
   .wp-block-spacer {
@@ -49,7 +49,7 @@ body {
 # Site Top - holds logo and main menu at top
 --------------------------------------------------------------*/
 .site-top {
-  position: relative; //change to fixed or absolute if wanted. if absolute add padding top to your entry-header!
+  position: fixed; //change to fixed or absolute if wanted. if absolute add padding top to your entry-header!
   background: var(--site-top);
   height:144px;
 }
@@ -100,6 +100,7 @@ body {
   color: var(--white);
   font-size: 1.1rem;
   height:auto;
+  height: 800px;
 
   a{
 	color: inherit;

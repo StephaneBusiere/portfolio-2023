@@ -1,13 +1,23 @@
 import LocomotiveScroll from 'locomotive-scroll';
 
-// init locmotiv scroll
-// if ($('#site-container').length) {
+
+// if ($('#site-content').length) {
 //    const scroll = new LocomotiveScroll({
-//       el: document.querySelector('#site-container'),
+//       el: document.querySelector('[data-scroll-container]'),
 //       smooth: true
 //    });
-//    // scroll.destroy();
-//    document.addEventListener("DOMContentLoaded", function(event) {
-//       scroll.update();
-//    });
+//    new ResizeObserver(() => scroll.update()).observe(document.querySelector("[data-scroll-container]"))
 // }
+
+
+window.addEventListener("load", () => {
+   const scroll = new LocomotiveScroll({
+     el: document.querySelector("[data-scroll-container]"),
+     smooth: true,
+     multiplier: 0.75,
+     scrollFromAnywhere: true,
+   });
+ });
+ setTimeout(() => {
+   scroll.update();
+ }, 5000);

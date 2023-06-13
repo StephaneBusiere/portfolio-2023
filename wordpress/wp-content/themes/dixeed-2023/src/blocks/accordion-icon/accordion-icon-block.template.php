@@ -21,7 +21,7 @@ $extra_classes      = $disable_responsive === true ? ' disable-responsive-style'
 $background_color = get_field( 'background_color_accordeon' );
 ?>
 
-<section <?php ign_block_attrs( $block, 'accordion-block-wrapper full-width' . $extra_classes ); ?> style="background-image:url(<?php echo esc_url( $background_image ); ?>); background-color:<?php echo ( $background_color ); ?> ">
+<section <?php ign_block_attrs( $block, 'accordion-block-wrapper full-width' . $extra_classes ); ?> style="background-image:url(<?php echo esc_url( $background_image ); ?>); background-color:<?php echo ( $background_color ); ?>"data-scroll-section>
 	<?php if ( have_rows( 'accordions_block' ) ) : ?>
 		<div class="accordion-block container">
 			<?php

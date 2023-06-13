@@ -30,10 +30,10 @@ $title_text_icon = get_field( 'title-text-icon' );
 
 ?>
 
-<section <?php ign_block_attrs( $block, 'text-image-section full-width' ); ?> style="background-color:<?php echo esc_attr( $background_color ); ?>">
+<section <?php ign_block_attrs( $block, 'text-image-section full-width' ); ?> style="background-color:<?php echo esc_attr( $background_color ); ?>" data-scroll-section>
 
 	<div class="text-image-container <?php echo esc_attr( $text_position [0] ); ?> <?php echo esc_attr( $text_spacing [0] ); ?>">
-		<div class="image-container" style="background-image:url(<?php echo esc_url( $background_image ); ?>);align-items:<?php echo esc_attr( $align_image_block[0] ); ?>;justify-content:<?php echo esc_attr( $vertical_align_image[0] ); ?>">
+		<div class="image-container" style="background-image:url(<?php echo esc_url( $background_image ); ?>);align-items:<?php echo esc_attr( $align_image_block[0] ); ?>;justify-content:<?php echo esc_attr( $vertical_align_image[0] ); ?>"data-scroll data-scroll-speed="0" >
 		<?php if ( $image_mobile ) : ?>
 			<img class="image-mobile" src="<?php echo esc_url( $image_mobile ); ?>" alt="">
 			<?php else : ?>
@@ -42,7 +42,7 @@ $title_text_icon = get_field( 'title-text-icon' );
 			<img class="image" src="<?php echo esc_url( $image ); ?>" alt="">
 		</div>
 		<?php if ( $text_type[0] === 'text' ) : ?>
-		<div class="block-text-container" style="background-color:<?php echo esc_attr( $background_color ); ?>;justify-content:<?php echo esc_attr( $vertical_align_text[0] ); ?>"><?php the_field( 'text' ); ?></div>
+		<div class="block-text-container" style="background-color:<?php echo esc_attr( $background_color ); ?>;justify-content:<?php echo esc_attr( $vertical_align_text[0] ); ?>"><?php the_field( 'text' ); ?></div data-scroll data-scroll-speed="4" >
 		<?php endif; ?>
 		<?php
 		if ( $text_type[0] === 'icon' ) :

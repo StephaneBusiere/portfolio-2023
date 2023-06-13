@@ -14,7 +14,7 @@
 
 </div><!-- #site-content -->
 
-<footer id="colophon" class="site-footer" role="contentinfo">
+<footer id="colophon" class="site-footer" role="contentinfo"data-scroll-section>
 		<?php ign_template('src/parts/global/site-footer.php'); ?>
 </footer><!-- #colophon -->
 

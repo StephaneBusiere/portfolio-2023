@@ -36,7 +36,7 @@ $app_menu = ign_get_config( 'mobile_menu_type', 'regular_menu' ); //accepts svg 
 </a>
 
 
-<div class="site-container" id="site-container">
+<div class="site-container" id="site-container"data-scroll-container>
 	<?php
 	$menu_icon = ign_get_config( 'menu_icon', 'icon-regular' );
 	if ( $menu_icon == 'icon-regular' ) {
@@ -49,14 +49,14 @@ $app_menu = ign_get_config( 'mobile_menu_type', 'regular_menu' ); //accepts svg 
 	<div id="panel-left"></div>
 	<div id="panel-right"></div>
 	
-	<div class="burger-menu-container home">
+	<div class="burger-menu-container home"data-scroll-section>
 	<?php add_filter('wp_nav_menu_items','add_new_menu_item', 10, 2);
 	function add_new_menu_item( $nav, $args ) {
 		$newmenuitem ="<div class='home-full-logo'>" . ign_logo() . "</div>";
 		$nav = $newmenuitem.$nav;
 		return $nav;
 	}?>
-		<div class="site-navigation__nav-holder desktop" >
+		<div class="site-navigation__nav-holder desktop" data-scroll-section>
 				<nav class="site-navigation__nav" role="navigation"
 					 aria-label="<?php _e( 'Top Menu', 'dixeed-2023' ); ?>">
 					<?php

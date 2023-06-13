@@ -9,7 +9,7 @@ $realisation_slide = get_field( 'realisation_slide' );
 $cta_link          = get_field( 'cta_link_realisations' );
 $realisation_title = get_field( 'realisations_title' );
 ?>
-<section <?php ign_block_attrs( $block, 'realisation-slider-block full-width' ); ?> style="background-color:<?php echo esc_attr( $background_color ); ?>">
+<section <?php ign_block_attrs( $block, 'realisation-slider-block full-width' ); ?> style="background-color:<?php echo esc_attr( $background_color ); ?>"data-scroll-section>
 	<div class="realisations-container">
 		<img class="line-realisations-1"src="<?php echo get_template_directory_uri(); ?>/images/line-realisation-slider-top.svg " alt="">
 		<div class="realisation-title-container-mobile">
