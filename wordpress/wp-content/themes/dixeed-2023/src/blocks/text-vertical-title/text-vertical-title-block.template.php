@@ -5,7 +5,7 @@ $description_text = get_field( 'vertical-title-description-text' );
 $vertical_text = get_field( 'vertical-title' );
 ?>
 
-<section <?php ign_block_attrs( $block, 'text-vertical-title-section full-width' ); ?> style="background-color:<?php echo esc_attr( $background_color ); ?>">
+<section <?php ign_block_attrs( $block, 'text-vertical-title-section full-width' ); ?> style="background-color:<?php echo esc_attr( $background_color ); ?>"data-scroll-section>
 
 	<div class="text-vertical-title-container">
 		<div class="top-text-container" >

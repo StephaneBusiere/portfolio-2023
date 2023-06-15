@@ -1,11 +1,11 @@
 {
-    "key": "group_64075562574ba",
-    "title": "Block horizontal slider with arrows",
+    "key": "group_647e00b6b7438",
+    "title": "Block metodologie",
     "fields": [
         {
-            "key": "field_644690bc57cb3",
-            "label": "Couleur en background",
-            "name": "horizontal-slide-background-color",
+            "key": "field_647e00e62763a",
+            "label": "Couleur de background",
+            "name": "background_color_methodology",
             "aria-label": "",
             "type": "color_picker",
             "instructions": "",
@@ -22,9 +22,30 @@
             "return_format": "string"
         },
         {
-            "key": "field_6407556394dc9",
-            "label": "Slide",
-            "name": "horizontal_slide",
+            "key": "field_647e00b727639",
+            "label": "Texte",
+            "name": "methodology-text",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "admin_only": 0,
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_647e0120b7d0d",
+            "label": "Contenu de l'accordéon",
+            "name": "methodology-accordion",
             "aria-label": "",
             "type": "repeater",
             "instructions": "",
@@ -36,7 +57,7 @@
                 "id": ""
             },
             "admin_only": 0,
-            "layout": "row",
+            "layout": "table",
             "pagination": 0,
             "min": 0,
             "max": 0,
@@ -45,16 +66,16 @@
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_640755df94dca",
-                    "label": "Titre slide",
-                    "name": "slide_title",
+                    "key": "field_647e0147b7d0e",
+                    "label": "Titre accordéon",
+                    "name": "metodology-accordion-title",
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "100",
+                        "width": "",
                         "class": "",
                         "id": ""
                     },
@@ -66,36 +87,14 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "parent_repeater": "field_6407556394dc9"
+                    "parent_repeater": "field_647e0120b7d0d"
                 },
                 {
-                    "key": "field_6407560494dcb",
-                    "label": "Contenu slide",
-                    "name": "slide_content",
+                    "key": "field_647e0178b7d0f",
+                    "label": "Contenu de l'accordéon",
+                    "name": "metodology-accordion-content",
                     "aria-label": "",
                     "type": "wysiwyg",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "100",
-                        "class": "",
-                        "id": ""
-                    },
-                    "admin_only": 0,
-                    "default_value": "",
-                    "tabs": "all",
-                    "toolbar": "full",
-                    "media_upload": 0,
-                    "delay": 0,
-                    "parent_repeater": "field_6407556394dc9"
-                },
-                {
-                    "key": "field_64087c19205b8",
-                    "label": "Image",
-                    "name": "slide_graphic",
-                    "aria-label": "",
-                    "type": "image",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -105,36 +104,14 @@
                         "id": ""
                     },
                     "admin_only": 0,
-                    "return_format": "url",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": "",
-                    "preview_size": "medium",
-                    "parent_repeater": "field_6407556394dc9"
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0,
+                    "parent_repeater": "field_647e0120b7d0d"
                 }
             ]
-        },
-        {
-            "key": "field_648ad318812f3",
-            "label": "Lien du CTA",
-            "name": "cta-horizontal-slide-link",
-            "aria-label": "",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "admin_only": 0,
-            "return_format": "array"
         }
     ],
     "location": [
@@ -142,7 +119,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/dixeed-horizontal-slider"
+                "value": "acf\/dixeed-methodology"
             }
         ]
     ],
@@ -155,5 +132,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1686819662
+    "modified": 1686044609
 }

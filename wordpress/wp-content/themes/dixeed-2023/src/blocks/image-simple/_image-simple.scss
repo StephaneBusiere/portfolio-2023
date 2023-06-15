@@ -1,0 +1,13 @@
+@use "../../sass/resources" as *;
+
+.image-section {
+    padding: 0;
+    overflow: hidden;
+  .image-simple-container {
+    display:flex;
+	justify-content: center;
+   
+}
+}
+@media (max-width: $media-container) {
+}

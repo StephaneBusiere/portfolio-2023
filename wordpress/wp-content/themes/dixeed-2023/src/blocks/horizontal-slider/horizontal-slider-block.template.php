@@ -7,8 +7,11 @@
 
 $horizontal_slide = get_field( 'horizontal_slide' );
 $background_color = get_field( 'horizontal-slide-background-color' );
+$cta_link         = get_field( 'cta-horizontal-slide-link' );
+
 ?>
-<div <?php ign_block_attrs( $block, 'horizontal-slider-block full-width' ); ?> style="background-color:<?php echo esc_attr( $background_color ); ?>">
+<div <?php ign_block_attrs( $block, 'horizontal-slider-block full-width' ); ?> style="background-color:<?php echo esc_attr( $background_color ); ?>"data-scroll-section>
+<div class="horizontal-slider-block-content-container">
 	<div class="horizontal-slider-wrapper">
 		<?php
 		if ( have_rows( 'horizontal_slide' ) ) :
@@ -51,5 +54,13 @@ $background_color = get_field( 'horizontal-slide-background-color' );
 				// Do something...
 			endif;
 			?>
+			
+	</div>
+	<div class="cta">
+		<a href="<?php echo esc_url( $cta_link['url'] ); ?>" title="<?php echo esc_attr( $cta_link['title'] ); ?>">
+			<span class="shape"></span>
+			<span class="text"><?php echo esc_attr( $cta_link['title'] ); ?></span>
+		</a>
+	</div>
 	</div>
 </div>

@@ -8,7 +8,7 @@ $background_color = get_field( 'background_color_realisations_archive' );
 
 ?>
 
-<section  <?php ign_block_attrs( $block, 'realisation-section full-width' ); ?> style="background-color:<?php echo esc_attr( $background_color ); ?>">
+<section  <?php ign_block_attrs( $block, 'realisation-section full-width' ); ?> style="background-color:<?php echo esc_attr( $background_color ); ?>"data-scroll-section>
 
 			<?php
 			$taxonomies = array( 'category' );
@@ -22,7 +22,6 @@ $background_color = get_field( 'background_color_realisations_archive' );
 			?>
 			  
 			<div class="filter-container">
-			<img class="icon-realisations" src="<?php echo get_template_directory_uri(); ?>/images/icons-trie.svg" alt="">
 				<div class="filter-item all" data-category="all"><?php echo __( 'Toutes les réalisations', 'Dixeed-2023' ); ?></div>
 				<?php
 				if ( ! empty( $terms ) ) :

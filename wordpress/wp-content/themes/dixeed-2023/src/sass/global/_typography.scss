@@ -102,7 +102,25 @@ h4, .h4 {
   line-height: 24px;
   font-weight: 700;
 }
+@media (max-width:$media-tablett) {
+  h1, .h1 {
+    font-family: 'Basier-circle-bold';
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 700;
+  }
 
+}
+
+@media (max-width:$media-small) {
+  h1, .h1 {
+    font-family: 'Basier-circle-bold';
+    font-size: 50px;
+    line-height: 50px;
+    font-weight: 700;
+  }
+
+}
 /*--------------------------------------------------------------
 # paragprahs from figma design system
 --------------------------------------------------------------*/
@@ -151,9 +169,14 @@ p {
   font-style: normal;
   font-weight: 700;
   font-size: 120px;
-  line-height: 97px;
+  line-height: 120px;
 }
-
+@media (max-width: 1200px) {
+  .text-image-section .block-text-container p > span.title-shadow {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
 /*--------------------------------------------------------------
 # Basic Links
 --------------------------------------------------------------*/

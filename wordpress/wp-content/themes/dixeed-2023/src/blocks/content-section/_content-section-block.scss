@@ -8,6 +8,8 @@
   & > .container-content {
     z-index: 2;
     position: relative;
+    padding-bottom: 30px;
+
   }
     .container-content.box {
       padding:0 365px;
@@ -15,14 +17,13 @@
 }
 
 @media (max-width: $media-nav) {
-  .k-ip-section-content-block {
-    margin-bottom: 4rem;
+  .section-content-block {
     & > .container-content {
       padding-top: 2rem;
     }
-  }
-  .wp-block-columns.strapper-block {
-    flex-direction: column-reverse;
+    .container-content.box {
+      padding:0 20px;
+    }
   }
 }
 .wp-block-columns {

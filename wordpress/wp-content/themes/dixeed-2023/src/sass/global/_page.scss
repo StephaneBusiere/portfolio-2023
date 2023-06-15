@@ -4,7 +4,7 @@
 # Body Background
 --------------------------------------------------------------*/
 body {
-  background: var(--body-bg);
+  background-color: var(--light-grey);
 }
 @media(max-width: $media-small) {
   .wp-block-spacer {
@@ -100,6 +100,7 @@ body {
   color: var(--white);
   font-size: 1.1rem;
   height:auto;
+  height: 800px;
 
   a{
 	color: inherit;

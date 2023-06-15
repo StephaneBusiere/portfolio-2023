@@ -246,6 +246,9 @@
 }
 @media (max-width: 600px) {
   .accordion-block-wrapper:not(.disable-responsive-style) {
+    .accordion-block {
+      padding:0 10px;
+    }
     .accordion-content {
       .accordion-image-container {
         min-width: 90px;

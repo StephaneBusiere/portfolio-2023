@@ -10,11 +10,10 @@
 
 $background_color = get_field( 'background_color_maison-dixeed' );
 $description_text = get_field( 'text_maison-dixeed' );
-$image_maison     = get_field( 'image_maison-dixeed' );
 $cta_link         = get_field( 'cta_link_maison' );
 ?>
 
-<section <?php ign_block_attrs( $block, 'maison-dixeed-section full-width' ); ?> style="background-color:<?php echo esc_attr( $background_color ); ?>">
+<section <?php ign_block_attrs( $block, 'maison-dixeed-section full-width' ); ?> style="background-color:<?php echo esc_attr( $background_color ); ?>"data-scroll-section>
 
 	<div class="maison-dixeed-container">
 		<img class="line-maison-1"src="<?php echo get_template_directory_uri(); ?>/images/line-maison-1.svg " alt="">
@@ -50,7 +49,6 @@ $cta_link         = get_field( 'cta_link_maison' );
 				</a>
 				</div>
 			</div>
-			
 		</div>
 		<div class="maison-image-container">
 		</div>

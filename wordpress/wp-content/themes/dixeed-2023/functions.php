@@ -228,14 +228,12 @@ function dixeed_2023_scripts() {
 	//ie11 js polyfills
 	wp_enqueue_script( 'polyfill', 'https://polyfill.io/v3/polyfill.min.js?flags=gated&features=AbortController%2Cdefault%2CNodeList.prototype.forEach%2CEvent%2Csmoothscroll' );
 
-	// gsap 
-	
-	wp_enqueue_script( 'gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js' );
-
+	wp_enqueue_style( 'slick', get_template_directory_uri() . '/src/library/slider-library/css/slick2.css', array(), '1.8.1' );
 	wp_enqueue_style( 'slick', get_template_directory_uri() . '/src/library/slider-library/css/slick2.css', array(), '1.8.1' );
 	wp_enqueue_style( 'slick-theme', get_template_directory_uri() . '/src/library/slider-library/css/slick-theme2.css', array(), '1.8.1' );
 	wp_enqueue_script( 'slick', get_template_directory_uri() . '/src/library/slider-library/js/slick.min.js', array( 'jquery' ), '1.8.1', true );
-
+	wp_enqueue_script( 'velocity', get_template_directory_uri() . '/src/library/slider-library/js/velocity.min.js', array( 'jquery' ), '1.8.1', true );
+	wp_enqueue_script( 'gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js', true );
 	// custom modal
 	wp_enqueue_script( 'dixeed-2023-modal', get_stylesheet_directory_uri() . '/src/parts/modal/modal.js', array( 'jquery' ), '1.6.0', true );
  

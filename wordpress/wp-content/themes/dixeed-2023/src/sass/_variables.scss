@@ -82,7 +82,7 @@
   --flex-gap: calc(var(--grid-gap) / 2);
 
   /*------- Panels --------*/
-  --panel-left-width: 300px; //width of panel-left when open
+  --panel-left-width: 100vw; //width of panel-left when open
   --panel-right-width: 350px; //width of panel-right when open
 
   /*------- Z-index --------*/

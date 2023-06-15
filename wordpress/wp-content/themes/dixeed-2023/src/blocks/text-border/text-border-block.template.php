@@ -4,7 +4,7 @@ $text_border_text = get_field( 'text-border-text' );
 
 ?>
 
-<section <?php ign_block_attrs( $block, 'text-border-section full-width' ); ?> style="background-color:<?php echo esc_attr( $background_color ); ?>">
+<section <?php ign_block_attrs( $block, 'text-border-section full-width' ); ?> style="background-color:<?php echo esc_attr( $background_color ); ?>"data-scroll-section>
 
 	<div class="text-border-container">
 		<div class="text-border-text" >

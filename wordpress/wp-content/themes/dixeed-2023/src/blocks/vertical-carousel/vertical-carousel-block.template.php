@@ -9,7 +9,7 @@ $vertical_carousel_col_1 = get_field( 'vertical_carousel_col_1' );
 $vertical_carousel_col_2 = get_field( 'vertical_carousel_col_2' );
 $vertical_carousel_col_3 = get_field( 'vertical_carousel_col_3' );
 ?>
-<div <?php ign_block_attrs( $block, 'vertical-carousel-block full-width' ); ?> style="background-color:<?php echo esc_attr( $background_color ); ?>">
+<div <?php ign_block_attrs( $block, 'vertical-carousel-block full-width' ); ?> style="background-color:<?php echo esc_attr( $background_color ); ?>"data-scroll-section>
 	<div class="vertical-carousel-wrapper">
 		<?php
 		if ( have_rows( 'vertical_carousel_col_1' ) ) :

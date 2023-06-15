@@ -11,8 +11,8 @@ $video_modal_mp4   = get_field( 'video_modal_mp4' );
 $video_modal_webm  = get_field( 'video_modal_webm' );
 $video_poster      = get_field( 'video_poster' );
 ?>
-<section <?php ign_block_attrs( $block, 'video-fullwidth-block full-width' ); ?>>
-	<div class="video-fullwidth-wrapper">
+<section <?php ign_block_attrs( $block, 'video-fullwidth-block full-width' ); ?> data-scroll-section>
+	<div class="video-fullwidth-wrapper" data-scroll data-scroll-speed="-7">
 		<?php if($video_loop_mp4) { ?>
 			<video muted loop autoplay playsinline poster="<?php echo $video_poster;?>">
 				<source src="<?php echo $video_loop_webm;?>" type="video/webm">
