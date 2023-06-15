@@ -49,7 +49,7 @@ body {
 # Site Top - holds logo and main menu at top
 --------------------------------------------------------------*/
 .site-top {
-  position: fixed; //change to fixed or absolute if wanted. if absolute add padding top to your entry-header!
+  position: relative; //change to fixed or absolute if wanted. if absolute add padding top to your entry-header!
   background: var(--site-top);
   height:144px;
 }

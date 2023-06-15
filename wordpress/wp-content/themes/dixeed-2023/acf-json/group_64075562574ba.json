@@ -118,6 +118,23 @@
                     "parent_repeater": "field_6407556394dc9"
                 }
             ]
+        },
+        {
+            "key": "field_648ad318812f3",
+            "label": "Lien du CTA",
+            "name": "cta-horizontal-slide-link",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "admin_only": 0,
+            "return_format": "array"
         }
     ],
     "location": [
@@ -138,5 +155,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1682346200
+    "modified": 1686819662
 }

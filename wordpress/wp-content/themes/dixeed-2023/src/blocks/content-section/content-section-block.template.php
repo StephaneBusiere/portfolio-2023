@@ -12,7 +12,7 @@ $padding_choices  = get_field( 'section-padding' );
 
 
 ?>
-<section <?php ign_block_attrs( $block, 'section-content-block full-width' . $background_class ); ?> data-scroll-section>
+<section <?php ign_block_attrs( $block, 'section-content-block full-width' . $background_class ); ?>>
 <?php
 if ( $padding_choices ) :
 	foreach ( $padding_choices as $padding_choice ) :

@@ -9,7 +9,7 @@ $circle_text = get_field( 'circle_text' );
 $circle_text_color = get_field( 'circle_text_color' );
 ?>
 
-<div <?php ign_block_attrs( $block, 'circle-outline-text-block full-width' ); ?>>
+<div <?php ign_block_attrs( $block, 'circle-outline-text-block full-width' ); ?>data-scroll-section>
 	<div class="circle-outline-text">
 		<svg viewBox="0 0 100 100" width="100" height="100">
 		  <defs>

@@ -4,7 +4,7 @@ $quote_text       = get_field( 'quote-text' );
 
 ?>
 
-<section <?php ign_block_attrs( $block, 'quote-section full-width' ); ?> style="background-color:<?php echo esc_attr( $background_color ); ?>">
+<section <?php ign_block_attrs( $block, 'quote-section full-width' ); ?> style="background-color:<?php echo esc_attr( $background_color ); ?>"data-scroll-section>
 
 	<div class="quote-container">
 		<div class="quote-text" >

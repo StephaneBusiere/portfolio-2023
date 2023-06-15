@@ -14,7 +14,7 @@ $text             = get_field( 'methodology-text' );
 
 ?>
 
-<section <?php ign_block_attrs( $block, 'methodology-section full-width' ); ?> style="background-color:<?php echo esc_attr( $background_color ); ?>">
+<section <?php ign_block_attrs( $block, 'methodology-section full-width' ); ?> style="background-color:<?php echo esc_attr( $background_color ); ?>"data-scroll-section>
 
 	<div class="methodology-container">
 		<div class="text-container"><?php echo wp_kses_post( $text ); ?>

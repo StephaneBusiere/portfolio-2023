@@ -8,7 +8,7 @@ $background_color = get_field( 'background_color_realisations_archive' );
 
 ?>
 
-<section  <?php ign_block_attrs( $block, 'realisation-section full-width' ); ?> style="background-color:<?php echo esc_attr( $background_color ); ?>">
+<section  <?php ign_block_attrs( $block, 'realisation-section full-width' ); ?> style="background-color:<?php echo esc_attr( $background_color ); ?>"data-scroll-section>
 
 			<?php
 			$taxonomies = array( 'category' );

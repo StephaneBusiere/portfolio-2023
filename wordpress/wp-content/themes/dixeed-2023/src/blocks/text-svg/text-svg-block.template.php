@@ -14,7 +14,7 @@ $description_text = get_field( 'text-svg_text' );
 
 ?>
 
-<section <?php ign_block_attrs( $block, 'text-svg-section full-width' ); ?> style="background-color:<?php echo esc_attr( $background_color ); ?>">
+<section <?php ign_block_attrs( $block, 'text-svg-section full-width' ); ?> style="background-color:<?php echo esc_attr( $background_color ); ?>"data-scroll-section>
 
 	<div class="text-svg-container">
 		<img class="line-text-svg-1"src="<?php echo get_template_directory_uri(); ?>/images/rectangle-text-svg-1.svg " alt="">
