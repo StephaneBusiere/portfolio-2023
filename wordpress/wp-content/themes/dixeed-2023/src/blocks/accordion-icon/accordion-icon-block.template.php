@@ -40,14 +40,14 @@ $background_color = get_field( 'background_color_accordeon' );
 					<?php endif ?>
 					<div class="accordion-text-content-container">
 						<div class="accordion-title"><?php echo wp_kses_post( $accordion_title ); ?></div>
-						<div class="accordion-button-container">
-							<img src="<?php echo get_template_directory_uri(); ?>/images/button-open.svg " alt="" class="accordion-button-open">
+						<div class="accordion-button-container">+
+							<!-- <img src="<?php echo get_template_directory_uri(); ?>/images/button-open.svg " alt="" class="accordion-button-open"> -->
 						</div>
 						<div class="accordion-text-container">
 							<div class="accordion-text"><?php echo wp_kses_post( $accordion_text ); ?></div>
 						</div>
-						<div class="accordion-button-close-container">
-							<img src="<?php echo get_template_directory_uri(); ?>/images/button-close.svg " alt="" class="accordion-button-close">
+						<div class="accordion-button-close-container">-
+							<!-- <img src="<?php echo get_template_directory_uri(); ?>/images/button-close.svg " alt="" class="accordion-button-close"> -->
 						</div>
 					</div>
 				</div>

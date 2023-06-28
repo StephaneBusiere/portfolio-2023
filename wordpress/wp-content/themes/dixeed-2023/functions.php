@@ -234,6 +234,9 @@ function dixeed_2023_scripts() {
 	wp_enqueue_script( 'slick', get_template_directory_uri() . '/src/library/slider-library/js/slick.min.js', array( 'jquery' ), '1.8.1', true );
 	wp_enqueue_script( 'velocity', get_template_directory_uri() . '/src/library/slider-library/js/velocity.min.js', array( 'jquery' ), '1.8.1', true );
 	wp_enqueue_script( 'gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js', true );
+	wp_enqueue_script( 'scroll-trigger', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js', true );
+	wp_enqueue_script( 'split', 'https://unpkg.com/splitting/dist/splitting.min.js', true );
+
 	// custom modal
 	wp_enqueue_script( 'dixeed-2023-modal', get_stylesheet_directory_uri() . '/src/parts/modal/modal.js', array( 'jquery' ), '1.6.0', true );
  

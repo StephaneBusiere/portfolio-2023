@@ -7,6 +7,10 @@
     z-index: 0;
     overflow: hidden;
     width: fit-content;
+    background: #efeae7;
+    box-shadow: 30px 30px 60px #cbc7c4,
+             -30px -30px 60px #ffffff;
+    border-radius: 10px;
     &.align-left {
       margin-left: 0;
       margin-right: auto;
@@ -21,10 +25,12 @@
     }
     a {
       padding: 18px 28px;
-      border: 1px solid var(--orange-500);
+      border: 1px solid #e86d0857;
       transition: color 300ms ease;
-      border-radius: 2px;
+      border-radius: 10px;
       display: block;
+      
+     
       .shape {
         display: block;
         width: 400px;

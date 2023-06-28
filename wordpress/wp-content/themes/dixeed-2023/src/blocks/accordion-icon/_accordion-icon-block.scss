@@ -45,6 +45,8 @@
     .accordion-text-content-container {
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
       .accordion-title {
         text-align: center;
         display: inline-block;
@@ -74,46 +76,110 @@
           color: black !important;
         }
       }
+
       .accordion-button-container {
         display: flex;
         justify-content: center;
+        align-items: center;
         margin-top: 3rem;
         position: relative;
         z-index: 2;
+        opacity: 1;
+        transition: opacity 0.1s linear 0.1s;
+        background: linear-gradient(145deg, #FFFFFF, #C2BEBC);
+        box-shadow: 9.91px 9.91px 22px #D9D5D2, -9.91px -9.91px 22px #FFFFFC;
+        border-radius: 50px;
+        width:40px;
+        height:40px;
+        color: #E86D08;
+        cursor:pointer;
       }
-      .accordion-button-close-container {
+
+      .accordion-button-container:hover {
         display: flex;
         justify-content: center;
+        align-items: center;
+        margin-top: 3rem;
+        position: relative;
+        z-index: 2;
+        opacity: 1;
+        transition: opacity 0.1s linear 0.1s;
+        background: #efeae7;
+        box-shadow: inset 9.91px 9.91px 22px #D9D5D2, inset -9.91px -9.91px 22px #FFFFFC;
+        border-radius: 50px;
+        width:40px;
+        height:40px;
+        color: #E86D08;
+        cursor:pointer;
+      }
+     
+      .accordion-button-container.active {
+        opacity: 0;
+        pointer-events: none;
+      }
+      
+      .accordion-button-close-container.active {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin-top: 1rem;
         position: relative;
         z-index: 2;
-      }
-      .accordion-button-open {
-        width: 41px;
-        height: 41px;
-        cursor: pointer;
         opacity: 1;
         transition: opacity 0.1s linear 0.1s;
-      }
-      .accordion-button-open.active {
-        opacity: 0;
-        pointer-events: none;
-        width: 41px;
-        height: 41px;
-      }
-      .accordion-button-close {
-        display: none;
+        background: linear-gradient(145deg, #FFFFFF, #C2BEBC);
+        box-shadow: 9.91px 9.91px 22px #D9D5D2, -9.91px -9.91px 22px #FFFFFC;
+        border-radius: 50px;
+        width:40px;
+        height:40px;
+        color: #E86D08;
+        cursor:pointer;
+        pointer-events:all;
         transition: opacity 0.1s linear 0.1s;
-        width: 41px;
-        height: 41px;
+       
       }
 
-      .accordion-button-close.active {
-        display: block;
-        width: 41px;
-        height: 41px;
-        cursor: pointer;
+      .accordion-button-close-container.active:hover {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+        position: relative;
+        z-index: 2;
+        opacity: 1;
+        transition: opacity 0.1s linear 0.1s;
+        background: #efeae7;
+        box-shadow: inset 9.91px 9.91px 22px #D9D5D2, inset -9.91px -9.91px 22px #FFFFFC;
+        border-radius: 50px;
+        width:40px;
+        height:40px;
+        color: #E86D08;
+        cursor:pointer;
+        pointer-events:all;
+        transition: opacity 0.1s linear 0.1s;
+       
       }
+
+      .accordion-button-close-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+        position: relative;
+        z-index: 2;
+        transition: opacity 0.1s linear 0.1s;
+        background: linear-gradient(145deg, #FFFFFF, #C2BEBC);
+        box-shadow: 9.91px 9.91px 22px #D9D5D2, -9.91px -9.91px 22px #FFFFFC;
+        border-radius: 50px;
+        width:40px;
+        height:40px;
+        color: #E86D08;
+        transition: opacity 0.1s linear 0.1s;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.1s linear 0.1s;
+      }
+      
       .accordion-text-container {
         text-align: center;
         font-size: 2rem;

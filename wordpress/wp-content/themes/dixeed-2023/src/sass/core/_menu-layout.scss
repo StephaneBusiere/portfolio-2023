@@ -21,7 +21,7 @@
   position:absolute;
   top:0;
   left:0;
-  background-color: rgb(28, 28, 28);
+  background-color: #1D4259;
   transform: scaleY(0);
   transform-origin: center;
   transition: transform 0.8s ease
@@ -33,7 +33,7 @@
   position:absolute;
   top:0;
   left:0;
-  background-color: rgb(28, 28, 28);
+  background-color: #1D4259;
   transform: scaleY(1);
   transform-origin: center;
   transition: transform 0.8s ease;
@@ -42,17 +42,24 @@
 }
 
 .menu-overlay-item {
+  position: relative;
   width: 100%;
   height: 100%;
   display: flex;
-  color: #efeae7b8;
+  font-family: 'roboto';
   justify-content: center;
   align-items: center;
   font-size: 110px;
   text-transform: uppercase;
   font-weight: bold;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  -webkit-text-fill-color: #1D4259;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #DBC2CF;
+  letter-spacing: 3px; 
   transform:translateY(200px);
-  transition:transform 0.6s ease-in, opacity 4s linear;
+  transition:transform 0.8s ease-in, opacity 0.5s linear;
   transform-origin: center;
   opacity:0;
 }
@@ -64,7 +71,7 @@
 .menu-overlay-item.active {
   transform:translateY(0);
   opacity:1;
-  transition:transform 0.6s ease-in, opacity 4s linear;
+  transition:transform 0.6s ease-in, opacity 2s linear;
   transform-origin: bottom;
 }
 .menu-item.active .menu-item-link > a {
