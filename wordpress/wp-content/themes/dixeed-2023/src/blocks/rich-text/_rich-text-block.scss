@@ -5,19 +5,7 @@
   padding-bottom: 2rem;
   padding-top: 2rem;
   max-width: 100%;
-  .rich-text-container {
-    .rich-text {
-      transform: translateY(400px);
-      transition:transform 3s ease;
-    }
-  }
-
-  .rich-text-container.is-inview {
-    .rich-text {
-      transform: translateY(0px);
-      transition:transform 3s ease;
-    }
-  }
+ 
 }
 
 @media (max-width: $media-container) {

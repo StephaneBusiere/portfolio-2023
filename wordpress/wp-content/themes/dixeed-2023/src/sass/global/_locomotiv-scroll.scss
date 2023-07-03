@@ -10,6 +10,10 @@ html.has-scroll-smooth {
   bottom: 0;   
 }
 
+[data-scroll-container] {
+  overflow: hidden !important;
+}
+
 html.has-scroll-dragging {
   -webkit-user-select: none;
   -moz-user-select: none;

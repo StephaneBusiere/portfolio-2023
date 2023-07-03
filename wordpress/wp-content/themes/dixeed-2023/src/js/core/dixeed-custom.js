@@ -33,6 +33,7 @@ import Splitting from "splitting";
       const fx3Titles = [...document.querySelectorAll(".maison-title-container[data-splitting][data-effect3]")];
       const fx4Titles = [...document.querySelectorAll(".maison-sub-title-container[data-splitting][data-effect4]")];
       const fx5Titles = [...document.querySelectorAll(".realisation-title[data-splitting][data-effect5]")];
+      const fx6Titles = [...document.querySelectorAll(".rich-text-container[data-splitting][data-effect6]")];
 
       locoScroll.on("scroll", ScrollTrigger.update);
       ScrollTrigger.scrollerProxy("[data-scroll-container]", {
@@ -73,6 +74,34 @@ import Splitting from "splitting";
          });
 
          fx2Titles.forEach((title) => {
+            const chars = title.querySelectorAll(".char");
+
+            gsap.fromTo(
+               chars,
+               {
+                  "will-change": "opacity, transform",
+                  opacity: 0,
+                  scale: 0.6,
+                  rotationZ: () => gsap.utils.random(-20, 20),
+               },
+               {
+                  ease: "slow",
+                  opacity: 1,
+                  scale: 1,
+                  rotation: 0,
+                  stagger: 0.4,
+                  scrollTrigger: {
+                     trigger: title,
+                     start: "center+=30% bottom",
+                     end: "+=80%",
+                     scrub: true,
+                     scroller: "[data-scroll-container]",
+                  },
+               }
+            );
+         });
+
+         fx6Titles.forEach((title) => {
             const chars = title.querySelectorAll(".char");
 
             gsap.fromTo(
@@ -204,7 +233,7 @@ import Splitting from "splitting";
                }
             );
          });
-
+         
       };
       scroll();
    }
@@ -233,4 +262,6 @@ import Splitting from "splitting";
          },
       });
    });
+
+   
 })(jQuery);
