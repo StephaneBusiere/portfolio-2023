@@ -1,12 +1,108 @@
 @use "../../sass/resources"as *;
 
-// Regular button
-.team-wrapper {
+.team-block {
   position: relative;
-  .team {
-    li {
-    }
+  background-color: var(--bleu-500);
+}
+.ellipse-1 {
+  position: absolute;
+  z-index: 0;
+  top:50%;
+  left:50%;
+  transform: translate3d(-50%,-50%,0);
+  display: block;
+  width: 100%;
+}
+.ellipse-2 {
+  position: absolute;
+  z-index: 0;
+  top:50%;
+  left:50%;
+  transform: translate3d(-50%,-50%,0);
+  display: block;
+  max-width: 1032px;
+}
+.team-wrapper {
+  margin: 50px auto;
+  min-height: 100vh;
+  position: relative;
+  overflow:hidden;
+  .team-headline {
+    position: absolute;
+    z-index:2;
+    top:50%;
+    left:50%;
+    transform: translate3d(-50%,-50%,0);
+    width: 100%;
+  }
+  h2 {
+    color: var(--white);
+    text-align: center;
+    display: block;
     
+    margin : 0 auto 3rem auto;
+  }
+  p {
+    color: var(--white);
+    text-align: center;
+    display: block;
+    max-width: 660px;
+    margin : 0 auto;
+  }
+
+  ul {
+    list-style: none;
+    position:absolute;
+    width: 100%;
+    z-index: 1;
+    top:50%;
+    left:50%;
+    transform: translate3d(-50%,-50%,0);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin:0;
+    padding:0;
+    
+    li {
+      position: relative;
+      margin-bottom:3rem;
+      display: inline-block;
+      flex: 43%;
+      span {
+        width:260px;
+        height:260px;
+        display: inline-block;
+        background-size: cover;
+        background-position: center;
+      }
+      &:nth-child(odd){
+        text-align: left;
+        margin-left:7%;
+      }
+      &:nth-child(even){
+        text-align: right;
+        margin-right:7%;
+      }
+      $var: 7;
+      @function randomNum($min, $max) {
+        $rand: random();
+        $randomNum: $min + floor($rand * (($max - $min) + 1));
+
+        @return $randomNum;
+      }
+
+      @for $i from 1 through 7 {
+        &:nth-child(#{$i}) {
+          // top: -#{$var}px;
+          // random(#{$var}) + 4)
+          transform-origin: center;
+          transform:rotate(#{randomNum(-24, 24)} + deg);
+          // $var: $var + 5;
+        }
+      }
+
+    }
   }
   
   @media(max-width: $media-large) {
