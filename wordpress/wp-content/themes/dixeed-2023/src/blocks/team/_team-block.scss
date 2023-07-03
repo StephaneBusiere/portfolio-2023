@@ -3,6 +3,7 @@
 .team-block {
   position: relative;
   background-color: var(--bleu-500);
+   overflow:hidden;
 }
 .ellipse-1 {
   position: absolute;
@@ -21,12 +22,13 @@
   transform: translate3d(-50%,-50%,0);
   display: block;
   max-width: 1032px;
+  max-height: 100%;
 }
 .team-wrapper {
-  margin: 50px auto;
+  margin: 0 auto;
   min-height: 100vh;
   position: relative;
-  overflow:hidden;
+ 
   .team-headline {
     position: absolute;
     z-index:2;
@@ -55,9 +57,9 @@
     position:absolute;
     width: 100%;
     z-index: 1;
-    top:50%;
+    top:0;
     left:50%;
-    transform: translate3d(-50%,-50%,0);
+    transform: translate3d(-50%,0,0);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -68,7 +70,9 @@
       position: relative;
       margin-bottom:3rem;
       display: inline-block;
+      transform: translate3d(0,100vh,0);
       flex: 43%; 
+      opacity: 0;
       span { 
         width:260px; 
         height:260px;
@@ -84,23 +88,23 @@
         text-align: right;
         margin-right:7%;
       }
-      $var: 7;
-      @function randomNum($min, $max) {
-        $rand: random();
-        $randomNum: $min + floor($rand * (($max - $min) + 1));
+      // $var: 7;
+      // @function randomNum($min, $max) {
+      //   $rand: random();
+      //   $randomNum: $min + floor($rand * (($max - $min) + 1));
 
-        @return $randomNum;
-      }
+      //   @return $randomNum;
+      // }
 
-      @for $i from 1 through 7 {
-        &:nth-child(#{$i}) {
-          // top: -#{$var}px;
-          // random(#{$var}) + 4)
-          transform-origin: center;
-          transform:rotate(#{randomNum(-24, 24)} + deg);
-          // $var: $var + 5;
-        }
-      }
+      // @for $i from 1 through 7 {
+      //   &:nth-child(#{$i}) {
+      //     // top: -#{$var}px;
+      //     // random(#{$var}) + 4)
+      //     transform-origin: center;
+      //     transform:rotate(#{randomNum(-24, 24)} + deg);
+      //     // $var: $var + 5;
+      //   }
+      // }
 
     }
   }
