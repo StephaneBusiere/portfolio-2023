@@ -26,18 +26,10 @@ $cta_link         = get_field( 'cta_link_maison' );
 		<img class="rectangle-maison-4"src="<?php echo get_template_directory_uri(); ?>/images/rectangle-maison-4.svg " alt="">
 		<div class="image-maison" alt=""></div>
 		<div class="maison-text-container">
-			<div class="maison-title-container">
-						<span class="B-Letter">B</span>
-						<span class="I-Letter">i</span>
-						<span class="E-Letter">e</span>
-						<span class="N-Letter">n</span>
-						<span class="V-Letter">v</span>
-						<span class="second-E-Letter">e</span>
-						<span class="second-N-Letter">n</span>
-						<span class="U-Letter">u</span>
-						<span class="third-E-Letter">e</span>
+			<div class="maison-title-container" data-splitting data-effect3 data-scroll data-scroll-speed="0">
+						Bienvenue
 			</div>
-			<div class="maison-sub-title-container">
+			<div class="maison-sub-title-container"data-splitting data-effect4 data-scroll data-scroll-speed="0">
 			<?php echo __( 'à la maison Dixeed', 'dixeed-2023' ); ?>
 			</div>	
 			<div class="maison-description-text-container">

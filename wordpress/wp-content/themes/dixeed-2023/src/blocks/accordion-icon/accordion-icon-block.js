@@ -2,8 +2,8 @@
    function initializeBlock($block) {
       $block.find(".accordion-content").each(function () {
          var container = $(this).find(".accordion-text-container");
-         var button_open = $(this).find(".accordion-button-open");
-         var button_close = $(this).find(".accordion-button-close");
+         var button_open = $(this).find(".accordion-button-container");
+         var button_close = $(this).find(".accordion-button-close-container");
          var text = $(this).find(".accordion-text");
          var icon = $(this).find(".accordion-icon");
          var image = $(this).find(".accordion-image");

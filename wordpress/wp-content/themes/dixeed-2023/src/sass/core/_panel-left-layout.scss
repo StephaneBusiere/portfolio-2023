@@ -130,6 +130,8 @@
 	text-indent: 100%;
 	white-space: nowrap;
 	z-index:99999;
+	box-shadow: 7px 7px 14px rgba(0, 0, 0, 0.3), -7px -7px 14px rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
   }
 
   .cd-nav-trigger .cd-icon {
@@ -217,6 +219,7 @@
 	-webkit-transition-delay: 0.4s;
 	-moz-transition-delay: 0.4s;
 	transition-delay: 0.4s;
+	background-image: linear-gradient(-45deg, #ffb57d, #eda169, #d98d55);
   }
   .cd-nav-trigger::after {
 	background-color: #EFEAE7;
@@ -288,7 +291,7 @@
 		position: relative;
 		max-width: 50%;
 		background-color: #EFEAE7;
-    	margin: 0 auto;
+    	margin: 0 auto 70px auto;
     	padding: 10px;
 		}
   .menu {

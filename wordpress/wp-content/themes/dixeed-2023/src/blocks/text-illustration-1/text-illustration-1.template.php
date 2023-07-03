@@ -42,7 +42,7 @@ $title_text_icon = get_field( 'title-text-icon' );
 			<img class="image" src="<?php echo esc_url( $image ); ?>" alt="">
 		</div>
 		<?php if ( $text_type[0] === 'text' ) : ?>
-		<div class="block-text-container" style="background-color:<?php echo esc_attr( $background_color ); ?>;justify-content:<?php echo esc_attr( $vertical_align_text[0] ); ?>"><?php the_field( 'text' ); ?></div data-scroll data-scroll-speed="4" >
+		<div class="block-text-container" style="background-color:<?php echo esc_attr( $background_color ); ?>;justify-content:<?php echo esc_attr( $vertical_align_text[0] ); ?>" data-splitting data-effect2 data-scroll data-scroll-repeat data-scroll-speed="0" data-scroll-offset="300px"><?php the_field( 'text' ); ?></div>
 		<?php endif; ?>
 		<?php
 		if ( $text_type[0] === 'icon' ) :

@@ -15,7 +15,68 @@
   display: block !important;
 }
 
+.header-overlay {
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  background-color: #1D4259;
+  transform: scaleY(0);
+  transform-origin: center;
+  transition: transform 0.8s ease
+}
 
+.header-overlay.active {
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  background-color: #1D4259;
+  transform: scaleY(1);
+  transform-origin: center;
+  transition: transform 0.8s ease;
+  overflow:hidden;
+
+}
+
+.menu-overlay-item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  font-family: 'roboto';
+  justify-content: center;
+  align-items: center;
+  font-size: 110px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  -webkit-text-fill-color: #1D4259;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #DBC2CF;
+  letter-spacing: 3px; 
+  transform:translateY(200px);
+  transition:transform 0.8s ease-in, opacity 0.5s linear;
+  transform-origin: center;
+  opacity:0;
+}
+
+.menu-item-link > a.active {
+  color:white;
+}
+
+.menu-overlay-item.active {
+  transform:translateY(0);
+  opacity:1;
+  transition:transform 0.6s ease-in, opacity 2s linear;
+  transform-origin: bottom;
+}
+.menu-item.active .menu-item-link > a {
+  color:#EFEAE7;
+}
 /*--------------------------------------------------------------
 # Vertical Menus
 --------------------------------------------------------------*/
@@ -28,7 +89,7 @@
 
     li {
       position: relative;
-      margin: 0;
+      margin: 0 80px 0 0;
 
       //added with hook. holds anchor and submenu button if applicable
       .menu-item-link {
@@ -225,6 +286,25 @@
 
 
 //hide navigation on mobile if its inside site-top while it hasnt moved yet. There is a split second where it appears as a vertical menu in site top...
+@media(max-width: $media-tablett) {
+  .site-logo {
+    font-size: 3.3rem;
+    text-transform: uppercase;
+    color: white;
+    max-width: 200px!important;
+}
+  .menu,
+  .menu > ul {
+    display: flex;
+    flex-direction: column;
+
+    li {
+      position: relative;
+      margin: 0 20px 0 0;
+
+}
+  }
+}
 @media(max-width: $media-nav) {
   .site-navigation .site-navigation__nav-holder {
     display: none;
