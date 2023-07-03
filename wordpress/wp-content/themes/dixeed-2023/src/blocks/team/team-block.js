@@ -21,6 +21,12 @@
       //    initializeBlock($(this));
       // });
 
+
+
+      // https://greensock.com/forums/topic/29346-animated-text-elements-inside-pinned-section-scroll-trigger/
+
+      // let items = gsap.utils.toArray('.team-block li')
+      // items.forEach((item, index) => {
       const tl = gsap.timeline({
          scrollTrigger: {
             trigger: '.team-block',
@@ -43,20 +49,23 @@
             y: - window.innerHeight,
             stagger: .025,
             // opacity: 1,
+            // onEnter: () => {
+            //    gsap.to(items, {
+            //       opacity: 1,
+            //       duration: 1,
+            //       overwrite: true
+            //    });
+            // },
             // css: {
             //    width: 300,
             //    height: 300
             // },
             // duration: 3
          })
-         .to(items, {
-            opacity: 1,
-            // stagger: .025,
-            // css: {
-            //    width: 300,
-            //    height: 300
-            // },
-            // duration: 1
-         }, 0)
+      // .to('.team-block li span', {
+      //    opacity: 1,
+      //    duration: 0.5,
+      // }, 0)
+      // });
    });
 })(jQuery);
