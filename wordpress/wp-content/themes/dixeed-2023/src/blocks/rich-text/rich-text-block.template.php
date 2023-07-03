@@ -16,7 +16,7 @@ $background_color  = get_field( 'background_color_rich_text' );
 ?>
 
 <section <?php ign_block_attrs( $block, 'rich-text-section' ); ?> style="background-color:<?php echo esc_attr( $background_color ); ?>"data-scroll-section>
-	<div class="rich-text-container">
+	<div class="rich-text-container"data-scroll data-scroll-repeat data-scroll-speed="2" data-scroll-offset="100px">
 		<div class="rich-text"><?php echo wp_kses_post( $text ); ?></div>
 	</div>
 </section>

@@ -56,7 +56,7 @@ $realisation_title = get_field( 'realisations_title' );
 				</div>
 			</div>
 			<div class="realisation-title-container">
-				<div class="realisation-title"><?php echo esc_attr( $realisation_title ); ?></div>
+				<div class="realisation-title"data-splitting data-effect5 data-scroll data-scroll-speed="0"><?php echo esc_attr( $realisation_title ); ?></div>
 				<img class="line-realisations-2"src="<?php echo get_template_directory_uri(); ?>/images/line-realisation-slider-bottom.svg " >
 			</div>
 	</div>

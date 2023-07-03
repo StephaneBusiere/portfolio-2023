@@ -286,6 +286,25 @@
 
 
 //hide navigation on mobile if its inside site-top while it hasnt moved yet. There is a split second where it appears as a vertical menu in site top...
+@media(max-width: $media-tablett) {
+  .site-logo {
+    font-size: 3.3rem;
+    text-transform: uppercase;
+    color: white;
+    max-width: 200px!important;
+}
+  .menu,
+  .menu > ul {
+    display: flex;
+    flex-direction: column;
+
+    li {
+      position: relative;
+      margin: 0 20px 0 0;
+
+}
+  }
+}
 @media(max-width: $media-nav) {
   .site-navigation .site-navigation__nav-holder {
     display: none;
