@@ -70,7 +70,7 @@
           margin-right:10%;
 
         }
-        @for $i from 1 through 7 {
+        @for $i from 1 through 12 {
           &:nth-child(#{$i}) {
             transform-origin: center;
             transform: translate3d(0,-100vh,0) rotate(#{randomNum(-24, 24)} + deg);
