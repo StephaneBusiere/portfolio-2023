@@ -26,6 +26,14 @@ $team_people = get_field('team_people');
 			<circle cx="516" cy="516" r="515.5" stroke="#F2EFEB" />
 		</svg>
 
+		<div class="team-headline">
+			<h2>
+				<?php echo $team_title; ?>
+			</h2>
+			<p class="p-18">
+				<?php echo $team_paragraph; ?>
+			</p>
+		</div>
 		<ul class="team">
 			<?php
 			while (have_rows('team_people')):
@@ -39,13 +47,5 @@ $team_people = get_field('team_people');
 			endwhile;
 			?>
 		</ul>
-		<div class="team-headline">
-			<h2>
-				<?php echo $team_title; ?>
-			</h2>
-			<p class="p-18">
-				<?php echo $team_paragraph; ?>
-			</p>
-		</div>
 	</div>
 </div>

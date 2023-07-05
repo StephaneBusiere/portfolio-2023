@@ -24,48 +24,36 @@
 
 
       // https://greensock.com/forums/topic/29346-animated-text-elements-inside-pinned-section-scroll-trigger/
-
-      // let items = gsap.utils.toArray('.team-block li')
-      // items.forEach((item, index) => {
-      const tl = gsap.timeline({
-         scrollTrigger: {
-            trigger: '.team-block',
-            start: "top top",
-            end: window.innerHeight * 6,
-            pin: '.team-wrapper',
-            anticipatePin: 1,
-            // pinSpacing: false,
-            invalidateOnRefresh: true,
-            markers: true,
-            scrub: true
-         }
-      });
+      // const list = document.querySelector(".team-block ul");
       const items = document.querySelectorAll(".team-block li");
-      tl.add('sceneOne')
-         .call(function () {
-            // document.querySelectorAll(".shape-1")[0].style.zIndex = "1";
+
+      gsap.timeline({
+         scrollTrigger: {
+            trigger: ".team-block",
+            start: "center center",
+            // end: " bottom",
+
+            // start: "bottom bottom ",
+            // end: "top top",
+            end: "+=" + window.innerHeight * 3,
+            scrub: 1,
+            pin: '.team-wrapper',
+            // pin: true
+         },
+         // onEnter: () => {
+         //    gsap.to(".targets", { ..., overwrite: true });
+         // },
+         // onLeave: () => {
+         //    gsap.to(".targets", { ..., overwrite: true });
+         // },
+      })
+         .from(".team-block li", {
+            y: window.innerHeight,
+            rotate: '0deg',
+            opacity: 1,
+            stagger: {
+               amount: 0.25,
+            }
          })
-         .to(items, {
-            y: - window.innerHeight,
-            stagger: .025,
-            // opacity: 1,
-            // onEnter: () => {
-            //    gsap.to(items, {
-            //       opacity: 1,
-            //       duration: 1,
-            //       overwrite: true
-            //    });
-            // },
-            // css: {
-            //    width: 300,
-            //    height: 300
-            // },
-            // duration: 3
-         })
-      // .to('.team-block li span', {
-      //    opacity: 1,
-      //    duration: 0.5,
-      // }, 0)
-      // });
    });
 })(jQuery);

@@ -61,7 +61,7 @@
                 "id": ""
             },
             "admin_only": 0,
-            "layout": "table",
+            "layout": "block",
             "pagination": 0,
             "min": 0,
             "max": 0,
@@ -79,7 +79,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "25",
                         "class": "",
                         "id": ""
                     },
@@ -93,7 +93,7 @@
                     "max_height": "",
                     "max_size": "",
                     "mime_types": "",
-                    "preview_size": "large",
+                    "preview_size": "medium",
                     "parent_repeater": "field_64a297eee6143"
                 }
             ]
@@ -117,5 +117,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1688377557
+    "modified": 1688562349
 }

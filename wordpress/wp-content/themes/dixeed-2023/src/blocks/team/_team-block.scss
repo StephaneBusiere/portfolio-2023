@@ -1,5 +1,10 @@
 @use "../../sass/resources"as *;
+@function randomNum($min, $max) {
+  $rand: random();
+  $randomNum: $min + floor($rand * (($max - $min) + 1));
 
+  @return $randomNum;
+}
 .team-block {
   position: relative;
   background-color: var(--bleu-500);
@@ -25,18 +30,65 @@
   max-height: 100%;
 }
 .team-wrapper {
-  margin: 0 auto;
-  min-height: 100vh;
-  position: relative;
- 
-  .team-headline {
-    position: absolute;
-    z-index:2;
-    top:50%;
-    left:50%;
-    transform: translate3d(-50%,-50%,0);
-    width: 100%;
+    margin: 0 auto;
+    min-height: 100vh;
+    position: relative; 
+      ul {
+      list-style: none;
+      position:absolute;
+      width: 100%;
+      z-index: 1;
+      top:0;
+      left:50%;
+      transform: translate3d(-50%,0,0);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin:0;
+      padding:0;
+      
+      li {
+        position: relative;
+        margin-bottom:3rem;
+        display: inline-block;
+        
+        flex: 40%; 
+        opacity: 0.5;
+        span { 
+          width:10vw; 
+          height:10vw;
+          display: inline-block;
+          background-size: cover;
+          background-position: center;
+        }
+        &:nth-child(odd){
+          text-align: left;
+          margin-left:10%;
+        }
+        &:nth-child(even){
+          text-align: right;
+          margin-right:10%;
+
+        }
+        @for $i from 1 through 7 {
+          &:nth-child(#{$i}) {
+            transform-origin: center;
+            transform: translate3d(0,-100vh,0) rotate(#{randomNum(-24, 24)} + deg);
+            // $var: $var + 5;
+          }
+        }
+      }
+      @media(max-width: $media-large) {
+      }
+    }
   }
+.team-headline {
+  position: absolute;
+  z-index:2;
+  top:50%;
+  left:50%;
+  transform: translate3d(-50%,-50%,0);
+  width: 100%;
   h2 {
     color: var(--white);
     text-align: center;
@@ -51,64 +103,5 @@
     max-width: 660px;
     margin : 0 auto;
   }
-
-  ul {
-    list-style: none;
-    position:absolute;
-    width: 100%;
-    z-index: 1;
-    top:0;
-    left:50%;
-    transform: translate3d(-50%,0,0);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin:0;
-    padding:0;
-    
-    li {
-      position: relative;
-      margin-bottom:3rem;
-      display: inline-block;
-      transform: translate3d(0,100vh,0);
-      flex: 43%; 
-      opacity: 0;
-      span { 
-        width:260px; 
-        height:260px;
-        display: inline-block;
-        background-size: cover;
-        background-position: center;
-      }
-      &:nth-child(odd){
-        text-align: left;
-        margin-left:7%;
-      }
-      &:nth-child(even){
-        text-align: right;
-        margin-right:7%;
-      }
-      // $var: 7;
-      // @function randomNum($min, $max) {
-      //   $rand: random();
-      //   $randomNum: $min + floor($rand * (($max - $min) + 1));
-
-      //   @return $randomNum;
-      // }
-
-      // @for $i from 1 through 7 {
-      //   &:nth-child(#{$i}) {
-      //     // top: -#{$var}px;
-      //     // random(#{$var}) + 4)
-      //     transform-origin: center;
-      //     transform:rotate(#{randomNum(-24, 24)} + deg);
-      //     // $var: $var + 5;
-      //   }
-      // }
-
-    }
-  }
-  
-  @media(max-width: $media-large) {
-  }
 }
+
