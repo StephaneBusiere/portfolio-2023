@@ -22,7 +22,17 @@
 		font-weight: bold;
 		line-height: 12rem;
 		text-align: center;
+		opacity:0
 		}
+		
+		.intro-1-title.active {
+			font-family: 'Basier-circle-regular';
+			font-size: 9rem; 
+			font-weight: bold;
+			line-height: 12rem;
+			text-align: center;
+			opacity:1;
+			}
 	}
 }
 @media (max-width: 1440px) {

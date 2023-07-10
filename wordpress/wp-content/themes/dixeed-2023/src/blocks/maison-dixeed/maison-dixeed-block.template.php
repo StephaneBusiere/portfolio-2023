@@ -33,7 +33,7 @@ $cta_link         = get_field( 'cta_link_maison' );
 			<?php echo __( 'à la maison Dixeed', 'dixeed-2023' ); ?>
 			</div>	
 			<div class="maison-description-text-container">
-				<p class="maison-description-text"><?php echo wp_kses_post( $description_text ); ?></p>
+				<p class="maison-description-text" data-splitting data-effect8 data-scroll data-scroll-speed="0"><?php echo wp_kses_post( $description_text ); ?></p>
 				<div class="cta-maison <?php echo $cta_align; ?>">
 				<a href="<?php echo esc_url( $cta_link['url'] ); ?>" title="<?php echo esc_attr( $cta_link['title'] ); ?>">
 					<span class="shape"></span>

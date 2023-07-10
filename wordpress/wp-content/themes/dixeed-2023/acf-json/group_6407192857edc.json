@@ -43,6 +43,27 @@
             "default_value": "",
             "enable_opacity": 0,
             "return_format": "string"
+        },
+        {
+            "key": "field_64abf45499c5b",
+            "label": "Titre du block",
+            "name": "circle_text_title",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "admin_only": 0,
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         }
     ],
     "location": [
@@ -63,5 +84,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1678186861
+    "modified": 1688990853
 }

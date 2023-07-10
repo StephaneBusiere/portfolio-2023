@@ -38,7 +38,7 @@
 			<!-- site-navigation__nav-holder -->
 		</div>
 		<?php else : ?>
-            <div class="site-navigation horizontal-menu flex not-home">
+			<div class="site-navigation horizontal-menu flex not-home">
 			<?php echo ign_logo(); ?>
 
 			<div class="site-navigation__nav-holder" data-moveto="#panel-left" data-moveat="--nav-move"

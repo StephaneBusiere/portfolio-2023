@@ -12,6 +12,60 @@ body {
   }
 }
 
+#loader-wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+#loader-wrapper .loader-section {
+  position: fixed;
+  top: 0;
+  width: 51%;
+  height: 100%;
+  background: #222222;
+  z-index: 1000;
+}
+
+#loader-wrapper .loader-section.section-left {
+  left: 0;
+}
+
+#loader-wrapper .loader-section.section-right {
+  right: 0;
+}
+
+#loader {
+  z-index: 1001;
+  color:white;
+  font-size:150px;
+  text-transform: uppercase;
+}
+
+.loaded #loader-wrapper .loader-section.section-left {
+  -webkit-transform: translateX(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+  -ms-transform: translateX(-100%);  /* IE 9 */
+  transform: translateX(-100%);  /* Firefox 16+, IE 10+, Opera */
+
+  -webkit-transition: all 0.3s 0.6s ease-out;
+                transition: all 0.3s 0.6s ease-out;
+}
+
+.loaded #loader-wrapper .loader-section.section-right {
+  -webkit-transform: translateX(100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+  -ms-transform: translateX(100%);  /* IE 9 */
+  transform: translateX(100%);  /* Firefox 16+, IE 10+, Opera */
+
+  -webkit-transition: all 0.3s 1s ease-out;
+  transition: all 0.3s 1s ease-out;
+}
+
+.loaded #loader-wrapper .loader-section.section-right,
+.loaded #loader-wrapper .loader-section.section-left {
+ 
+    -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
 // text selection
 ::-moz-selection { /* Code for Firefox */
   color: var(--black);
@@ -23,6 +77,16 @@ body {
   background: var(--white);
 }
 
+.loaded #loader {
+  opacity: 0;
+  display: none;
+  -webkit-transition: all 0.3s ease-out;
+            transition: all 0.3s ease-out;
+}
+
+.loaded #loader-wrapper {
+  visibility: hidden;
+}
 
 /*--------------------------------------------------------------
 # Logo
@@ -51,7 +115,7 @@ body {
 .site-top {
   position: fixed; //change to fixed or absolute if wanted. if absolute add padding top to your entry-header!
   background: var(--site-top);
-  height:100px;
+  height:130px;
   top: 0; left: 0;
   transform: translate3d(0,0,0);
   transition: transform .5s ease-in-out;
@@ -116,6 +180,27 @@ html[data-direction="down"] .site-top {
   .container-footer {
     .footer-title-container {
       padding:100px;
+      overflow: hidden;
+      .footer-title {
+        .widget {
+          & h1 {
+            transform: translateY(400px);
+            transition: transform 2s ease;
+          }
+
+        }
+      
+      }
+      .footer-title.is-inview {
+        .widget {
+          & h1 {
+            transform: translateY(0px);
+            transition: transform 2s ease;
+          }
+          
+        }
+      
+      }
     } 
     .footer-content-container {
       display: flex;

@@ -16,7 +16,7 @@
 <div class="container-footer">
 	<div class="footer-title-container">
 		<?php if ( is_active_sidebar( 'footer-title' ) ) : ?>
-			<div class="footer-title">
+			<div class="footer-title" data-splitting data-effect7 data-scroll data-scroll-speed="0" data-scroll-repeat data-scroll-offset="200px" >
 				<?php dynamic_sidebar( 'footer-title' ); ?>
 			</div>
 		<?php endif; ?>

@@ -22,7 +22,13 @@
 
 	<?php wp_head(); ?>
 </head>
-
+<div id="loader-wrapper">
+    <div id="loader">Dixeed</div>
+ 
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+ 
+</div>
 
 <?php
 $app_menu = ign_get_config( 'mobile_menu_type', 'regular_menu' ); //accepts svg icon or 'app' which renders the special = to x
