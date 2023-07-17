@@ -5,17 +5,77 @@
 --------------------------------------------------------------*/
 body {
   background-color: var(--light-grey);
+  overflow:hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
+body.loaded {
+  -ms-overflow-style: initial;
+  scrollbar-width: initial;
+}
+
 @media(max-width: $media-small) {
   .wp-block-spacer {
     height: 40px!important;
   }
 }
 
+.spinner{
+  
+  &-wrap{
+    position: relative;
+  }
+  
+  &-item{
+    border: 1px solid red;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    animation: zoom 1s linear 0.75s infinite;
+   
+    &--2{
+      animation-delay: 0.25s;
+    }
+    
+    &--3{
+      animation-delay: 0.75s;
+    }
+  }
+}
+
+@keyframes zoom {
+    0% {
+        transform: translate(-50%, -50%) scale(0.2);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.9;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0;
+    }
+}
+
+
+.gif-loader {
+  position:absolute;
+}
+
 #loader-wrapper {
+  z-index: 1000;
+  position: absolute;
   align-items: center;
   display: flex;
   justify-content: center;
+  width: 100%;
+  height: 100vh;
+  overflow:hidden
 }
 
 #loader-wrapper .loader-section {
@@ -23,8 +83,9 @@ body {
   top: 0;
   width: 51%;
   height: 100%;
-  background: #222222;
+  background: #eda169;
   z-index: 1000;
+  
 }
 
 #loader-wrapper .loader-section.section-left {
@@ -36,10 +97,34 @@ body {
 }
 
 #loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 1001;
   color:white;
   font-size:150px;
-  text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #E86D08 0%,
+    #FF9905 29%,
+    #EC954E 67%,
+    #F1DAC5 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
 }
 
 .loaded #loader-wrapper .loader-section.section-left {
@@ -66,18 +151,9 @@ body {
     -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
     transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
 }
-// text selection
-::-moz-selection { /* Code for Firefox */
-  color: var(--black);
-  background: var(--white);
-}
 
-::selection {
-  color: var(--black);
-  background: var(--white);
-}
 
-.loaded #loader {
+.loaded #loader, .loaded .loader-overlay {
   opacity: 0;
   display: none;
   -webkit-transition: all 0.3s ease-out;

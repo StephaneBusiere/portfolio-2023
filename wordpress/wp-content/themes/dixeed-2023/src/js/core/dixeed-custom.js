@@ -353,6 +353,8 @@ import Splitting from "splitting";
                }
             );
          });
+
+         
          const footer = $('.site-footer');
          const footer_container = $('.vertical-carousel-block');
          gsap.fromTo(
@@ -408,8 +410,50 @@ import Splitting from "splitting";
          },
       });
    });
-   $(document).ready(function() {
-          $('body').addClass('loaded');
-  });
    
+      // var loader_container = $('#loader-wrapper');
+      // var loader_overlay = $('.loader-overlay');
+      // var section_left = $('.loader-section.section-left');
+      // var section_right = $('.loader-section.section-right');
+      // var tl = gsap.timeline();    
+      //     tl.fromTo(loader_container,
+      //       {
+      //       clipPath: "circle(0%)",
+      //       opacity:1,
+      //       },
+      //       {
+      //       ease: "power4,inOut",
+      //       clipPath: "circle(200%)",
+      //       duration: 2,
+      //       opacity:1,
+      //       }
+      //       )
+            
+      //       .to(section_left, {
+      //          ease: "power4,inOut",
+      //          translateX:'-100%',
+      //          delay:2
+      //       })
+      //       .to(section_right, {
+      //          ease: "power4,inOut",
+      //          translateX:'100%',
+      //          delay:2
+      //       })
+
+      //       .to(loader_overlay, {
+      //          ease: "power4,inOut",
+      //          opacity:0,
+      //       })
+            
+            
+
+         
+
+         // $(document).ready(function() {
+         //    $('body').addClass('loaded');
+         // });
+         setTimeout(function() { 
+            $('body').addClass('loaded');
+        }, 2000);
+        
 })(jQuery);
