@@ -1,59 +1,59 @@
-
-
 (function ($) {
-   function initializeBlock($block) {
+   function initializeBlock() {
+      if ($('.team-block').length) {
+         // https://greensock.com/forums/topic/29015-setting-same-animation-for-multiple-elements-to-get-triggered-individually-gsap-scrolltrigger/
+         const list = $(".team-block ul");
+         const tm = gsap.timeline({
+            scrollTrigger: {
+               trigger: ".team-block",
+               start: "center center",
+               // end: "+=" + list.height() * 2,
+               end: window.innerHeight * 4,
+               scrub: 1,
+               pin: '.team-wrapper',
+               immediateRender: false,
+               // markers: true,
+               // pin: true
+            },
+            // onEnter: () => {
+            //    gsap.to(".targets", { ..., overwrite: true });
+            // },
+            // onLeave: () => {
+            //    gsap.to(".targets", { ..., overwrite: true });
+            // },
+         })
+            .from(".team-block li", {
+               y: window.innerHeight,
+               rotate: '0deg',
+               opacity: 1,
+               stagger: {
+                  amount: 0.25,
+               },
+            })
 
+         // .from(".team-block li:nth-child(1)", {
+         //    y: window.innerHeight,
+         //    rotate: '0deg',
+         //    opacity: 1,
+         //    // stagger: {
+         //    //    amount: 0.25,
+         //    // },
+         // })
+         // .from(".team-block li:nth-child(4)", {
+         //    y: window.innerHeight,
+         //    rotate: '0deg',
+         //    opacity: 1,
+         //    // stagger: {
+         //    //    amount: 0.25,
+         //    // },
+         // })
+      }
    }
-   // if (window.acf) {
-   //    // Initialize dynamic block preview (editor).
-   //    window.acf.addAction("render_block_preview", function($el, attributes) {
-   //       var $block = $el;
-
-   //       console.log($block);
-   //       if ($block.length) {
-   //          initializeBlock($block);
-   //       }
-   //    });
-   // } else {
    // Initialize each block on page load (front end).
    $(document).ready(function () {
-      // $(".horizontal-slider").each(function() {
-      //    initializeBlock($(this));
+      initializeBlock();
+      // $(window).on("resize", function () {
+      //    initializeBlock();
       // });
-
-
-
-      // https://greensock.com/forums/topic/29346-animated-text-elements-inside-pinned-section-scroll-trigger/
-      // const list = document.querySelector(".team-block ul");
-      const items = document.querySelectorAll(".team-block li");
-
-      gsap.timeline({
-         scrollTrigger: {
-            trigger: ".team-block",
-            start: "center center",
-            // end: " bottom",
-
-            // start: "bottom bottom ",
-            // end: "top top",
-            end: "+=" + window.innerHeight * 3,
-            scrub: 1,
-            pin: '.team-wrapper',
-            // pin: true
-         },
-         // onEnter: () => {
-         //    gsap.to(".targets", { ..., overwrite: true });
-         // },
-         // onLeave: () => {
-         //    gsap.to(".targets", { ..., overwrite: true });
-         // },
-      })
-         .from(".team-block li", {
-            y: window.innerHeight,
-            rotate: '0deg',
-            opacity: 1,
-            stagger: {
-               amount: 0.25,
-            }
-         })
    });
 })(jQuery);
