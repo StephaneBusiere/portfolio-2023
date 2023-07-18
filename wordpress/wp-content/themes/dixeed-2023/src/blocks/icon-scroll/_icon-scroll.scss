@@ -1,0 +1,31 @@
+@use "../../sass/resources" as *;
+
+.scroll-icon-section {
+    padding: 0;
+    overflow: hidden;
+    .scroll-icon-container {
+      display:flex;
+      justify-content: center;
+      .scroll-icon {
+       
+        & path, & circle {
+          animation: updown 2s ease infinite;
+          transform-origin: 40px;
+        }
+      
+      }
+      @keyframes updown {
+        0% {
+          transform: translateY(0px);
+        }
+      
+        50% {
+          transform: translateY(50px);
+        }
+      
+        100% {
+          transform: translateY(0px);
+        }
+      }
+    }
+}

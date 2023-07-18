@@ -8,7 +8,14 @@ body {
   overflow:hidden;
   -ms-overflow-style: none;
   scrollbar-width: none;
+
 }
+
+.default-cursor {
+  cursor: none;
+}
+
+
 body.loaded {
   -ms-overflow-style: initial;
   scrollbar-width: initial;
