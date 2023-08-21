@@ -22,8 +22,21 @@
 
 	<?php wp_head(); ?>
 </head>
-
-
+<!-- <div class="loader-overlay"> -->
+	<div id="loader-wrapper">
+		<div id="loader">DIXEED
+			<!-- <img class="gif-loader" src="<?php echo get_template_directory_uri() ?>/images/gif-loader.gif" alt=""> -->
+			<div class="spinner-wrap">
+				<div class="spinner-item"></div>
+				<div class="spinner-item spinner-item--2"></div>
+				<div class="spinner-item spinner-item--3"></div>
+			</div>
+		</div>
+	
+	<div class="loader-section section-left"></div>
+	<div class="loader-section section-right"></div>
+	</div>
+<!-- </div> -->
 <?php
 $app_menu = ign_get_config( 'mobile_menu_type', 'regular_menu' ); //accepts svg icon or 'app' which renders the special = to x
 

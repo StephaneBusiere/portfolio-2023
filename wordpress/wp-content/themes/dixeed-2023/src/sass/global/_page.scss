@@ -5,24 +5,171 @@
 --------------------------------------------------------------*/
 body {
   background-color: var(--light-grey);
+  overflow:hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
 }
+
+.default-cursor {
+  cursor: none;
+}
+
+
+body.loaded {
+  -ms-overflow-style: initial;
+  scrollbar-width: initial;
+}
+
 @media(max-width: $media-small) {
   .wp-block-spacer {
     height: 40px!important;
   }
 }
 
-// text selection
-::-moz-selection { /* Code for Firefox */
-  color: var(--black);
-  background: var(--white);
+.spinner{
+  
+  &-wrap{
+    position: relative;
+  }
+  
+  &-item{
+    border: 1px solid red;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    animation: zoom 1s linear 0.75s infinite;
+   
+    &--2{
+      animation-delay: 0.25s;
+    }
+    
+    &--3{
+      animation-delay: 0.75s;
+    }
+  }
 }
 
-::selection {
-  color: var(--black);
-  background: var(--white);
+@keyframes zoom {
+    0% {
+        transform: translate(-50%, -50%) scale(0.2);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.9;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0;
+    }
 }
 
+
+.gif-loader {
+  position:absolute;
+}
+
+#loader-wrapper {
+  z-index: 1000;
+  position: absolute;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  overflow:hidden
+}
+
+#loader-wrapper .loader-section {
+  position: fixed;
+  top: 0;
+  width: 51%;
+  height: 100%;
+  background: #eda169;
+  z-index: 1000;
+  
+}
+
+#loader-wrapper .loader-section.section-left {
+  left: 0;
+}
+
+#loader-wrapper .loader-section.section-right {
+  right: 0;
+}
+
+#loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+  color:white;
+  font-size:150px;
+  background-image: linear-gradient(
+    -225deg,
+    #E86D08 0%,
+    #FF9905 29%,
+    #EC954E 67%,
+    #F1DAC5 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.loaded #loader-wrapper .loader-section.section-left {
+  -webkit-transform: translateX(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+  -ms-transform: translateX(-100%);  /* IE 9 */
+  transform: translateX(-100%);  /* Firefox 16+, IE 10+, Opera */
+
+  -webkit-transition: all 0.3s 0.6s ease-out;
+                transition: all 0.3s 0.6s ease-out;
+}
+
+.loaded #loader-wrapper .loader-section.section-right {
+  -webkit-transform: translateX(100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+  -ms-transform: translateX(100%);  /* IE 9 */
+  transform: translateX(100%);  /* Firefox 16+, IE 10+, Opera */
+
+  -webkit-transition: all 0.3s 1s ease-out;
+  transition: all 0.3s 1s ease-out;
+}
+
+.loaded #loader-wrapper .loader-section.section-right,
+.loaded #loader-wrapper .loader-section.section-left {
+ 
+    -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+
+
+.loaded #loader, .loaded .loader-overlay {
+  opacity: 0;
+  display: none;
+  -webkit-transition: all 0.3s ease-out;
+            transition: all 0.3s ease-out;
+}
+
+.loaded #loader-wrapper {
+  visibility: hidden;
+}
 
 /*--------------------------------------------------------------
 # Logo
@@ -51,7 +198,7 @@ body {
 .site-top {
   position: fixed; //change to fixed or absolute if wanted. if absolute add padding top to your entry-header!
   background: var(--site-top);
-  height:100px;
+  height:130px;
   top: 0; left: 0;
   transform: translate3d(0,0,0);
   transition: transform .5s ease-in-out;
@@ -116,6 +263,27 @@ html[data-direction="down"] .site-top {
   .container-footer {
     .footer-title-container {
       padding:100px;
+      overflow: hidden;
+      .footer-title {
+        .widget {
+          & h1 {
+            transform: translateY(400px);
+            transition: transform 2s ease;
+          }
+
+        }
+      
+      }
+      .footer-title.is-inview {
+        .widget {
+          & h1 {
+            transform: translateY(0px);
+            transition: transform 2s ease;
+          }
+          
+        }
+      
+      }
     } 
     .footer-content-container {
       display: flex;

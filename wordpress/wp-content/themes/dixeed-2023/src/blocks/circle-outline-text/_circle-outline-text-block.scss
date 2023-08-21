@@ -1,6 +1,16 @@
 @use "../../sass/resources"as *;
 
 .circle-outline-text-block {
+  display:flex;
+  justify-content: space-between;
+  .block-text-container-circle {
+    opacity:0;
+  }
+
+  .block-text-container-circle.active {
+    opacity:1;
+  }
+  
   .circle-outline-text {
     width: 288px;
     height: 288px;

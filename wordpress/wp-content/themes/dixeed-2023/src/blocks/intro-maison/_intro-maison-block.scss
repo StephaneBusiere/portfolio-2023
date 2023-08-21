@@ -1,44 +1,50 @@
 @use "../../sass/resources" as *;
 
-.intro-1-block  {
+.intro-maison-block  {
 	height: 120vh;
 	padding: 0;
 	overflow: hidden;
   
-	.intro-1-wrapper {
+	.intro-maison-wrapper {
 	  max-width: 100%;
 	  height: 100%;
 	  background-size: cover; 
 	  background-repeat: no-repeat;
 	  background-position: center center;
 	  display:flex;
+	  flex-direction: column;
 	  justify-content: center;
 	  align-items: center;
 	  padding: 20px;
 
-		.intro-1-title {
-		font-family: 'Basier-circle-regular';
+		.intro-maison-title {
 		font-size: 9rem; 
 		font-weight: bold;
 		line-height: 12rem;
 		text-align: center;
-		opacity:0
+		color:white;
+		text-transform: uppercase;
+    	-webkit-text-fill-color: transparent;
+    	-webkit-text-stroke-width: 1px;
+    	-webkit-text-stroke-color: white;
+		font-family: 'roboto';
 		}
-		
-		.intro-1-title.active {
+
+		.intro-maison-text {
 			font-family: 'Basier-circle-regular';
 			font-size: 9rem; 
-			font-weight: bold;
-			line-height: 12rem;
+			line-height: 3rem;
 			text-align: center;
-			opacity:1;
+			color:white;
+			font-size: 1.8rem;
 			}
+		
 	}
 }
 @media (max-width: 1440px) {
-	.intro-1-block  {
-		.intro-1-wrapper {
-			.intro-1-title {
+	.intro-maison-block  {
+		.intro-maison-wrapper {
+			.intro-maison-title {
 			font-size: 6rem; 
 			line-height: 8rem;
 			}
@@ -46,9 +52,9 @@
 	}
 }
 @media (max-width: $media-sidebar) {
-	.intro-1-block  {
-		.intro-1-wrapper {
-			.intro-1-title {
+	.intro-maison-block  {
+		.intro-maison-wrapper {
+			.intro-maison-title {
 			font-size: 4.2rem; 
 			line-height: 6rem;
 			}
@@ -57,9 +63,9 @@
 }
 
 @media (max-width: $media-medium) {
-	.intro-1-block  {
-		.intro-1-wrapper {
-			.intro-1-title {
+	.intro-maison-block  {
+		.intro-maison-wrapper {
+			.intro-maison-title {
 			font-size: 3.5rem; 
 			line-height: 4rem;
 			}
@@ -68,11 +74,11 @@
 }
 
 @media (max-width: $media-small) {
-	.intro-1-block  {
+	.intro-maison-block  {
 		height: 50vh;
-		.intro-1-wrapper {
+		.intro-maison-wrapper {
 		padding: 5px;
-			.intro-1-title {
+			.intro-maison-title {
 			font-size: 1.8rem; 
 			line-height: 2.7rem;
 			margin-top:80px;

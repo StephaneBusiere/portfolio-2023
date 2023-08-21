@@ -7,6 +7,7 @@ import "splitting/dist/splitting-cells.css";
 import Splitting from "splitting";
 
 (function ($) {
+   
    if ($("#site-container").length) {
       const locoScroll = new LocomotiveScroll({
          el: document.querySelector("[data-scroll-container]"),
@@ -34,7 +35,11 @@ import Splitting from "splitting";
       const fx4Titles = [...document.querySelectorAll(".maison-sub-title-container[data-splitting][data-effect4]")];
       const fx5Titles = [...document.querySelectorAll(".realisation-title[data-splitting][data-effect5]")];
       const fx6Titles = [...document.querySelectorAll(".rich-text-container[data-splitting][data-effect6]")];
-
+      const fx7Titles = [...document.querySelectorAll(".block-text-container-circle[data-splitting][data-effect7]")];
+      const fx8Titles = [...document.querySelectorAll(".maison-description-text[data-splitting][data-effect8]")];
+      const line1      = [...document.querySelectorAll('.line-text-svg-1')];
+      const line2      = [...document.querySelectorAll('.line-text-svg-2')];
+   
       locoScroll.on("scroll", ScrollTrigger.update);
       ScrollTrigger.scrollerProxy("[data-scroll-container]", {
          scrollTop(value) {
@@ -46,33 +51,76 @@ import Splitting from "splitting";
          pinType: document.querySelector("[data-scroll-container]").style.transform ? "transform" : "fixed",
       });
 
-      ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-      ScrollTrigger.refresh();
+      
 
+
+      
+      
       const scroll = () => {
 
+       gsap.fromTo(
+         line1,
+         {
+            "will-change": "opacity, transform",
+            xPercent: 300,
+         },
+         {
+            ease: "power4",
+            xPercent: 0,
+            scrollTrigger: {
+               trigger: line1,
+               start: 'top +=80%',
+               end:'+=500',
+               scrub:0.2,
+               scroller: "[data-scroll-container]",
+            },
+         }
+       );
+
+       gsap.fromTo(
+         line2,
+         {
+            "will-change": "opacity, transform",
+            xPercent: -300,
+         },
+         {
+            ease: "power4",
+            xPercent: 0,
+            scrollTrigger: {
+               trigger: line2,
+               start: 'top +=70%',
+               end:'+=500',
+               scrub:0.2,
+               scroller: "[data-scroll-container]",
+            },
+         }
+       );
+
+       $(document).ready(function() {
+         $('.intro-1-title').addClass('active');
          fx1Titles.forEach((title) => {
-            const chars = title.querySelectorAll(".char");
+         const chars = title.querySelectorAll(".char");
 
-            gsap.fromTo(
-               chars,
-               {
-                  "will-change": "opacity, transform",
-                  opacity: 0,
-                  xPercent: () => gsap.utils.random(-200, 200),
-                  yPercent: () => gsap.utils.random(-150, 150),
-               },
-               {
-                  duration: 1.5,
-                  ease: "power1.inOut",
-                  opacity: 1,
-                  xPercent: 0,
-                  yPercent: 0,
-                  stagger: { each: 0.05, grid: "auto", from: "random" },
-               }
-            );
-         });
-
+         gsap.fromTo(
+            chars,
+            {
+               "will-change": "opacity, transform",
+               opacity: 0,
+               xPercent: () => gsap.utils.random(-200, 200),
+               yPercent: () => gsap.utils.random(-150, 150),
+            },
+            {
+               duration: 1.2,
+               delay:1,
+               ease: "power3",
+               opacity: 1,
+               xPercent: 0,
+               yPercent: 0,
+               stagger: { each: 0.05, grid: "auto", from: "random" },
+            }
+         );
+      });
+       });
          fx2Titles.forEach((title) => {
             const chars = title.querySelectorAll(".char");
 
@@ -85,15 +133,15 @@ import Splitting from "splitting";
                   rotationZ: () => gsap.utils.random(-20, 20),
                },
                {
-                  ease: "slow",
+                  ease: "power4",
                   opacity: 1,
                   scale: 1,
                   rotation: 0,
                   stagger: 0.4,
                   scrollTrigger: {
                      trigger: title,
-                     start: "center+=30% bottom",
-                     end: "+=80%",
+                     start: "top +=70%",
+                     end: "+=60%",
                      scrub: true,
                      scroller: "[data-scroll-container]",
                   },
@@ -113,15 +161,15 @@ import Splitting from "splitting";
                   rotationZ: () => gsap.utils.random(-20, 20),
                },
                {
-                  ease: "slow",
+                  ease: "power4",
                   opacity: 1,
                   scale: 1,
                   rotation: 0,
                   stagger: 0.4,
                   scrollTrigger: {
                      trigger: title,
-                     start: "center+=30% bottom",
-                     end: "+=80%",
+                     start: "top +=70%",
+                     end: "+=60%",
                      scrub: 1,
                      scroller: "[data-scroll-container]",
                   },
@@ -158,6 +206,79 @@ import Splitting from "splitting";
                         trigger: word,
                         start: "center bottom+=25%",
                         end: "bottom center-=30%",
+                        scrub: 0.9,
+                        scroller: "[data-scroll-container]",
+                     },
+                  }
+               );
+            }
+         });
+         $(document).ready(function() {
+
+         fx7Titles.forEach((title) => {
+          $('.block-text-container-circle').addClass('active');
+            const words = title.querySelectorAll(".word");
+
+            for (const word of words) {
+               const chars = word.querySelectorAll(".char");
+
+               chars.forEach((char) => gsap.set(char.parentNode, { perspective: 2000 }));
+
+               gsap.fromTo(
+                  chars,
+                  {
+                     "will-change": "opacity, transform",
+                     opacity: 0,
+                     rotationX: -90,
+                     yPercent: 50,
+                  },
+                  {
+                     ease: "power1.inOut",
+                     opacity: 1,
+                     rotationX: 0,
+                     yPercent: 0,
+                     delay:2,
+                     duration:2,
+                     stagger: {
+                        each: 0.03,
+                        from: 0,
+                     },
+                    
+                  }
+               );
+            }
+         });
+      });
+
+         fx8Titles.forEach((title) => {
+            const words = title.querySelectorAll(".word");
+
+            for (const word of words) {
+               const chars = word.querySelectorAll(".char");
+
+               chars.forEach((char) => gsap.set(char.parentNode, { perspective: 2000 }));
+
+               gsap.fromTo(
+                  chars,
+                  {
+                     "will-change": "opacity, transform",
+                     opacity: 0,
+                     rotationX: -90,
+                     yPercent: 50,
+                  },
+                  {
+                     ease: "power1.inOut",
+                     opacity: 1,
+                     rotationX: 0,
+                     yPercent: 0,
+                     stagger: {
+                        each: 0.03,
+                        from: 0,
+                     },
+                     scrollTrigger: {
+                        trigger: word,
+                        start: "center bottom+=10%",
+                        end: "bottom center-=10%",
                         scrub: 0.9,
                         scroller: "[data-scroll-container]",
                      },
@@ -233,9 +354,37 @@ import Splitting from "splitting";
                }
             );
          });
+
          
+         const footer = $('.site-footer');
+         const footer_container = $('.vertical-carousel-block');
+         gsap.fromTo(
+            footer,
+            {
+               "will-change": "border-radius,transform",
+               borderTopRightRadius: "50%",
+               borderTopLeftRadius:  "50%",
+               scaleX: 1.3,
+
+            },
+            {
+               ease: "slow",
+               borderTopRightRadius: "0%",
+               borderTopLeftRadius:  "0%",
+               scrollTrigger: {
+                  trigger: footer_container,
+                  start: "top",
+                  end: "bottom top+=10%",
+                  scrub: true,
+                  scroller: "[data-scroll-container]",
+               },
+            }
+         );
       };
       scroll();
+
+      ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+      ScrollTrigger.refresh();
    }
 
    var top_menu = $("#top-menu");
@@ -262,6 +411,50 @@ import Splitting from "splitting";
          },
       });
    });
-
    
+      // var loader_container = $('#loader-wrapper');
+      // var loader_overlay = $('.loader-overlay');
+      // var section_left = $('.loader-section.section-left');
+      // var section_right = $('.loader-section.section-right');
+      // var tl = gsap.timeline();    
+      //     tl.fromTo(loader_container,
+      //       {
+      //       clipPath: "circle(0%)",
+      //       opacity:1,
+      //       },
+      //       {
+      //       ease: "power4,inOut",
+      //       clipPath: "circle(200%)",
+      //       duration: 2,
+      //       opacity:1,
+      //       }
+      //       )
+            
+      //       .to(section_left, {
+      //          ease: "power4,inOut",
+      //          translateX:'-100%',
+      //          delay:2
+      //       })
+      //       .to(section_right, {
+      //          ease: "power4,inOut",
+      //          translateX:'100%',
+      //          delay:2
+      //       })
+
+      //       .to(loader_overlay, {
+      //          ease: "power4,inOut",
+      //          opacity:0,
+      //       })
+            
+            
+
+         
+
+         // $(document).ready(function() {
+         //    $('body').addClass('loaded');
+         // });
+         setTimeout(function() { 
+            $('body').addClass('loaded');
+        }, 2000);
+
 })(jQuery);

@@ -1,13 +1,39 @@
 {
-    "key": "group_6407192857edc",
-    "title": "Block circle text outline",
+    "key": "group_64b54e2270809",
+    "title": "Block intro maison",
     "fields": [
         {
-            "key": "field_64071928b1fdf",
-            "label": "Texte du cercle",
-            "name": "circle_text",
+            "key": "field_64b54e4e4b452",
+            "label": "image en background",
+            "name": "background_image_intro_maison",
             "aria-label": "",
-            "type": "text",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "admin_only": 0,
+            "return_format": "url",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_64b550da8ea51",
+            "label": "Titre",
+            "name": "title_intro_maison",
+            "aria-label": "",
+            "type": "textarea",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -18,19 +44,17 @@
             },
             "admin_only": 0,
             "default_value": "",
-            "autocomplete": "",
-            "ign_set_data": "",
             "maxlength": "",
+            "rows": "",
             "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "new_lines": ""
         },
         {
-            "key": "field_6407194e8a0bf",
-            "label": "Couleur du texte",
-            "name": "circle_text_color",
+            "key": "field_64b54e224b451",
+            "label": "Texte",
+            "name": "text_intro_maison",
             "aria-label": "",
-            "type": "color_picker",
+            "type": "textarea",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -41,29 +65,10 @@
             },
             "admin_only": 0,
             "default_value": "",
-            "enable_opacity": 0,
-            "return_format": "string"
-        },
-        {
-            "key": "field_64abf45499c5b",
-            "label": "Titre du block",
-            "name": "circle_text_title",
-            "aria-label": "",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "admin_only": 0,
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
+            "maxlength": "",
+            "rows": "",
+            "placeholder": "",
+            "new_lines": "br"
         }
     ],
     "location": [
@@ -71,7 +76,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/dixeed-circle-outline-text"
+                "value": "acf\/dixeed-intro-maison"
             }
         ]
     ],
@@ -84,5 +89,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1688990853
+    "modified": 1689604974
 }
