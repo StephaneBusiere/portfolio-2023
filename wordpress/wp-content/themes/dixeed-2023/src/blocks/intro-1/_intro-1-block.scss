@@ -18,7 +18,7 @@
 
 		.intro-1-title {
 		font-family: 'Basier-circle-regular';
-		font-size: 9rem; 
+		font-size: 11rem; 
 		font-weight: bold;
 		line-height: 12rem;
 		text-align: center;
@@ -27,11 +27,12 @@
 		
 		.intro-1-title.active {
 			font-family: 'Basier-circle-regular';
-			font-size: 9rem; 
+			font-size: 12rem; 
 			font-weight: bold;
-			line-height: 12rem;
+			line-height: 14rem;
 			text-align: center;
 			opacity:1;
+			padding-top: 120px;
 			}
 	}
 }

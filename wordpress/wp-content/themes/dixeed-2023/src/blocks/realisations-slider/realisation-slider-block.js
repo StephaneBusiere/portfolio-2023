@@ -4,7 +4,7 @@
          arrows: false,
          dots: false,
          slidesToShow: 4,
-         slidesToScroll: 4,
+         slidesToScroll: 1,
          draggable: true,
          swipe: true,
          variableWidth: true,

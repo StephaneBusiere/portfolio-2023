@@ -18,6 +18,7 @@ $video_poster      = get_field( 'video_poster' );
 				<source src="<?php echo $video_loop_webm;?>" type="video/webm">
 			    <source src="<?php echo $video_loop_mp4;?>" type="video/mp4">
 			</video>
+			<div class="video-text">QUI SUIS JE ?</div>
 		<?php } ?>
 	    <div class="video-mask"></div>
 	    <span class="play" data-mp4-url="<?php echo $video_modal_mp4;?>" data-webm-url="<?php echo $video_modal_webm;?>" data-poster-url="<?php echo $video_poster;?>">

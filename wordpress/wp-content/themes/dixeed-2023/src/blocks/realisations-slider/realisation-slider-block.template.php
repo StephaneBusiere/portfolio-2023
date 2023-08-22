@@ -6,6 +6,7 @@
  */
 $background_color  = get_field( 'background_color_realisations_slide' );
 $realisation_slide = get_field( 'realisation_slide' );
+$realisation_link  = get_field( 'realisation_link' );
 $cta_link          = get_field( 'cta_link_realisations' );
 $realisation_title = get_field( 'realisations_title' );
 ?>
@@ -35,9 +36,9 @@ $realisation_title = get_field( 'realisations_title' );
 							the_row();
 							$slide_content = get_sub_field( 'realisation_slide_content' );
 							?>
-							<div class="realisation-slide-content">
+							<a class="realisation-slide-content" href="<?php echo esc_url( $realisation_link ); ?>">
 								<img src="<?php echo esc_url( $slide_content ); ?>" alt="">
-							</div>
+							</a>
 									<?php
 							endwhile;
 						?>

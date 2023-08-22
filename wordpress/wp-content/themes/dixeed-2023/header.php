@@ -24,8 +24,7 @@
 </head>
 <!-- <div class="loader-overlay"> -->
 	<div id="loader-wrapper">
-		<div id="loader">DIXEED
-			<!-- <img class="gif-loader" src="<?php echo get_template_directory_uri() ?>/images/gif-loader.gif" alt=""> -->
+		<div id="loader">S BUSIERE
 			<div class="spinner-wrap">
 				<div class="spinner-item"></div>
 				<div class="spinner-item spinner-item--2"></div>

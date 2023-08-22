@@ -9,6 +9,17 @@
 		position: relative;
 		height: 100vh;
 		min-height: -webkit-fill-available;
+		display: flex;
+    	justify-content: center;
+    	align-items: center;
+		.video-text {
+			font-family: 'Basier-circle-regular';
+			font-weight: bold;
+			position: absolute;
+    		font-size: 12rem;
+    		color: white;
+			margin-top: -270px;
+		}
 		video {
 		    position: absolute;
 		    z-index: 0;

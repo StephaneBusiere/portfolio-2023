@@ -90,7 +90,7 @@ body.loaded {
   top: 0;
   width: 51%;
   height: 100%;
-  background: #eda169;
+  background: #cceaeb;
   z-index: 1000;
   
 }
@@ -109,13 +109,13 @@ body.loaded {
   align-items: center;
   z-index: 1001;
   color:white;
-  font-size:150px;
+  font-size:160px;
   background-image: linear-gradient(
     -225deg,
-    #E86D08 0%,
-    #FF9905 29%,
-    #EC954E 67%,
-    #F1DAC5 100%
+    #00fff3 0%,
+    #17e7bf 29%,
+    #5bdce5 67%,
+    #597ee9 100%
   );
   background-size: auto auto;
   background-clip: border-box;
@@ -180,7 +180,7 @@ body.loaded {
 
 
   color: white;
-  max-width: 350px;
+  max-width: 133px;
 
   svg, path, g {
 	fill: currentColor; //uses color above
@@ -262,7 +262,7 @@ html[data-direction="down"] .site-top {
   }
   .container-footer {
     .footer-title-container {
-      padding:100px;
+      padding:17px;
       overflow: hidden;
       .footer-title {
         .widget {
