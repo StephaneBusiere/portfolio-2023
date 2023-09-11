@@ -240,7 +240,8 @@
     .text-image-section {
         .image-container {
             .image {
-                width:70%;
+                width:80%;
+                
             }
         }
         .block-text-container {
@@ -286,7 +287,7 @@
   .text-image-section {
     .text-image-container  {
       display:block;
-      padding: 40px 20px;
+      padding: 20px 20px;
       .image-container {
         width:auto!important;
         .image-mobile {
@@ -340,4 +341,15 @@
     }
 
   }
+}
+
+@media (max-width: $media-small) {
+    .text-image-section .text-image-container .image-container .image-mobile {
+        display: block !important;
+        width: 40%;
+    }
+
+    .realisations-dixeed .text-image-section .text-image-container.row.half-half .image-container {
+        width:600px!important;
+    }
 }

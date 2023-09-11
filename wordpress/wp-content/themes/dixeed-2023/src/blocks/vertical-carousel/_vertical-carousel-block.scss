@@ -42,18 +42,16 @@
       margin: 0;
     }
   }
-  @media(max-width: $media-medium) {
+  @media(max-width: $media-nav) {
     max-width: 100%;
     display: block;
     margin-bottom: 10px;
     .vertical-carousel {
       width: 100vw;
-      height: 110px;
-      // display: flex;
-      // flex-wrap: nowrap;
+      height: 150px;
       li {
-        width: 100px;
-        height: 100px;
+        width: 160px;
+        height: 160px;
         margin: 0 ;
       }
       .slick-slide {

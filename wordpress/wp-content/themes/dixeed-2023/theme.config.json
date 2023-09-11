@@ -5,7 +5,8 @@
   "ssl": false,
   "google_fonts": [
     "Roboto:400,400i,700,700i",
-    "Roboto Slab:400,700"
+    "Roboto Slab:400,700",
+    "Archivo Black:400"
   ],
   "menu_icon": "",
   "sidebar_icon": "",

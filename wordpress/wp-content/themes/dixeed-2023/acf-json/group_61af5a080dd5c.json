@@ -445,6 +445,28 @@
             "maxlength": "",
             "autocomplete": "",
             "ign_set_data": ""
+        },
+        {
+            "key": "field_64ec95d3c4069",
+            "label": "Effet de split",
+            "name": "split-effect",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "admin_only": 0,
+            "message": "",
+            "default_value": 1,
+            "ign_set_data": "",
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
         }
     ],
     "location": [
@@ -465,5 +487,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1677594702
+    "modified": 1693226577
 }

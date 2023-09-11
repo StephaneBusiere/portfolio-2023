@@ -19,7 +19,7 @@
          cssEase: 'linear',
          adaptiveHeight: true,
          responsive: [{
-               breakpoint: 768,
+               breakpoint: 800,
                settings: {
                   slidesToShow: 3,
                   vertical: false,

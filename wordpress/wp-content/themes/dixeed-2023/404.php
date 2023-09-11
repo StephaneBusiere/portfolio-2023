@@ -15,8 +15,8 @@ get_header(); ?>
 
 			<div class="container-content text-center">
 				<div class="h1 title-404">404</div>
-					<p><?php _e( 'It looks like nothing was found at this location.', 'dixeed-2023' ); ?></p>
-					<a class="button" href="<?php echo home_url(); ?>"><?php _e( 'Go To Home', 'dixeed-2023' ); ?></a>
+					<p><?php _e( 'Il semble que rien n\'ait été trouvé à cet endroit.', 'dixeed-2023' ); ?></p>
+					<a class="button" href="<?php echo home_url(); ?>"><?php _e( 'Retour à l\'acceuil', 'dixeed-2023' ); ?></a>
 			</div>
 
 		</main><!-- #main -->

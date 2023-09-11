@@ -9,6 +9,9 @@
 	margin: 0 80px;
   		.quote-text {
 			padding: 100px 20%;
+			& p {
+			line-height: 25px;
+			}
 		}
 
 		.quote-icon {

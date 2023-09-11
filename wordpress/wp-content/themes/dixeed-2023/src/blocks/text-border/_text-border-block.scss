@@ -5,6 +5,8 @@
    .text-border-container {
 	position:relative;
 	margin: 0;
+	margin-top: 40px;
+    margin-bottom: 40px;
 	&::before {
 		content : "";
   		position: absolute;
@@ -49,6 +51,9 @@
     			transform-origin: right;
 				z-index: 9;
 			}
+			& p {
+				line-height: 25px;
+			}
 
 			
 		}
@@ -57,7 +62,7 @@
 }
 .vertical-text {
 	position:absolute;
-	top:140px;
+	top:14px;
 	font-size: 150px;
 	font-weight: 700;
 	line-height: 247px;
@@ -84,7 +89,7 @@
 	
 	.vertical-text {
 		position:absolute;
-		top:140px;
+		top:0px;
 		font-size: 100px;
 		font-weight: 700;
 		line-height: 247px;

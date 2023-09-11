@@ -70,6 +70,31 @@
 			}
 		}
 	}
-	@media (max-width: $media-medium) {
+	
+}
+
+@media (max-width: 1050px) {
+	.video-fullwidth-block .video-fullwidth-wrapper .video-text {
+		font-size: 8rem;
+		
+	}
+}
+
+
+@media (max-width: $media-small) {
+	.video-fullwidth-block .video-fullwidth-wrapper {
+		position: relative;
+		height: 56vh;
+		min-height: -webkit-fill-available;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.video-fullwidth-block {
+		height: 50vh;
+	}
+	.video-fullwidth-block .video-fullwidth-wrapper .video-text {
+		font-size: 4rem;
+		
 	}
 }

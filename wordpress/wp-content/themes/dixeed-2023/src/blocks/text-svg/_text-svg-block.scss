@@ -190,3 +190,50 @@
 
 	}
 }
+
+@media (max-width: 450px) {
+
+	.text-svg-section {
+		width:100%;
+		  height: auto;
+		  padding: 0;
+		  overflow: hidden;
+		.text-svg-container {
+			position:relative;
+			padding: 0px 0 80px 0;
+			height: 365px;
+			.line-text-svg-1 {
+				display:none;
+			}
+			.line-text-svg-2 {
+				display:none;
+			}
+			
+			.text-svg-text-container {
+				.text-svg-title-container {
+					text-align: center;
+					
+					& h2 {
+						font-weight: 700;
+						font-size: 50px;
+						line-height: 14px;
+						
+					}
+					
+				}
+				
+				.text-svg-description-container {
+					padding-left: 15px;
+					text-align: left;
+					.text-svg-description-text {
+						font-size: 1.6rem;
+						line-height:2.6rem ;
+						letter-spacing: 0.06em;
+					}
+				}
+				
+			}
+		}
+
+	}
+}

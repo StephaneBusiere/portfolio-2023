@@ -69,7 +69,7 @@ $background_color = get_field( 'background_color_realisations_archive' );
 						<?php } ?>
 						</div>
 					</div>
-					<div class="realisations-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'large', array( 'sizes' => '(width:220px) , (height:146px) ' ) ); ?></a></div>
+					<div class="realisations-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'full' ); ?></a></div>
 
 				</div>
 						<?php wp_reset_postdata(); ?>

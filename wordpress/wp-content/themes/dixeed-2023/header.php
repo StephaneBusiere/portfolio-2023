@@ -24,7 +24,7 @@
 </head>
 <!-- <div class="loader-overlay"> -->
 	<div id="loader-wrapper">
-		<div id="loader">S BUSIERE
+		<div id="loader"><h1>S BUSIERE</h1>
 			<div class="spinner-wrap">
 				<div class="spinner-item"></div>
 				<div class="spinner-item spinner-item--2"></div>

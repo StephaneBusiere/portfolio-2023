@@ -1,4 +1,4 @@
-# Theme Dixeed 2023 by DIXEED 
+# Theme portfolio by Stéphane Busiere
 
 ## Comment utiliser ce projet
 Nécessite :

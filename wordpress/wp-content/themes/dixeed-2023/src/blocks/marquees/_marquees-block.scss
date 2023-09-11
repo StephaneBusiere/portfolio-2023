@@ -27,12 +27,24 @@
       	font-size: 72px;
       }
 
-      @media(max-width: $media-medium) {
-      	font-size:36px;
-      	-webkit-text-shadow: none;
-      text-shadow: none;
-      color: var(--orange-500);
-      }
     }
+  }
+}
+
+@media(max-width: $media-large) {
+  .marquees-block {
+    padding: 0px;
+    
+  }
+
+  .horizontal-slider-block-content-container .cta {
+    position: relative;
+    display: block;
+    z-index: 0;
+    overflow: hidden;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 60px auto 0 auto;
+    
   }
 }

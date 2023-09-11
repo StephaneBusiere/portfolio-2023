@@ -20,13 +20,8 @@ $vertical_align_text  = get_field( 'text-vertical-align' );
 $text_position        = get_field( 'image_text_choice' );
 $text_spacing         = get_field( 'image_text_spacing' );
 $text_type            = get_field( 'image-text-type-choice' );
-
-$title_text_icon = get_field( 'title-text-icon' );
-
-
-
-
-
+$split_effect         = get_field( 'split-effect' );
+$title_text_icon      = get_field( 'title-text-icon' );
 
 ?>
 
@@ -41,8 +36,11 @@ $title_text_icon = get_field( 'title-text-icon' );
 			<?php endif; ?>
 			<img class="image" src="<?php echo esc_url( $image ); ?>" alt="">
 		</div>
-		<?php if ( $text_type[0] === 'text' ) : ?>
+		<?php if ( ( $text_type[0] === 'text' ) && ( $split_effect === true  ) ) : ?>
 		<div class="block-text-container" style="background-color:<?php echo esc_attr( $background_color ); ?>;justify-content:<?php echo esc_attr( $vertical_align_text[0] ); ?>" data-splitting data-effect2 data-scroll data-scroll-repeat data-scroll-speed="0" data-scroll-offset="300px"><?php the_field( 'text' ); ?></div>
+		<?php endif; ?>
+		<?php if ( ( $text_type[0] === 'text' ) && ( $split_effect === false  ) ) : ?>
+		<div class="block-text-container" style="background-color:<?php echo esc_attr( $background_color ); ?>;justify-content:<?php echo esc_attr( $vertical_align_text[0] ); ?>"  data-scroll data-scroll-repeat data-scroll-speed="0" data-scroll-offset="300px"><?php the_field( 'text' ); ?></div>
 		<?php endif; ?>
 		<?php
 		if ( $text_type[0] === 'icon' ) :

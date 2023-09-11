@@ -151,6 +151,7 @@
 	background-color: black;
 	z-index: 10;
   }
+
   .cd-nav-trigger .cd-icon::before, .cd-nav-trigger .cd-icon:after {
 	/* upper and lower lines of the menu icon */
 	position: absolute;
@@ -172,6 +173,7 @@
 	-moz-transition: -moz-transform .3s;
 	transition: transform .3s;
   }
+
   .cd-nav-trigger .cd-icon::before {
 	-webkit-transform: translateY(-6px) rotate(0deg);
 	-moz-transform: translateY(-6px) rotate(0deg);
@@ -179,6 +181,7 @@
 	-o-transform: translateY(-6px) rotate(0deg);
 	transform: translateY(-6px) rotate(0deg);
   }
+
   .cd-nav-trigger .cd-icon::after {
 	-webkit-transform: translateY(6px) rotate(0deg);
 	-moz-transform: translateY(6px) rotate(0deg);
@@ -186,6 +189,7 @@
 	-o-transform: translateY(6px) rotate(0deg);
 	transform: translateY(6px) rotate(0deg);
   }
+
   .cd-nav-trigger::before, .cd-nav-trigger::after {
 	/* 2 rounded colored backgrounds for the menu icon */
 	position: absolute;
@@ -206,6 +210,7 @@
 	-moz-transition-property: -moz-transform;
 	transition-property: transform;
   }
+
   .cd-nav-trigger::before {
 	background-color: #cceaeb;
 	-webkit-transform: scale(1);
@@ -219,8 +224,8 @@
 	-webkit-transition-delay: 0.4s;
 	-moz-transition-delay: 0.4s;
 	transition-delay: 0.4s;
-	background-image: linear-gradient(-45deg, #a7edf0, #cceaeb, #18ebf3);
   }
+
   .cd-nav-trigger::after {
 	background-color: #EFEAE7;
 	-webkit-transform: scale(0);
@@ -235,6 +240,7 @@
 	-moz-transition-delay: 0s;
 	transition-delay: 0s;
   }
+
   .cd-nav-trigger.close-nav::before {
 	/* user clicks on the .cd-nav-trigger element - 1st rounded background disappears */
 	-webkit-transform: scale(0);
@@ -243,6 +249,7 @@
 	-o-transform: scale(0);
 	transform: scale(0);
   }
+
   .cd-nav-trigger.close-nav::after {
 	/* user clicks on the .cd-nav-trigger element - 2nd rounded background appears */
 	-webkit-transform: scale(1);
@@ -257,13 +264,16 @@
 	-moz-transition-delay: 0.4s;
 	transition-delay: 0.4s;
   }
+
   .cd-nav-trigger.close-nav .cd-icon {
 	/* user clicks on the .cd-nav-trigger element - transform the icon */
 	background-color: rgba(255, 255, 255, 0);
   }
+
   .cd-nav-trigger.close-nav .cd-icon::before, .cd-nav-trigger.close-nav .cd-icon::after {
 	background-color: black;
   }
+
   .cd-nav-trigger.close-nav .cd-icon::before {
 	-webkit-transform: translateY(0) rotate(45deg);
 	-moz-transform: translateY(0) rotate(45deg);
@@ -271,6 +281,7 @@
 	-o-transform: translateY(0) rotate(45deg);
 	transform: translateY(0) rotate(45deg);
   }
+
   .cd-nav-trigger.close-nav .cd-icon::after {
 	-webkit-transform: translateY(0) rotate(-45deg);
 	-moz-transform: translateY(0) rotate(-45deg);
@@ -278,6 +289,7 @@
 	-o-transform: translateY(0) rotate(-45deg);
 	transform: translateY(0) rotate(-45deg);
   }
+
   .burger-menu-container {
 	width: 100vw;
     display: inline-block;
@@ -312,11 +324,13 @@
 	-moz-transition: visibility 0s, opacity 0.3s;
 	transition: visibility 0s, opacity 0.3s;
   }
+
   .menu li {
 	margin: 1.6em 0;
 	text-align: center;
 	text-transform: capitalize;
   }
+
   .menu a {
 	font-size: 20px;
 	font-size: 3rem;
@@ -326,9 +340,11 @@
 	-moz-transition: color 0.2s;
 	transition: color 0.2s;
   }
+
   .no-touch .menu a:hover {
 	color: #ffffff;
   }
+  
   .menu.fade-in {
 	/* navigation visible at the end of the circle animation */
 	visibility: visible;
@@ -441,7 +457,7 @@
 	z-index: 2;
   }
   .cd-overlay-nav span {
-	background-color: #EDA169;
+	background-color: #cceaeb;;
   }
   
   .cd-overlay-content {
