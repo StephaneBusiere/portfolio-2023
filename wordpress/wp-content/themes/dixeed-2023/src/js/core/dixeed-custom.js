@@ -238,7 +238,7 @@ import Splitting from "splitting";
                         opacity: 1,
                         rotationX: 0,
                         yPercent: 0,
-                        delay:2,
+                        delay:1,
                         duration:2,
                         stagger: {
                            each: 0.03,
@@ -391,7 +391,7 @@ import Splitting from "splitting";
 
             setTimeout(function() { 
                $('body').addClass('loaded');
-         }, 1000);
+         }, 1200);
 }
 
 })(jQuery);

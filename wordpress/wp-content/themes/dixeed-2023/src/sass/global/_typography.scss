@@ -171,6 +171,13 @@ p {
   font-size: 120px;
   line-height: 120px;
 }
+@media (max-width: 370px) {
+  .text-image-section .block-text-container p > span.title-shadow {
+    font-size: 100px;
+    line-height: 100px;
+  }
+}
+
 @media (max-width: 1200px) {
   .text-image-section .block-text-container p > span.title-shadow {
     font-size: 60px;
