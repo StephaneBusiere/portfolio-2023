@@ -8,6 +8,7 @@ body {
   overflow:hidden;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  pointer-events: none;
 }
 
 .default-cursor {
@@ -19,6 +20,7 @@ body.loaded {
   -ms-overflow-style: initial;
   scrollbar-width: initial;
   overflow:auto;
+  pointer-events: all;
 }
 
 
@@ -484,6 +486,35 @@ html[data-direction="down"] .site-top {
     margin-bottom: var(--gap);
   }
 }
+
+@media(max-width: $media-tablett) {
+  body {
+    background-color: var(--light-grey);
+    overflow:auto;
+    -ms-overflow-style: initial;
+    scrollbar-width: initial;
+    pointer-events: all;
+    cursor:none;
+  }
+  #loader-wrapper {
+    z-index: 1000;
+    position: absolute;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: none;
+  }
+
+  .wpcc-cursor {
+    display:none;
+  }
+  
+
+}
+
 @media(max-width: $media-nav) {
 
 body {
@@ -491,6 +522,7 @@ body {
   overflow:auto;
   -ms-overflow-style: initial;
   scrollbar-width: initial;
+  pointer-events: all;
 }
 #loader-wrapper {
   z-index: 1000;
@@ -503,6 +535,7 @@ body {
   overflow: hidden;
   display: none;
 }
+
 .reference-wrapper {
   flex-direction: column-reverse;
   .reference-text-wrapper {

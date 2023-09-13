@@ -22,9 +22,15 @@
 		font-weight: bold;
 		line-height: 12rem;
 		text-align: center;
-		opacity:0
+		opacity:0;
 		}
 		
+		.intro-1-image {
+			width:100%;
+			height:100%;
+			object-fit: cover;
+		}
+
 		.intro-1-title.active {
 			font-family: 'Basier-circle-regular';
 			font-size: 12rem; 
