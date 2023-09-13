@@ -69,13 +69,11 @@
                     }
                 }
             }
-            
-            .methodology-accordeon-content,
-            .methodology-accordeon-container:hover .methodology-accordeon-content {
-            height: 6em;
-            overflow: hidden;
-            transition: height 0.5s;
+            .methodology-accordeon-container:hover .methodology-accordeon-item:hover .methodology-accordeon-content,
+            .methodology-accordeon-container .methodology-accordeon-item--default .methodology-accordeon-content {
+                height: 8em;
             }
+           
         }
         
     }
@@ -103,17 +101,14 @@
                             color: #262626;
                         }
                         .methodology-accordeon-content > p {
-                            padding:10px;
+                            padding:0px;
                         }
                     }
                 }
-                
-                .methodology-accordeon-content,
-                .methodology-accordeon-container:hover .methodology-accordeon-content {
-                height: 12em;
-                overflow: hidden;
-                transition: height 0.5s;
-                }
+                .methodology-accordeon-container:hover .methodology-accordeon-item:hover .methodology-accordeon-content,
+            .methodology-accordeon-container .methodology-accordeon-item--default .methodology-accordeon-content {
+                height: 10em;
+            }
             }
             
         }

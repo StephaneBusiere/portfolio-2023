@@ -12,7 +12,7 @@ $realisation_title = get_field( 'realisations_title' );
 ?>
 <section <?php ign_block_attrs( $block, 'realisation-slider-block full-width' ); ?> style="background-color:<?php echo esc_attr( $background_color ); ?>"data-scroll-section>
 	<div class="realisations-container">
-		<img class="line-realisations-1"src="<?php echo get_template_directory_uri(); ?>/images/line-realisation-slider-top.svg " alt="">
+		<img class="line-realisations-1"src="<?php echo get_template_directory_uri(); ?>/images/Line-realisation-slider-top.svg " alt="">
 		<div class="realisation-title-container-mobile">
 				<div class="realisation-title"><?php echo esc_attr( $realisation_title ); ?></div>
 				<img class="line-realisations-2"src="<?php echo get_template_directory_uri(); ?>/images/line-realisation-slider-bottom.svg " >

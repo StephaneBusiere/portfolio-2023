@@ -48,9 +48,40 @@
     margin-bottom: 10px;
     .vertical-carousel {
       width: 100vw;
+      height: 170px;
+      li {
+        width: 200px;
+        height: 160px;
+        margin: 0 ;
+        span {
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+      }
+      .slick-slide {
+        margin:0 5px;
+      }
+      &:nth-child(1) {
+        margin: 0;
+      }
+      &:nth-child(2) {
+        margin: 0;
+      }
+      &:nth-child(3) {
+        margin: 0;
+      }
+    }
+  }
+
+  @media(max-width: $media-small) {
+    max-width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    .vertical-carousel {
+      width: 100vw;
       height: 150px;
       li {
-        width: 160px;
+        width: 200px;
         height: 160px;
         margin: 0 ;
       }

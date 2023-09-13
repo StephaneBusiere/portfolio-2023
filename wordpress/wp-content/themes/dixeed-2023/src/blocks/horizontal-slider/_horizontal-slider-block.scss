@@ -55,7 +55,7 @@
   }
 }
 .horizontal-slider-block {
-  padding-bottom:40px;
+  padding: 0 20px 0 20px;
 }
 
 .horizontal-slider-wrapper {
@@ -130,6 +130,15 @@
       }
     }
   }
+
+  @media(max-width: $media-tablett) {
+    .horizontal-slider {
+      margin:0;
+      padding:0 10px;
+    }
+
+  }
+
   @media(max-width: $media-large) {
     .horizontal-slider-block-content-container {
       padding: 0 20px;
@@ -192,5 +201,11 @@
 @media(max-width: $media-large) {
   .horizontal-slider-block-content-container {
     padding: 0 20px;
+  }
+}
+
+@media(max-width: $media-medium) {
+  .horizontal-slider-block {
+    padding: 0 0px 0 0px;
   }
 }

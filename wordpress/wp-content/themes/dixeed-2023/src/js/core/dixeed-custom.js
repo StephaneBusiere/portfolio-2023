@@ -1,14 +1,14 @@
 import LocomotiveScroll from "locomotive-scroll";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
 import "splitting/dist/splitting.css";
 import "splitting/dist/splitting-cells.css";
 import Splitting from "splitting";
 
 (function ($) {
    var windowWidth = $(window).width();
-   if(windowWidth > 800) {
+   if(windowWidth > 1200) {
+      gsap.registerPlugin(ScrollTrigger);
       if ($("#site-container").length) {
          const locoScroll = new LocomotiveScroll({
             el: document.querySelector("[data-scroll-container]"),
@@ -388,10 +388,11 @@ import Splitting from "splitting";
          });
       });
       
+      
+      setTimeout(function() { 
+         $('body').addClass('loaded');
+   }, 1200);
 
-            setTimeout(function() { 
-               $('body').addClass('loaded');
-         }, 1200);
-}
-
+   }
+   
 })(jQuery);

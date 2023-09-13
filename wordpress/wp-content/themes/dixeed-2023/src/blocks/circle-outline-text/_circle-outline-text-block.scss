@@ -82,6 +82,18 @@
     }
   }
 }
+@media (max-width: $media-tablett) {
+  .circle-outline-text-block {
+  
+    .block-text-container-circle {
+      opacity:1;
+    }
+
+    .block-text-container-circle.active {
+      opacity:1;
+    }
+  }
+}
 
 @media (max-width: 1130px) {
   .block-text-container-circle {
@@ -125,4 +137,14 @@
       line-height: 60px;
     }
   }
+}
+
+@media (max-width: $media-small) {
+  .circle-outline-text-block {
+   
+    .block-text-container-circle {
+      margin-top: 40px;
+    }
+  }
+
 }

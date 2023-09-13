@@ -116,4 +116,34 @@
 	.vertical-text {
 		display:none;
 	}
+}
+@media (max-width:$media-small) {
+  .text-border-section {
+	margin-top: -60px;
+	 .text-border-container {
+	  &::before {
+		  content : "";
+			position: absolute;
+			left    : 0;
+			bottom  : -10px;
+			height  : 1px;
+			width   : 50%;
+			border-bottom:1px solid #BE916B;
+	  }
+	  &::after {
+		  content : "";
+			position: absolute;
+			right    : 0;
+			top : -10px;
+			height  : 1px;
+			width   : 50%;
+			border-bottom:1px solid #BE916B;
+	  }
+			.text-border-text {
+			  padding: 15px 10%;
+			  
+		  }
+		  
+	  }
   }
+}

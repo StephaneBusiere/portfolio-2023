@@ -305,7 +305,23 @@
 
 }
   }
+
+  .header-overlay {
+    display:none;
+  }
+  .menu-item-link > a.active {
+    color:black;
+  }
+  
+  .menu-overlay-item.active {
+    display:none;
+    opacity:0;
+  }
+  .menu-item.active .menu-item-link > a {
+    color:black;
+  }
 }
+
 @media(max-width: $media-nav) {
   .site-navigation .site-navigation__nav-holder {
     display: none;
